@@ -1,6 +1,6 @@
 # The 1st ChatGPT4PCG Competition: Character-like Level Generation for Science Birds
 
-![Logo](https://github.com/chatgpt4pcg/chatgpt4pcg.github.io/raw/main/docs/logo.png)
+![Logo](https://github.com/chatgpt4pcg/chatgpt4pcg.github.io/raw/main/public/logo.png)
 ## Organizers
 
 1. Pittawat Taveekitworachai, Graduate School of Information Science and Engineering, Ritsumeikan University
