@@ -1,0 +1,34 @@
+.navigation {
+	display: flex;
+	margin: 0 0 32px;
+	background-color: #2C3333;
+	padding: 0 64px;
+}
+
+.navItem {
+	list-style-type: none;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.navItem a {
+	display: block;
+	padding: 16px;
+	color: #CBE4DE;
+	text-align: center;
+	text-decoration: none;
+}
+
+.navItem a:hover:not(.active) {
+	background-color: #2E4F4F;
+}
+
+.active {
+	background-color: #0E8388;
+}
+
+@media screen and (max-width: 768px) {
+	.navigation {
+		padding: 0 32px;
+	}
+}
