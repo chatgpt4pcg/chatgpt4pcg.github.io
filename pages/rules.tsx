@@ -33,13 +33,13 @@ export default function Rules() {
 					<ol>
 						<li>The maximum word count for the prompt is 900 words.</li>
 						<li>
-							The result from ChatGPT must contain a code block (``` must be
+							The result from ChatGPT must contain code blocks (``` must be
 							present in the exported Markdown file using the Chrome Extension
 							called{' '}
 							<a href='https://chrome.google.com/webstore/detail/chatgpt-prompt-genius/jjdnakkfjnnbbckhifcfchagnpofjffo'>
 								ChatGPT Prompt Genius
 							</a>
-							), as we will run a script to extract code between these symbols.
+							), as we will run a script to extract all code between these symbols.
 							If the result from ChatGPT contains no code, we will skip that
 							result, and its score will be 0.
 						</li>
