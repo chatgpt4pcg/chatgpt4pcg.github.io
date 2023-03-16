@@ -1,19 +1,19 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "next",
-    "build": "next build && mkdir -p docs/ && next export -o docs/"
-  },
-  "dependencies": {
-    "next": "latest",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-highlight-syntax": "^1.1.0"
-  },
-  "devDependencies": {
-    "@types/node": "^18.11.5",
-    "@types/react": "^18.0.23",
-    "@types/react-dom": "^18.0.7",
-    "typescript": "^4.8.4"
-  }
+	"private": true,
+	"scripts": {
+		"dev": "next",
+		"build": "next build && mkdir -p docs/ && next export -o docs/ && touch docs/.nojekyll"
+	},
+	"dependencies": {
+		"next": "latest",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-highlight-syntax": "^1.1.0"
+	},
+	"devDependencies": {
+		"@types/node": "^18.11.5",
+		"@types/react": "^18.0.23",
+		"@types/react-dom": "^18.0.7",
+		"typescript": "^4.8.4"
+	}
 }
