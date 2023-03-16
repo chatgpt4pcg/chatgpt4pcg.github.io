@@ -7,9 +7,8 @@
 2. Febri Abdullah, Graduate School of Information Science and Engineering, Ritsumeikan University
 3. Mury F. Dewantoro, Graduate School of Information Science and Engineering, Ritsumeikan University
 4. Ruck Thawonmas, College of Information Science and Engineering, Ritsumeikan University
-
-
-
+5. Julian Togelius, NYU Tandon School of Engineering, New York University
+6. Jochen Renz, School of Computing, The Australian National University
 
 ## Description of the Competition
 
@@ -27,13 +26,15 @@ Email address: chatgpt4pcg@gmail.com
 
 # Submission deadline
 
-???
+Midterm: 19 May 2023 (23:59 JST)
+
+Final: 20 May 2023 - 21 July 2023 (23:59 JST) (No extension)
 
 # Other information
 
-Keywords:  ChatGPT, prompt engineering, procedural content generation, level generation, conversational, dialogue agent, large language model
+Keywords: ChatGPT, prompt engineering, procedural content generation, level generation, conversational agent, large language model
 
-Programming languages: N/A
+Programming languages: N/A. However, having general programming knowledge can be useful.
 
 Complexity: Low-Medium
 
