@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from '@/components/Image/Image';
 import InlineCode from '@/components/InlineCode/InlineCode';
 import PageHeader from '@/components/PageHeader/PageHeader';
 import PageLayout from '@/components/PageLayout/PageLayout';
@@ -39,9 +40,9 @@ export default function Rules() {
 							<a href='https://chrome.google.com/webstore/detail/chatgpt-prompt-genius/jjdnakkfjnnbbckhifcfchagnpofjffo'>
 								ChatGPT Prompt Genius
 							</a>
-							), as we will run a script to extract all code between these symbols.
-							If the result from ChatGPT contains no code, we will skip that
-							result, and its score will be 0.
+							), as we will run a script to extract all code between these
+							symbols. If the result from ChatGPT contains no code, we will skip
+							that result, and its score will be 0.
 						</li>
 						<li>
 							The{' '}
@@ -70,24 +71,48 @@ export default function Rules() {
 												<InlineCode>b31</InlineCode>
 											</strong>
 											.
+											<Image
+												src='combined.png'
+												alt='Combined block example'
+												width={100}
+												noBorderRadius
+											/>
 											<ol>
 												<li>
 													<strong>
 														<InlineCode>b11</InlineCode>
 													</strong>{' '}
 													denotes a square block whose size is 1x1 cell.
+													<Image
+														src='b11.png'
+														alt='B11 block example'
+														width={25}
+														noBorderRadius
+													/>
 												</li>
 												<li>
 													<strong>
 														<InlineCode>b13</InlineCode>
 													</strong>{' '}
 													denotes a column block whose size is 1x3 cells.
+													<Image
+														src='b13.png'
+														alt='B13 block example'
+														width={25}
+														noBorderRadius
+													/>
 												</li>
 												<li>
 													<strong>
 														<InlineCode>b31</InlineCode>
 													</strong>{' '}
 													denotes a row block whose size is 3x1 cells.
+													<Image
+														src='b31.png'
+														alt='B31 block example'
+														width={75}
+														noBorderRadius
+													/>
 												</li>
 											</ol>
 										</li>

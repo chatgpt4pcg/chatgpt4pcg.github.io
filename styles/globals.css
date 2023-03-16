@@ -58,3 +58,7 @@ p, h1, h2, h3, h4, h5, h6 {
 		clip-path: inset(0.6px);
 	}
 }
+
+a {
+  color: #0E8388;
+}

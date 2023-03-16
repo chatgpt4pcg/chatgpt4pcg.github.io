@@ -12,7 +12,7 @@ export default function HorizontalList({ header, items }: HorizontalListProps) {
 			<figcaption className={styles.listHeader}>{header}: </figcaption>
 			<ul className={styles.list}>
 				{items.map((item) => (
-					<li className={styles.listItem}>{item}</li>
+					<li key={item} className={styles.listItem}>{item}</li>
 				))}
 			</ul>
 		</figure>

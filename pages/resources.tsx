@@ -69,7 +69,20 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						<li>Start interact with the model.</li>
 					</ol>
 					<SectionSubSubHeader>Science Birds</SectionSubSubHeader>
-					<Paragraph>TBA</Paragraph>
+					<Paragraph>
+						Please visit our{' '}
+						<a href='https://github.com/chatgpt4pcg/modified-science-birds'>
+							Modified Science Birds repository
+						</a>{' '}
+						to download the project and find out more detail about it.
+					</Paragraph>
+					<Paragraph>
+						This repository contains a modified version of the original Science
+						Birds game. The modifications include adjusting the blocks to match
+						the grid specification and adding a plugin called "Grid Level
+						Converter MkIII" that allows users to convert strings of the{' '}
+						<code>ab_drop()</code> function into Science Birds levels.
+					</Paragraph>
 					<SectionSubSubHeader>
 						Online Text-to-XML Converter
 					</SectionSubSubHeader>

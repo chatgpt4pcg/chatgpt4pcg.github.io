@@ -4,8 +4,23 @@ import styles from './Image.module.css';
 type ImageProps = {
 	src: string;
 	alt: string;
+	width?: number;
+	noBorderRadius?: boolean;
 };
 
-export default function Image({ src, alt }: ImageProps) {
-	return <img src={src} alt={alt} className={styles.image} />;
+export default function Image({
+	src,
+	alt,
+	width,
+	noBorderRadius = false,
+}: ImageProps) {
+	return (
+		<img
+			src={src}
+			alt={alt}
+			className={styles.image}
+			width={width}
+			style={noBorderRadius ? { borderRadius: 0 } : undefined}
+		/>
+	);
 }
