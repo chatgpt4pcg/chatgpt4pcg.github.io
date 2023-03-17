@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import PageHeader from '@/components/PageHeader/PageHeader';
 import PageLayout from '@/components/PageLayout/PageLayout';
 import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
@@ -86,7 +87,7 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 					<SectionSubSubHeader>
 						Online Text-to-XML Converter
 					</SectionSubSubHeader>
-					<Paragraph>TBA</Paragraph>
+					<Link href="/converter/xml">Text-to-XML Converter</Link>
 					<SectionSubSubHeader>
 						Online Text-to-Image Converter
 					</SectionSubSubHeader>
