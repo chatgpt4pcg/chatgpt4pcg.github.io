@@ -78,3 +78,10 @@
   height: 32px;
   background: #0E8388;
 }
+
+@media screen and (max-width: 768px) {
+  .gridCell, .activeGridCell {
+    width: 18px;
+    height: 18px;
+  }
+}
