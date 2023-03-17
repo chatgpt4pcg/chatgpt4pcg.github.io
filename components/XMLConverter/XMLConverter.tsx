@@ -8,7 +8,13 @@ export default function XMLConverter() {
 	const [rawData, setRawData] = useState('');
 	const [result, setResult] = useState('');
 	const [resultGrid, setResultGrid] = useState<number[][]>([[]]);
+	const [fileCounter, setFileCounter] = useState(0);
 	const resultRef = useRef<HTMLTextAreaElement>(null);
+
+	useEffect(() => {
+		window.localStorage.getItem('fileCounter') &&
+			setFileCounter(parseInt(window.localStorage.getItem('fileCounter')!));
+	}, []);
 
 	useEffect(() => {
 		if (rawData.length === 0) {
@@ -16,12 +22,17 @@ export default function XMLConverter() {
 		}
 	}, [rawData]);
 
+	useEffect(() => {
+		window.localStorage.setItem('fileCounter', fileCounter.toString());
+	}, [fileCounter]);
+
 	function submitHandler(event: FormEvent) {
 		event.preventDefault();
 		try {
 			const [output, _, gridBeforeShift] = convertToXML(rawData.toLowerCase());
 			setResult(output);
 			setResultGrid(gridBeforeShift.reverse());
+			setFileCounter(fileCounter + 1);
 		} catch (e) {
 			alert(e);
 		}
@@ -79,7 +90,7 @@ ab_drop('b13', 1)`}
 						href={URL.createObjectURL(
 							new Blob([result], { type: 'application/xml' })
 						)}
-						download='result.xml'
+						download={`result_${String(fileCounter).padStart(2, '0')}.xml`}
 					>
 						Download XML file
 					</a>
@@ -92,7 +103,11 @@ ab_drop('b13', 1)`}
 						{resultGrid.map((row) => (
 							<div className={styles.gridRow}>
 								{row.map((cell) => (
-									<div className={cell === 1 ? styles.activeGridCell :  styles.gridCell}></div>
+									<div
+										className={
+											cell === 1 ? styles.activeGridCell : styles.gridCell
+										}
+									></div>
 								))}
 							</div>
 						))}
