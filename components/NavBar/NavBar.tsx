@@ -15,6 +15,21 @@ export default function NavBar() {
 				<Link href='/'>Home</Link>
 			</li>
 			<li className={`${styles.navItem} ${
+					router.pathname == '/prompt' ? styles.active : ''
+				}`}>
+				<Link href='/prompt'>Prompt</Link>
+			</li>
+			<li className={`${styles.navItem} ${
+					router.pathname == '/submission' ? styles.active : ''
+				}`}>
+				<Link href='/submission'>Submission</Link>
+			</li>
+			<li className={`${styles.navItem} ${
+					router.pathname == '/evaluation' ? styles.active : ''
+				}`}>
+				<Link href='/evaluation'>Evaluation</Link>
+			</li>
+			<li className={`${styles.navItem} ${
 					router.pathname == '/rules' ? styles.active : ''
 				}`}>
 				<Link href='/rules'>Rules</Link>
@@ -22,7 +37,7 @@ export default function NavBar() {
 			<li className={`${styles.navItem} ${
 					router.pathname == '/resources' ? styles.active : ''
 				}`}>
-				<Link href='/resources'>Useful Resources</Link>
+				<Link href='/resources'>Resources</Link>
 			</li>
 		</nav>
 	);

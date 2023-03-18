@@ -15,12 +15,14 @@ export default function Image({
 	noBorderRadius = false,
 }: ImageProps) {
 	return (
-		<img
-			src={src}
-			alt={alt}
-			className={styles.image}
-			width={width}
-			style={noBorderRadius ? { borderRadius: 0 } : undefined}
-		/>
+		<div className={styles.imageContainer}>
+			<img
+				src={src}
+				alt={alt}
+				className={styles.image}
+				width={width}
+				style={noBorderRadius ? { borderRadius: 0 } : undefined}
+			/>
+		</div>
 	);
 }

@@ -68,26 +68,28 @@ export default function Home() {
 					<Paragraph>
 						As a participant, your goal is to create a prompt that instructs
 						ChatGPT to generate a level in Science Birds that resembles an
-						English character while ensuring that the level is stable and able
-						to withstand gravity. You are encouraged to use various prompt
+						English capital letter while ensuring that the level is stable and
+						able to withstand gravity. You are encouraged to use various prompt
 						engineering techniques to develop the most effective prompt
 						possible.
 					</Paragraph>
 					<Paragraph>
-						To participate, you must submit your prompt along with instructions
-						on how to generate various character levels. We will then generate a
-						number of samples, each of which will undergo rigorous testing for
-						stability and similarity. Stability will be evaluated by loading the
-						level in Science Birds and ensuring that there is no movement for a
-						duration of 10 seconds. The similarity of each generated level to
-						its corresponding English character will be determined using a
-						state-of-the-art optical character recognition (OCR) model.
+						To participate, you must submit your prompt according to our
+						guidelines. We will then generate a number of samples, each of which
+						will undergo rigorous testing for stability and similarity.
+						Stability will be evaluated by loading the level in Science Birds
+						and ensuring that there is no movement for a duration of 10 seconds.
+						The similarity of each generated level to its corresponding English
+						character will be determined using an open-source optical character
+						recognition (OCR) model. The stability testing system and the
+						instructions to use the OCR model, as well as all the relevant
+						tools, will be provided.
 					</Paragraph>
 					<Paragraph>
 						This competition offers a unique opportunity for the best prompt
 						engineers from around the world to showcase their creativity and
 						skills. Join us in this exciting challenge to push the boundaries of
-						natural language processing and procedural content generation!
+						prompt engineering and procedural content generation!
 					</Paragraph>
 				</Section>
 				<Section>
@@ -100,8 +102,14 @@ export default function Home() {
 				<Section>
 					<SectionHeader>Submission deadline</SectionHeader>
 					<Paragraph>Midterm: 19 May 2023 (23:59 JST)</Paragraph>
+					<Paragraph>Final: 21 July 2023 (23:59 JST)</Paragraph>
 					<Paragraph>
-						Final: 20 May 2023 - 21 July 2023 (23:59 JST) (No extension)
+						If OpenAI releases an update to free-version web-based ChatGPT one
+						week before the deadline (either for the midterm or final), we will
+						extend the deadline by one week to give participants enough time to
+						adjust their prompts. We will notify all participants who have
+						submitted their work by email if this occurs. We will also make an
+						announcement on our website.
 					</Paragraph>
 				</Section>
 				<Section>
@@ -115,6 +123,8 @@ export default function Home() {
 							'Level generation',
 							'Conversational agent',
 							'Large language model',
+							'Angry Birds',
+							'Science Birds',
 						]}
 					/>
 					<HorizontalList

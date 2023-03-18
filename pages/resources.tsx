@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Link from 'next/link';
+import Image from '@/components/Image/Image';
 import PageHeader from '@/components/PageHeader/PageHeader';
 import PageLayout from '@/components/PageLayout/PageLayout';
 import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
@@ -54,8 +54,10 @@ b13, a vertical block whose width is 1 unit and height is 3 units
 3. Tool
 Use the \`ab_drop()\` function to vertically drop a block from layer H such that its center is at slot y and drop earlier blocks representing more bottom parts of the structure.`}
 					</ReactHighlightSyntax>
-					<SectionSubHeader>Tools</SectionSubHeader>
-					<SectionSubSubHeader>ChatGPT</SectionSubSubHeader>
+				</Section>
+				<Section>
+					<SectionHeader>Tools</SectionHeader>
+					<SectionSubHeader>ChatGPT</SectionSubHeader>
 					<ol>
 						<li>
 							Open your preferred web browser (such as Chrome, Firefox, or
@@ -69,25 +71,78 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						</li>
 						<li>Start interact with the model.</li>
 					</ol>
-					<SectionSubSubHeader>Science Birds</SectionSubSubHeader>
+					<SectionSubHeader>Science Birds</SectionSubHeader>
+					<Image src='science_birds.png' alt='Science Birds screenshot' />
 					<Paragraph>
-						Please visit our{' '}
-						<a href='https://github.com/chatgpt4pcg/modified-science-birds'>
-							Modified Science Birds repository
+						This is a modified version of{' '}
+						<a href='https://github.com/lucasnfe/science-birds'>
+							Science Birds
 						</a>{' '}
-						to download the project and find out more detail about it.
+						that supports blocks used in the competition. Additionally, it comes
+						with a converter feature that can convert a text consisting of a
+						series of <code>ab_drop()</code> functions into a valid Science
+						Birds level.
 					</Paragraph>
 					<Paragraph>
-						This repository contains a modified version of the original Science
-						Birds game. The modifications include adjusting the blocks to match
-						the grid specification and adding a plugin called "Grid Level
-						Converter MkIII" that allows users to convert strings of the{' '}
-						<code>ab_drop()</code> function into Science Birds levels.
+						You can download the modified version of Science Birds from{' '}
+						<a href='https://github.com/chatgpt4pcg/modified-science-birds'>
+							https://github.com/chatgpt4pcg/modified-science-birds
+						</a>
+						.
 					</Paragraph>
-					<SectionSubSubHeader>
-						Online Converter
-					</SectionSubSubHeader>
-					<Link href="/converter">Converter</Link>
+					<SectionSubSubHeader>Installation Instruction</SectionSubSubHeader>
+					<ol>
+						<li>Download Unity Hub</li>
+						<li>Open the project in Unity Hub</li>
+						<li>Download the required version of Unity (if needed)</li>
+						<li>Open project in Unity</li>
+					</ol>
+					<Paragraph>
+						For further installation steps, please refer to the{' '}
+						<a href='https://github.com/lucasnfe/science-birds'>
+							Science Birds
+						</a>{' '}
+						repository.
+					</Paragraph>
+					<SectionSubHeader>Online Converter</SectionSubHeader>
+					<Paragraph>
+						The converter is a tool that creates an XML file and image from a
+						series of <code>ab_drop()</code> function string. The resulting XML
+						file provides a structured representation of the functions while the
+						image shows the visual representation of the functions. It is
+						recommended to use the converter on a desktop device to ensure
+						optimal usage and accurate generation of output files.
+					</Paragraph>
+					<Image src='online_converter.png' alt='Online converter screenshot' />
+					<ol>
+						<li>
+							Visit our online converter at{' '}
+							<a href='https://chatgpt4pcg.github.io/converter/xml'>
+								https://chatgpt4pcg.github.io/converter
+							</a>
+							.
+						</li>
+						<li>
+							Paste the text into the first input box, ensuring that it is in
+							the correct format.
+						</li>
+						<li>Click the &quot;Convert&quot; button.</li>
+						<li>
+							You can either copy or download the XML result and test it in
+							Science Birds. To download the image, click the &quot;Download
+							image&quot; button.
+						</li>
+					</ol>
+					<Paragraph>
+						Note that the XML file must be placed in the{' '}
+						<code>Assets/StreamingAssets/Levels</code> folder.
+					</Paragraph>
+					<SectionSubHeader>Online Code Extractor</SectionSubHeader>
+					<Paragraph>TBA</Paragraph>
+					<SectionSubHeader>Online OCR Recognizer</SectionSubHeader>
+					<Paragraph>TBA</Paragraph>
+					<SectionSubHeader>Offline Scripts and Packages</SectionSubHeader>
+					<Paragraph>TBA</Paragraph>
 				</Section>
 			</PageLayout>
 		</>
