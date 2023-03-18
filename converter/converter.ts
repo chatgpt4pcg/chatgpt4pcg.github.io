@@ -10,6 +10,36 @@ export const ONE_CELL_WIDTH_IN_UNITY = new BigNumber('0.2401')
 export const LEVEL_WIDTH_IN_UNITY = new BigNumber('18')
 export const STRUCTURE_STARTING_POSITION = new Position(new BigNumber('2'), new BigNumber('-3.5'))
 
+export function getLeftMostBlock(blocks: Array<Block>): Block {
+  let leftMostBlock = blocks[0]
+  for (const block of blocks) {
+    if (block.position.x.isLessThan(leftMostBlock.position.x)) {
+      leftMostBlock = block
+    }
+  }
+  return leftMostBlock
+}
+
+export function getRightMostBlock(blocks: Array<Block>): Block {
+  let rightMostBlock = blocks[0]
+  for (const block of blocks) {
+    if (block.position.x.isGreaterThan(rightMostBlock.position.x)) {
+      rightMostBlock = block
+    }
+  }
+  return rightMostBlock
+}
+
+export function getHighestBlock(blocks: Array<Block>): Block {
+  let highestBlock = blocks[0]
+  for (const block of blocks) {
+    if (block.position.y.isGreaterThan(highestBlock.position.y)) {
+      highestBlock = block
+    }
+  }
+  return highestBlock
+}
+
 export function shiftBlocksOnGrid(blocks: Array<Block>, grid: number[][]): [Array<Block>, number[][]] {
   const newGrid = grid.map(row => [...row])
   
@@ -35,9 +65,9 @@ export function shiftBlocksOnGrid(blocks: Array<Block>, grid: number[][]): [Arra
   return [blocks, newGrid]
 }
 
-export function getBlocksWithPosition(functionsString: string, gridWidth: number, gridHeight: number): [Array<Block>, number[][]] {
+export function getBlocksWithPosition(functionsString: string): [Array<Block>, number[][]] {
   const blocks = []
-  let grid = initializeGrid(gridWidth, gridHeight)
+  let grid = initializeGrid(GRID_WIDTH, GRID_HEIGHT)
 
   const lines = functionsString.split('\n')
   for (const line of lines) {
@@ -50,7 +80,7 @@ export function getBlocksWithPosition(functionsString: string, gridWidth: number
     const block = getAvailableBlock(blockType);
 
     const position = getBlockPositionOnGrid(blockType, slotPosition, grid)
-    grid = placeBlockOnGrid(grid, position, slotPosition, getBlockSize(blockType))
+    grid = placeBlockOnGrid(grid, position, slotPosition, block.size)
 
     block.position = new Position(new BigNumber(position.x), new BigNumber(position.y))
     blocks.push(block)

@@ -1,10 +1,11 @@
-import Converter from "@/components/Converter/Converter";
-import Head from "next/head";
-import PageHeader from "@/components/PageHeader/PageHeader";
-import PageLayout from "@/components/PageLayout/PageLayout";
-import PageSubHeader from "@/components/PageSubHeader/PageSubHeader";
-import Section from "@/components/Section/Section";
-import SectionHeader from "@/components/SectionHeader/SectionHeader";
+import Converter from '@/components/Converter/Converter';
+import Head from 'next/head';
+import PageHeader from '@/components/PageHeader/PageHeader';
+import PageLayout from '@/components/PageLayout/PageLayout';
+import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
+import Paragraph from '@/components/Paragraph/Paragraph';
+import Section from '@/components/Section/Section';
+import SectionHeader from '@/components/SectionHeader/SectionHeader';
 
 export default function XML() {
 	return (
@@ -26,9 +27,17 @@ export default function XML() {
 					Character-like Level Generation for Science Birds
 				</PageHeader>
 				<Section>
-          <SectionHeader>Converter</SectionHeader>
-          <Converter />
-        </Section>
+					<SectionHeader>Converter</SectionHeader>
+					<Paragraph>
+						The converter is a tool that creates an XML file and image from a
+						series of ab_drop() function string. The resulting XML file provides
+						a structured representation of the functions while the image shows
+						the visual representation of the functions. It is recommended to use
+						the converter on a desktop device to ensure optimal usage and
+						accurate generation of output files.
+					</Paragraph>
+					<Converter />
+				</Section>
 			</PageLayout>
 		</>
 	);

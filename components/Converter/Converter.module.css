@@ -59,3 +59,9 @@
   margin: 16px 0;
   gap: 16px;
 }
+
+@media screen and (max-width: 1024px) {
+  .resultContainer {
+    flex-direction: column;
+  }
+}
