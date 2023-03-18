@@ -85,13 +85,9 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						<code>ab_drop()</code> function into Science Birds levels.
 					</Paragraph>
 					<SectionSubSubHeader>
-						Online Text-to-XML Converter
+						Online Converter
 					</SectionSubSubHeader>
-					<Link href="/converter/xml">Text-to-XML Converter</Link>
-					<SectionSubSubHeader>
-						Online Text-to-Image Converter
-					</SectionSubSubHeader>
-					<Paragraph>TBA</Paragraph>
+					<Link href="/converter">Converter</Link>
 				</Section>
 			</PageLayout>
 		</>

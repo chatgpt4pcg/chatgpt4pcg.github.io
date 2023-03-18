@@ -6,12 +6,14 @@ export class Block {
   type: string;
   rotation: number;
   position: Position;
+  readonly size: Size;
 
   constructor(id: string, type: string, rotation: number) {
     this.id = id;
     this.type = type;
     this.rotation = rotation;
     this.position = new Position();
+    this.size = getBlockSize(BlockType[id.toUpperCase() as keyof typeof BlockType]);
   }
 }
 export enum BlockType {
