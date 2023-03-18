@@ -2,7 +2,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next",
-		"build": "next build && mkdir -p docs/ && next export -o docs/ && touch docs/.nojekyll"
+		"build": "next build && mkdir -p docs/ && next export -o docs/ && touch docs/.nojekyll && git add docs/ && git commit -m 'chore: update for GitHub Page' && git push origin main"
 	},
 	"dependencies": {
 		"bignumber.js": "^9.1.1",
