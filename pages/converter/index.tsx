@@ -1,10 +1,10 @@
+import Converter from "@/components/Converter/Converter";
 import Head from "next/head";
 import PageHeader from "@/components/PageHeader/PageHeader";
 import PageLayout from "@/components/PageLayout/PageLayout";
 import PageSubHeader from "@/components/PageSubHeader/PageSubHeader";
 import Section from "@/components/Section/Section";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
-import XMLConverter from "@/components/XMLConverter/XMLConverter";
 
 export default function XML() {
 	return (
@@ -26,8 +26,8 @@ export default function XML() {
 					Character-like Level Generation for Science Birds
 				</PageHeader>
 				<Section>
-          <SectionHeader>XML Converter</SectionHeader>
-          <XMLConverter />
+          <SectionHeader>Converter</SectionHeader>
+          <Converter />
         </Section>
 			</PageLayout>
 		</>

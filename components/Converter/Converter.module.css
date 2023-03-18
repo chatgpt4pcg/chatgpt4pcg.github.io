@@ -52,36 +52,10 @@
   cursor: pointer;
 }
 
-.grid {
+.resultContainer {
   display: flex;
-  border: 1 solid #e1e1e1;
-  flex-direction: column;
-  gap: 2px;
+  justify-content: space-between;
   align-items: center;
-}
-
-.gridRow {
-  display: flex;
-  gap: 2px;
-}
-
-.gridCell {
-  display: flex;
-  width: 32px;
-  height: 32px;
-  background: #e1e1e1;
-}
-
-.activeGridCell {
-  display: flex;
-  width: 32px;
-  height: 32px;
-  background: #0E8388;
-}
-
-@media screen and (max-width: 768px) {
-  .gridCell, .activeGridCell {
-    width: 18px;
-    height: 18px;
-  }
+  margin: 16px 0;
+  gap: 16px;
 }
