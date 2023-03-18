@@ -30,40 +30,24 @@ export default function Rules() {
 					<SectionHeader>General</SectionHeader>
 					<ol>
 						<li>
-							Any form of cheating, as determined by the organizers, will result
-							in automatic disqualification from the competition.
-							<ol>
-								<li>
-									Example of cheating
-									<ol>
-										<li>
-											Plagiarism: submitting work that is not original and
-											claiming it as one&#39;s own.
-										</li>
-										<li>
-											Collaboration: working with someone outside of the allowed
-											team to create a submission.
-										</li>
-										<li>
-											Data manipulation: altering data to achieve better results
-											or to make the submission appear more impressive.
-										</li>
-										<li>
-											Exploiting loopholes: taking advantage of unclear rules or
-											guidelines to gain an unfair advantage.
-										</li>
-										<li>
-											Intended harm to the computing system used to conduct the
-											evaluation process.
-										</li>
-									</ol>
-								</li>
-							</ol>
+							<Paragraph>
+								Any form of cheating, as determined by the organizers, will
+								result in automatic disqualification from the competition.
+							</Paragraph>
 						</li>
 						<li>
-							The organizers reserve the right to update the rules and details
-							of the competition at any time. Any changes will be communicated
-							through our website.
+							<Paragraph>
+								Any intended attempts to harm the computing system used to
+								conduct the evaluation process will result in automatic
+								disqualification.
+							</Paragraph>
+						</li>
+						<li>
+							<Paragraph>
+								The organizers reserve the right to update the rules and details
+								of the competition at any time. Any changes will be communicated
+								through our website.
+							</Paragraph>
 						</li>
 					</ol>
 				</Section>

@@ -35,15 +35,15 @@ export default function Rules() {
 						which includes subjecting them to 10 trials for each of the 26
 						English uppercase alphabets. The levels generated for each character
 						will be evaluated based on their similarity and stability, and
-						scored using the criteria outlined in the scoring policy. The entire
-						evaluation process will be conducted using automated scripts and
-						programs, which are accessible online via the{' '}
+						scored using the criteria outlined in the scoring policy given
+						below. The entire evaluation process will be conducted using
+						automated scripts and programs, which are accessible online via the{' '}
 						<Link href='/resources'>Resources</Link> page.
 					</Paragraph>
 					<Paragraph>
 						Please note that the evaluation process will be conducted twice, at
 						midterm and final stages. The number of trials and characters in the
-						evaluation set may be adjusted based on the number of participants.
+						evaluation set may be adjusted based on the number of entries.
 					</Paragraph>
 					<SectionSubHeader>Evaluation Set</SectionSubHeader>
 					<Paragraph>All 26 alphabetical uppercase characters.</Paragraph>
@@ -54,35 +54,28 @@ export default function Rules() {
 					<Paragraph>In each trial of the specific character:</Paragraph>
 					<ol>
 						<li>
-							Stability: A stable level is a level that can be completed without
-							crashing or unexpected errors. Each stable level will receive
-							<strong>
-								<code>1</code>
-							</strong>{' '}
-							point.
+							Stability: A stable level is one that can be constructed by{' '}
+							<a href='https://github.com/chatgpt4pcg/modified-science-birds'>
+								our modified version of Science Birds
+							</a>{' '}
+							without pieces moving due to the game&quot;s gravity within the
+							first 10 seconds of initialization. Each level will receive{' '}
+							<code>1</code> point if stable; otherwise, <code>0</code>.
 						</li>
 						<li>
-							Similarity: The similarity score reflects the degree of similarity
-							between the submitted level and the target character. Each similar
-							level will receive{' '}
-							<strong>
-								<code>1</code>
-							</strong>{' '}
-							point.
+							The similarity score reflects the highest confidence of the OCR
+							model in predicting the correct character for the submitted level
+							compared to the target character. Each level will receive a
+							continuous value between <code>0</code> and <code>1</code>, which
+							represents the highest confidence that the model has in correctly
+							predicting the target character. If the model is unable to detect
+							the level as a character or if the predicted character with the
+							highest confidence is incorrect, the level will receive{' '}
+							<code>0</code> points.
 						</li>
 					</ol>
-					<Paragraph>
-						Additionally, the overall score for each submitted prompt will be
-						the sum of the stability and similarity points earned across all
-						characters and trials. The maximum possible score is 520 (10 trials
-						x 26 characters x 2 points per trial).
-					</Paragraph>
 					<SectionSubHeader>Ranking Policy</SectionSubHeader>
-					<Paragraph>
-						We will determine the rankings based on the scores obtained by each
-						team. The team with the highest score will be ranked first, followed
-						by the team with the second-highest score, and so on.
-					</Paragraph>
+					<Paragraph>Each team will be ranked based on its score.</Paragraph>
 					<SectionSubSubHeader>Tie-breaking Policy</SectionSubSubHeader>
 					<Paragraph>
 						In the event of a tie in the ranking, the following criteria will be
@@ -126,9 +119,12 @@ export default function Rules() {
 							with features to
 							<ol>
 								<li>Enable/disable gravity</li>
-								<li>Enable/disable background</li>
-								<li>Automatically assess for stability</li>
-								<li>Automatically export image without background</li>
+								<li>Enable/disable the background</li>
+								<li>Automatically assess the stability</li>
+								<li>
+									Automatically export images using black-textured blocks on a
+									white background for similarity testing
+								</li>
 							</ol>
 						</li>
 						<li>
@@ -136,7 +132,7 @@ export default function Rules() {
 							<a href='https://tesseract.projectnaptha.com'>teserract.js</a>
 						</li>
 						<li>
-							Automation scripts available on our{' '}
+							Automation scripts are available on our{' '}
 							<Link href='/resources'>Resources</Link> page.
 						</li>
 					</ol>
@@ -177,8 +173,8 @@ export default function Rules() {
 					<SectionHeader>Evaluation Process</SectionHeader>
 					<ol>
 						<li>
-							Qualification scripts will first run to check for rule violations,
-							including:
+							Qualification scripts will be first run to check for rule
+							violations, including:
 							<ol>
 								<li>Whether the prompt contains disallowed characters.</li>
 								<li>
@@ -191,10 +187,10 @@ export default function Rules() {
 							</ol>
 						</li>
 						<li>
-							The response gathering script will load each qualified team&#39;s
-							prompt and replace <code>&lt;OBJECT&gt;</code> with the target
-							character. Then it will contact the ChatGPT API for all characters
-							for a specific number of trials.
+							TThe response gathering script will load each qualified team's
+							prompt and repeat the following two steps for each character --
+							(1) replace <code>&lt;OBJECT&gt;</code> with the target character
+							and (2) contact the ChatGPT API for a specific number of trials.
 							<ol>
 								<li>
 									Each trial will always start from scratch and will contain no
@@ -212,9 +208,13 @@ export default function Rules() {
 							a Science Birds level.
 						</li>
 						<li>
-							A modified version of Science Birds will load all levels and
-							assess their stability. Then it will record the stability result
-							and produce an image of the structure with a white background.
+							<a href='https://github.com/chatgpt4pcg/modified-science-birds'>
+								A modified version of Science Birds
+							</a>{' '}
+							will individually load all levels and assess their stability. The
+							results of stability will be recorded, and an image of the
+							structure with black-textured blocks on a white background will be
+							produced by the program.
 						</li>
 						<li>
 							The similarity checking script will load the image of the

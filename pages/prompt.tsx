@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from '@/components/Image/Image';
+import Link from 'next/link';
 import PageHeader from '@/components/PageHeader/PageHeader';
 import PageLayout from '@/components/PageLayout/PageLayout';
 import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
@@ -56,142 +57,147 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 					<SectionHeader>Prompt Rules</SectionHeader>
 					<ol>
 						<li>
-							The prompt must be written in English using only alphanumeric
-							characters and the following symbols: /, , +, -, *, `, &#39;,
-							&quot;, ., ,, !, @, #, $, %, ^, &amp;, (, ), _, =, [, ], {'{'},{' '}
-							{'}'}, |, &lt;, and &gt;.
-						</li>
-						<li>The maximum word count for the prompt is <strong>900 words</strong>.</li>
-						<li>
-							Prompts exceeding this limit or containing disallowed characters
-							will result in automatic disqualification.
-						</li>
-						<li>
-							Responses from the ChatGPT API must contain code blocks indicated
-							by the presence of three backticks (```) in the output. If no code
-							blocks are present, the response will be skipped, and its score
-							will be 0.
-						</li>
-						<li>
-							The prompt must include{' '}
-							<strong>
-								<code>&lt;OBJECT&gt;</code>
-							</strong>{' '}
-							to indicate a section of the prompt that will be replaced with
-							each target character, such as &quot;A,&quot; &quot;B,&quot; or
-							&quot;X.&quot; Prompts without{' '}
-							<strong>
-								<code>&lt;OBJECT&gt;</code>
-							</strong>{' '}
-							will not be assessed.
-						</li>
-						<li>
-							Participants must use only the
-							<strong>
-								<code>ab_drop()</code>
-							</strong>{' '}
-							function in their response. The use of other function names or
-							functions is not allowed. If intermediate results are obtained
-							using other functions, participants must provide a script to
-							convert them into a series of
-							<strong>
-								<code>ab_drop()</code>
-							</strong>{' '}
-							functions.
+							<Paragraph>
+								The prompt must be written in English using only alphanumeric
+								characters and the following symbols: /, , +, -, *, `, &#39;,
+								&quot;, ., ,, !, @, #, $, %, ^, &amp;, (, ), _, =, [, ], {'{'},{' '}
+								{'}'}, |, &lt;, and &gt;.
+							</Paragraph>
 						</li>
 						<li>
 							<Paragraph>
-								The definition of the{' '}
-								<strong>
-									<code>ab_drop()</code>
-								</strong>{' '}
-								function is as follows:
+								The maximum word count for the prompt is{' '}
+								<strong>900 words</strong>. The number of words will be counted
+								by our tool which has the same algorithm as the online version
+								provided on the <Link href='/resources'>Resource</Link> page.
+							</Paragraph>
+						</li>
+						<li>
+							<Paragraph>
+								Prompts exceeding this limit or containing disallowed characters
+								will result in automatic disqualification.
+							</Paragraph>
+						</li>
+						<li>
+							<Paragraph>
+								Responses from the ChatGPT API must contain code blocks
+								indicated by the presence of three backticks (```) in the
+								output. If no code blocks are present, the response will be
+								skipped, and its score will be 0.
+							</Paragraph>
+						</li>
+						<li>
+							<Paragraph>
+								The prompt must include <code>&lt;OBJECT&gt;</code> to indicate
+								a section of the prompt that will be replaced with each target
+								character, such as &quot;A,&quot; &quot;B,&quot; or
+								&quot;X.&quot; Prompts without <code>&lt;OBJECT&gt;</code> will
+								not be assessed.
+							</Paragraph>
+						</li>
+						<li>
+							<Paragraph>
+								The response to your prompt from ChatGPT must explicitly include
+								a series of <code>ab_drop()</code> , which will be executed in
+								that order by our tool to generate a character-like structure in
+								a Science Birds level.
+							</Paragraph>
+						</li>
+						<li>
+							<Paragraph>
+								The definition of the <code>ab_drop()</code> function is as
+								follows:
 							</Paragraph>
 							<ol>
 								<li>
-									It drops a block vertically from the top so that its center is
-									located at slot{' '}
-									<strong>
-										<code>x_position</code>.
-									</strong>
+									<Paragraph>
+										It drops a block vertically from the top so that its center
+										is located at slot <code>x_position</code>.
+									</Paragraph>
+								</li>
+								<li>
+									<Paragraph>
+										This function works on the following assumptions:
+									</Paragraph>
+									<ol>
+										<li>
+											<Paragraph>
+												A 2D grid with equal cell size and a width (
+												<code>W</code>) of 20 cells and a height (<code>H</code>
+												) of 16 cells is a two-dimensional arrangement of
+												rectangular cells, each of which has the same size and
+												dimensions.
+											</Paragraph>
+										</li>
+										<li>
+											<Paragraph>
+												A coordinate <code>(x, y)</code> where <code>x</code>{' '}
+												represents the horizontal index and <code>y</code>{' '}
+												represents the vertical index. <code>(0, 0)</code>
+												denotes the bottom-left corner cell of the grid and
+												<code>(W-1, H-1)</code> denotes the top-right corner
+												cell of the grid.
+											</Paragraph>
+										</li>
+										<li>
+											<Paragraph>
+												A cell on the grid has a size of 1x1 cell. Each cell has
+												a unique <code>(x, y)</code> coordinate associated with
+												it.
+											</Paragraph>
+										</li>
+									</ol>
 								</li>
 								<li>
 									<Paragraph>It has two parameters:</Paragraph>
 									<ol>
 										<li>
 											<Paragraph>
-												<strong>
-													<code>block_type</code>
-												</strong>
-												: a value that indicates the type of block to be placed.
-												The possible values are
-												<strong>
-													<code>b11</code>
-												</strong>
-												,{' '}
-												<strong>
-													<code>b13</code>
-												</strong>
-												, and{' '}
-												<strong>
-													<code>b31</code>
-												</strong>
-												.
-											</Paragraph>
-											<Paragraph>
-												<Image
-													src='combined.png'
-													alt='Combined blocks'
-													noBorderRadius
-                          width={24*4}
-												/>
+												<code>block_type</code>: a value that indicates the type
+												of block to be placed. The possible values are
+												<code>b11</code>, <code>b13</code>, and <code>b31</code>
+												. An invalid block type will result in an error.
 											</Paragraph>
 											<ol>
 												<li>
 													<Paragraph>
-														<strong>
-															<code>b11</code>
-														</strong>{' '}
-														denotes a square block whose size is 1x1 cell.
+														<code>b11</code> denotes a square block whose size
+														is 1x1 cell.
 													</Paragraph>
 													<Paragraph>
 														<Image
 															src='b11.png'
 															alt='b11 blocks'
 															noBorderRadius
-                              width={24}
+															width={24}
 														/>
 													</Paragraph>
 												</li>
 												<li>
 													<Paragraph>
-														<strong>
-															<code>b13</code>
-														</strong>{' '}
-														denotes a column block whose size is 1x3 cells.
+														<code>b13</code> denotes a column block whose size
+														is 1x3 cells.
 													</Paragraph>
 													<Paragraph>
 														<Image
 															src='b13.png'
 															alt='b13 blocks'
 															noBorderRadius
-                              width={24}
+															width={24}
 														/>
 													</Paragraph>
 												</li>
 												<li>
 													<Paragraph>
-														<strong>
-															<code>b31</code>
-														</strong>{' '}
-														denotes a row block whose size is 3x1 cells.
+														<code>b31</code> denotes a row block whose size is
+														3x1 cells.
 													</Paragraph>
 													<Paragraph>
 														<Image
 															src='b31.png'
 															alt='b31 blocks'
 															noBorderRadius
-                              width={24*3}
+															width={24 * 3}
 														/>
 													</Paragraph>
 												</li>
@@ -199,43 +205,17 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 										</li>
 										<li>
 											<Paragraph>
-												<strong>
-													<code>x_position</code>
-												</strong>
-												: a horizontal index of a grid cell, where
-												<strong>
-													<code>0</code>
-												</strong>{' '}
-												represents the leftmost cell of the grid, and{' '}
-												<strong>
-													<code>W-1</code>
-												</strong>{' '}
-												represents the rightmost cell of the grid. The
-												<strong>
-													<code>x_position</code>
-												</strong>{' '}
+												<code>x_position</code>: a horizontal index of a grid
+												cell, where <code>0</code> represents the leftmost cell
+												of the grid, and <code>W-1</code> represents the
+												rightmost cell of the grid. The <code>x_position</code>{' '}
 												parameter indicates the center pivot point of the block
-												being placed. For example, if
-												<strong>
-													<code>b31</code>
-												</strong>{' '}
-												is placed at
-												<strong>
-													<code>x_position=4</code>
-												</strong>
-												, it will occupy cells{' '}
-												<strong>
-													<code>(3, 0)</code>
-												</strong>
-												,{' '}
-												<strong>
-													<code>(4, 0)</code>
-												</strong>
-												, and{' '}
-												<strong>
-													<code>(5, 0)</code>
-												</strong>
-												.
+												being placed. For example, if <code>b31</code> is the
+												only block in the level and is placed at{' '}
+												<code>x_position=4</code>, it will occupy cells{' '}
+												<code>(3, 0)</code>, <code>(4, 0)</code>, and{' '}
+												<code>(5, 0)</code>. An invalid position will result in
+												an error.
 											</Paragraph>
 										</li>
 									</ol>

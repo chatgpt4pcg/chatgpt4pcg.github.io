@@ -117,8 +117,8 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 					<ol>
 						<li>
 							Visit our online converter at{' '}
-							<a href='https://chatgpt4pcg.github.io/converter/xml'>
-								https://chatgpt4pcg.github.io/converter
+							<a href='/tools/converter'>
+								https://chatgpt4pcg.github.io/tools/converter
 							</a>
 							.
 						</li>
@@ -137,6 +137,8 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						Note that the XML file must be placed in the{' '}
 						<code>Assets/StreamingAssets/Levels</code> folder.
 					</Paragraph>
+					<SectionSubHeader>Online Word Counter</SectionSubHeader>
+					<Paragraph>TBA</Paragraph>
 					<SectionSubHeader>Online Code Extractor</SectionSubHeader>
 					<Paragraph>TBA</Paragraph>
 					<SectionSubHeader>Online OCR Recognizer</SectionSubHeader>

@@ -47,9 +47,7 @@ export default function Converter() {
 		<form className={styles.form} onSubmit={submitHandler}>
 			<div className={styles.formField}>
 				<label className={styles.fieldLabel} htmlFor='raw-input-field'>
-					<SectionSubHeader>
-						String Input
-					</SectionSubHeader>
+					<SectionSubHeader>String Input</SectionSubHeader>
 				</label>
 				<textarea
 					id='raw-input-field'
