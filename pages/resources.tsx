@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from '@/components/Image/Image';
+import Link from 'next/link';
 import PageHeader from '@/components/PageHeader/PageHeader';
 import PageLayout from '@/components/PageLayout/PageLayout';
 import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
@@ -117,9 +118,9 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 					<ol>
 						<li>
 							Visit our online converter at{' '}
-							<a href='/tools/converter'>
+							<Link href='/tools/converter'>
 								https://chatgpt4pcg.github.io/tools/converter
-							</a>
+							</Link>
 							.
 						</li>
 						<li>
@@ -138,7 +139,20 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						<code>Assets/StreamingAssets/Levels</code> folder.
 					</Paragraph>
 					<SectionSubHeader>Online Word Counter</SectionSubHeader>
-					<Paragraph>TBA</Paragraph>
+					<Paragraph>
+						The word counter web app is a quick and efficient tool that uses the{' '}
+						<a href='https://www.npmjs.com/package/words-count'>
+							<code>words-count</code>
+						</a>{' '}
+						package to accurately count the number of words in your prompt.
+					</Paragraph>
+					<Paragraph>
+						Visit our online word counter at{' '}
+						<Link href='/tools/word-counter'>
+							https://chatgpt4pcg.github.io/tools/word-counter
+						</Link>
+						.
+					</Paragraph>
 					<SectionSubHeader>Online Code Extractor</SectionSubHeader>
 					<Paragraph>TBA</Paragraph>
 					<SectionSubHeader>Online OCR Recognizer</SectionSubHeader>
