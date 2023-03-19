@@ -27,6 +27,12 @@ export default function Home() {
 				<PageHeader>
 					Character-like Level Generation for Science Birds
 				</PageHeader>
+				<PageHeader>
+					<span className='red'>
+						(Please stay tuned.<wbr /> We will finalize this competition site around
+						March 20, 2023.)
+					</span>
+				</PageHeader>
 				<Image src='logo.png' alt='Competition logo' />
 				<Section>
 					<SectionHeader>Organizers</SectionHeader>

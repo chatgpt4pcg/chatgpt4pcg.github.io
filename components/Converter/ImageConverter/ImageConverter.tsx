@@ -37,12 +37,10 @@ export default function ImageConverter({
 		canvasContext.canvas.width = CANVAS_WIDTH;
 		canvasContext.canvas.height = CANVAS_HEIGHT;
 		canvasContext.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-		canvasContext.fillStyle = 'white';
 
 		imageCanvasContext.canvas.width = CANVAS_WIDTH;
 		imageCanvasContext.canvas.height = CANVAS_HEIGHT;
-		imageCanvasContext.fillStyle = 'white';
-		imageCanvasContext.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+		imageCanvasContext.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
 		canvasContext.strokeStyle = 'lightgray';
 
@@ -75,7 +73,7 @@ export default function ImageConverter({
 
 		const numEmptyCellHorizontal = numEmptyCellOnLeft + numEmptyCellOnRight;
 		const horizontalShift =
-			Math.ceil(numEmptyCellHorizontal / 2) * ONE_GRID_CELL_SIZE;
+			Math.floor(numEmptyCellHorizontal / 2) * ONE_GRID_CELL_SIZE;
 		const verticalShift =
 			Math.floor(numEmptyCellVertical / 2) * ONE_GRID_CELL_SIZE;
 
@@ -120,7 +118,7 @@ export default function ImageConverter({
 
 		const numEmptyCellHorizontal = numEmptyCellOnLeft + numEmptyCellOnRight;
 		const horizontalShift =
-			Math.ceil(numEmptyCellHorizontal / 2) * ONE_GRID_CELL_SIZE;
+			Math.floor(numEmptyCellHorizontal / 2) * ONE_GRID_CELL_SIZE;
 		const verticalShift =
 			Math.floor(numEmptyCellVertical / 2) * ONE_GRID_CELL_SIZE;
 
