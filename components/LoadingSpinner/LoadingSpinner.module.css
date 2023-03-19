@@ -1,0 +1,24 @@
+.spinner {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}
+.spinner:after {
+  content: " ";
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #e1e1e1;
+  border-color: #e1e1e1 transparent #e1e1e1 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

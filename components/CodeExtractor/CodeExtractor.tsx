@@ -11,12 +11,12 @@ export default function CodeExtractor() {
 	const [extractedCode, setExtractedCode] = useState('');
 
 	useEffect(() => {
-		window.localStorage.getItem('fileCounter') &&
-			setFileCounter(parseInt(window.localStorage.getItem('fileCounter')!));
+		window.localStorage.getItem('codeFileCounter') &&
+			setFileCounter(parseInt(window.localStorage.getItem('codeFileCounter')!));
 	}, []);
 
 	useEffect(() => {
-		window.localStorage.setItem('fileCounter', fileCounter.toString());
+		window.localStorage.setItem('codeFileCounter', fileCounter.toString());
 	}, [fileCounter]);
 
 	useEffect(() => {
