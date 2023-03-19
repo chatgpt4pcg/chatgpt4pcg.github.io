@@ -69,7 +69,15 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 								The maximum word count for the prompt is{' '}
 								<strong>900 words</strong>. The number of words will be counted
 								by our tool which has the same algorithm as the online version
-								provided on the <Link href='/resources'>Resource</Link> page.
+								provided on the <Link href='/resources'>Resources</Link> page.
+							</Paragraph>
+						</li>
+						<li>
+							<Paragraph>
+								Prompts must be designed for a one-round conversation, meaning
+								that there should be only one user request (the prompt) and one
+								response from ChatGPT. This ensures simplicity and fairness in
+								this year&quot;s competition.
 							</Paragraph>
 						</li>
 						<li>
@@ -82,15 +90,42 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 							<Paragraph>
 								Responses from the ChatGPT API must contain code blocks
 								indicated by the presence of three backticks (```) in the
-								output. If no code blocks are present, the response will be
-								skipped, and its score will be 0.
+								output.
 							</Paragraph>
+							<ol>
+								<li>
+									<Paragraph>
+										The code extraction script will only extract the content
+										between the last pair of three backticks (```).
+									</Paragraph>
+								</li>
+								<li>
+									<Paragraph>
+										The extracted code must not contain any loops. Any use of
+										loops will be ignored, resulting in only one instance of the
+										loop's content. The code should not use variables in the
+										call of <code>ab_drop()</code> function, as this will result
+										in an error and that response will be skipped for the rest
+										of the evaluation process. To check the behavior of the code
+										extractor, please refer to the{' '}
+										<Link href='/resources'>Resources</Link> page where you can
+										find an online tool.
+									</Paragraph>
+								</li>
+								<li>
+									<Paragraph>
+										If no code blocks are present or extracted code results in
+										an empty string, the response will be skipped, and its score
+										will be 0.
+									</Paragraph>
+								</li>
+							</ol>
 						</li>
 						<li>
 							<Paragraph>
 								The prompt must include <code>&lt;OBJECT&gt;</code> to indicate
-								a section of the prompt that will be replaced with each target
-								character, such as &quot;A,&quot; &quot;B,&quot; or
+								a section of the prompt that will be replaced by us with each
+								target character, such as &quot;A,&quot; &quot;B,&quot; or
 								&quot;X.&quot; Prompts without <code>&lt;OBJECT&gt;</code> will
 								not be assessed.
 							</Paragraph>
@@ -117,32 +152,31 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 								</li>
 								<li>
 									<Paragraph>
-										This function works on the following assumptions:
+										This function works on the following settings:
 									</Paragraph>
 									<ol>
 										<li>
 											<Paragraph>
-												A 2D grid with equal cell size and a width (
-												<code>W</code>) of 20 cells and a height (<code>H</code>
-												) of 16 cells is a two-dimensional arrangement of
-												rectangular cells, each of which has the same size and
-												dimensions.
+												A character is placed on a 2D grid with a width (
+												<code>W</code>) of 20 columns and a height (
+												<code>H</code>) of 16 rows. The grid is formed by 320
+												equal-size cells.
 											</Paragraph>
 										</li>
 										<li>
 											<Paragraph>
-												A coordinate <code>(x, y)</code> where <code>x</code>{' '}
-												represents the horizontal index and <code>y</code>{' '}
-												represents the vertical index. <code>(0, 0)</code>
-												denotes the bottom-left corner cell of the grid and
-												<code>(W-1, H-1)</code> denotes the top-right corner
-												cell of the grid.
+												Coordinates <code>(x, y)</code> are used to represent
+												the positions in the grid, where <code>x</code> and{' '}
+												<code>y</code> show the horizontal and vertical indices
+												of cells, respectively. For example, <code>(0, 0)</code>{' '}
+												denotes the bottom-left corner cell of the grid, and{' '}
+												<code>(W-1, H-1)</code> is the top-right corner cell.
 											</Paragraph>
 										</li>
 										<li>
 											<Paragraph>
-												A cell on the grid has a size of 1x1 cell. Each cell has
-												a unique <code>(x, y)</code> coordinate associated with
+												A cell on the grid has a size of 1x1. Each cell has a
+												unique <code>(x, y)</code> coordinate associated with
 												it.
 											</Paragraph>
 										</li>
@@ -162,7 +196,7 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 												<li>
 													<Paragraph>
 														<code>b11</code> denotes a square block whose size
-														is 1x1 cell.
+														is 1x1.
 													</Paragraph>
 													<Paragraph>
 														<Image
@@ -176,7 +210,7 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 												<li>
 													<Paragraph>
 														<code>b13</code> denotes a column block whose size
-														is 1x3 cells.
+														is 1x3.
 													</Paragraph>
 													<Paragraph>
 														<Image
@@ -190,7 +224,7 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 												<li>
 													<Paragraph>
 														<code>b31</code> denotes a row block whose size is
-														3x1 cells.
+														3x1.
 													</Paragraph>
 													<Paragraph>
 														<Image
@@ -206,21 +240,44 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 										<li>
 											<Paragraph>
 												<code>x_position</code>: a horizontal index of a grid
-												cell, where <code>0</code> represents the leftmost cell
-												of the grid, and <code>W-1</code> represents the
-												rightmost cell of the grid. The <code>x_position</code>{' '}
-												parameter indicates the center pivot point of the block
-												being placed. For example, if <code>b31</code> is the
-												only block in the level and is placed at{' '}
-												<code>x_position=4</code>, it will occupy cells{' '}
-												<code>(3, 0)</code>, <code>(4, 0)</code>, and{' '}
-												<code>(5, 0)</code>. An invalid position will result in
-												an error.
+												cell, where <code>0</code> represents the leftmost
+												column of the grid, and <code>W-1</code> represents the
+												rightmost column of the grid. The{' '}
+												<code>x_position</code> parameter indicates the center
+												pivot point of the block being placed. For example, if{' '}
+												<code>b31</code> is the only block in the level and is
+												placed at <code>x_position=4</code>, it will occupy
+												cells <code>(3, 0)</code>, <code>(4, 0)</code>, and{' '}
+												<code>(5, 0)</code>. An invalid position, like the
+												position where a block of interest intrudes on the grid
+												boundary, will result in an error.
 											</Paragraph>
 										</li>
 									</ol>
 								</li>
 							</ol>
+						</li>
+						<li>
+							<Paragraph>
+								We do not encourage the use of pre-defined prompting styles that
+								rely solely on if-then rules, as shown in the example.
+							</Paragraph>
+							<ReactHighlightSyntax
+								language={'PlainText'}
+								theme={'Base16Darcula'}
+								copy={true}
+								copyBtnTheme={'Dark'}
+							>{`If the task is to generate the character "I" then just do the following.
+ab_drop(b13, 9)
+ab_drop(b13, 9)
+ab_drop(b31, 9
+ab_drop(b11, 9)
+else if the task is to generate the character "U" then just do the following
+ab_drop(b11, 7)
+ab_drop(b13, 7
+ab_drop(b31, 9)
+ab_drop(b11, 11)
+ab_drop(b13, 11)`}</ReactHighlightSyntax>
 						</li>
 					</ol>
 				</Section>

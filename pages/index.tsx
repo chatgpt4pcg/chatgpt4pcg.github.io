@@ -84,7 +84,7 @@ export default function Home() {
 						guidelines. We will then generate a number of samples, each of which
 						will undergo rigorous testing for stability and similarity.
 						Stability will be evaluated by loading the level in Science Birds
-						and ensuring that there is no movement for a duration of 10 seconds.
+						and examining that there is no movement for a duration of 10 seconds.
 						The similarity of each generated level to its corresponding English
 						character will be determined using an open-source optical character
 						recognition (OCR) model. The stability testing system and the

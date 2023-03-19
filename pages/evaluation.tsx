@@ -43,7 +43,7 @@ export default function Rules() {
 					<Paragraph>
 						Please note that the evaluation process will be conducted twice, at
 						midterm and final stages. The number of trials and characters in the
-						evaluation set may be adjusted based on the number of entries.
+						evaluation set may be adjusted based on the number of teams.
 					</Paragraph>
 					<SectionSubHeader>Evaluation Set</SectionSubHeader>
 					<Paragraph>All 26 alphabetical uppercase characters.</Paragraph>
@@ -76,7 +76,7 @@ export default function Rules() {
 					</ol>
 					<SectionSubHeader>Ranking Policy</SectionSubHeader>
 					<Paragraph>Each team will be ranked based on its score.</Paragraph>
-					<SectionSubSubHeader>Tie-breaking Policy</SectionSubSubHeader>
+					<SectionSubHeader>Tie-breaking Policy</SectionSubHeader>
 					<Paragraph>
 						In the event of a tie in the ranking, the following criteria will be
 						used to break the tie in the following order:
@@ -189,8 +189,9 @@ export default function Rules() {
 						<li>
 							TThe response gathering script will load each qualified team's
 							prompt and repeat the following two steps for each character --
-							(1) replace <code>&lt;OBJECT&gt;</code> with the target character
-							and (2) contact the ChatGPT API for a specific number of trials.
+							(1) replacing <code>&lt;OBJECT&gt;</code> with the target
+							character and (2) contacting the ChatGPT API for a specific number
+							of trials.
 							<ol>
 								<li>
 									Each trial will always start from scratch and will contain no
@@ -212,19 +213,17 @@ export default function Rules() {
 								A modified version of Science Birds
 							</a>{' '}
 							will individually load all levels and assess their stability. The
-							results of stability will be recorded, and an image of the
-							structure with black-textured blocks on a white background will be
-							produced by the program.
+							results of stability will be recorded, and for each stable level
+							an image of the structure with black-textured blocks on a white
+							background will be produced by the program.
 						</li>
 						<li>
-							The similarity checking script will load the image of the
-							structure and pass it through an OCR model. It will then record
-							the similarity result.
+							The similarity checking script will load each image and pass it
+							through an OCR model. It will then record the similarity result.
 						</li>
 						<li>
-							Finally, the scoring and ranking script will load all stable and
-							similarity results and produce the final rank and score result for
-							all teams.
+							Finally, the scoring and ranking script will load all similarity
+							results and produce the final rank and score result for all teams.
 						</li>
 					</ol>
 				</Section>

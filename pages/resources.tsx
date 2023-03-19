@@ -1,3 +1,4 @@
+import Divider from '@/components/Divider/Divider';
 import Head from 'next/head';
 import Image from '@/components/Image/Image';
 import Link from 'next/link';
@@ -71,6 +72,7 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						</li>
 						<li>Start interact with the model.</li>
 					</ol>
+					<Divider />
 					<SectionSubHeader>Science Birds</SectionSubHeader>
 					<Image src='science_birds.png' alt='Science Birds screenshot' />
 					<Paragraph>
@@ -104,6 +106,8 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						</a>{' '}
 						repository.
 					</Paragraph>
+					<Divider />
+
 					<SectionSubHeader>Online Converter</SectionSubHeader>
 					<Paragraph>
 						The converter is a tool that creates an XML file and image from a
@@ -137,6 +141,7 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						Note that the XML file must be placed in the{' '}
 						<code>Assets/StreamingAssets/Levels</code> folder.
 					</Paragraph>
+					<Divider />
 					<SectionSubHeader>Online Word Counter</SectionSubHeader>
 					<Paragraph>
 						The word counter web app is a quick and efficient tool that uses the{' '}
@@ -152,12 +157,37 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						</Link>
 						.
 					</Paragraph>
+					<Divider />
 					<SectionSubHeader>Online Code Extractor</SectionSubHeader>
-					<Paragraph>TBA</Paragraph>
+					<Paragraph>
+						Visit our online code extractor at{' '}
+						<Link href='/tools/code'>
+							https://chatgpt4pcg.github.io/tools/code
+						</Link>
+						.
+					</Paragraph>
+					<Divider />
 					<SectionSubHeader>Online OCR Recognizer</SectionSubHeader>
-					<Paragraph>TBA</Paragraph>
+					<Paragraph>
+						Please try the online OCR tool on{' '}
+						<a href='https://tesseract.projectnaptha.com'>
+							the package's website.
+						</a>
+					</Paragraph>
+					<Divider />
 					<SectionSubHeader>Offline Scripts and Packages</SectionSubHeader>
-					<Paragraph>TBA</Paragraph>
+					<Paragraph>
+						Code Extraction Script -{' '}
+						<a href='https://github.com/chatgpt4pcg/code-extraction-script'>
+							https://github.com/chatgpt4pcg/code-extraction-script
+						</a>
+					</Paragraph>
+					<Paragraph>
+						Similarity Checking Script -{' '}
+						<a href='https://github.com/chatgpt4pcg/similarity-checking-script'>
+							https://github.com/chatgpt4pcg/similarity-checking-script
+						</a>
+					</Paragraph>
 				</Section>
 			</PageLayout>
 		</>
