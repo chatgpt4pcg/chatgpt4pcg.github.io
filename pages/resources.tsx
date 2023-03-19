@@ -169,10 +169,11 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 					<Divider />
 					<SectionSubHeader>Online OCR Recognizer</SectionSubHeader>
 					<Paragraph>
-						Please try the online OCR tool on{' '}
-						<a href='https://tesseract.projectnaptha.com'>
-							the package's website.
-						</a>
+					Visit our online OCR recognizer at{' '}
+						<Link href='/tools/ocr'>
+							https://chatgpt4pcg.github.io/tools/ocr
+						</Link>
+						.
 					</Paragraph>
 					<Divider />
 					<SectionSubHeader>Offline Scripts and Packages</SectionSubHeader>
