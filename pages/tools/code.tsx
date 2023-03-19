@@ -1,12 +1,12 @@
+import CodeExtractor from '@/components/CodeExtractor/CodeExtractor';
 import Head from 'next/head';
 import PageHeader from '@/components/PageHeader/PageHeader';
 import PageLayout from '@/components/PageLayout/PageLayout';
 import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
-import Paragraph from '@/components/Paragraph/Paragraph';
 import Section from '@/components/Section/Section';
 import SectionHeader from '@/components/SectionHeader/SectionHeader';
 
-export default function CodeExtractor() {
+export default function CodeExtractorPage() {
 	return (
 		<>
 			<Head>
@@ -27,9 +27,7 @@ export default function CodeExtractor() {
 				</PageHeader>
 				<Section>
 					<SectionHeader>Code Extractor</SectionHeader>
-					<Paragraph>
-						TBA
-					</Paragraph>
+					<CodeExtractor />
 				</Section>
 			</PageLayout>
 		</>
