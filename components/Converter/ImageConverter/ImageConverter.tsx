@@ -29,18 +29,18 @@ export default function ImageConverter({
 	const imageCanvasRef = useRef<HTMLCanvasElement>(null);
 	const [isGridVisible, setIsGridVisible] = useState(true);
 	const [isBlockImage, setIsBlockImage] = useState(false);
+	const [imageCanvasDataString, setImageCanvasDataString] = useState('');
 
 	function drawGrid() {
+		clearCanvas();
 		const canvasContext = canvasRef.current!.getContext('2d')!;
 		const imageCanvasContext = imageCanvasRef.current!.getContext('2d')!;
 
 		canvasContext.canvas.width = CANVAS_WIDTH;
 		canvasContext.canvas.height = CANVAS_HEIGHT;
-		canvasContext.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
 		imageCanvasContext.canvas.width = CANVAS_WIDTH;
 		imageCanvasContext.canvas.height = CANVAS_HEIGHT;
-		imageCanvasContext.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
 		canvasContext.strokeStyle = 'lightgray';
 
@@ -73,7 +73,8 @@ export default function ImageConverter({
 
 		const numEmptyCellHorizontal = numEmptyCellOnLeft + numEmptyCellOnRight;
 		const horizontalShift =
-			Math.floor(numEmptyCellHorizontal / 2) * ONE_GRID_CELL_SIZE;
+			(Math.floor(numEmptyCellHorizontal / 2) - numEmptyCellOnLeft) *
+			ONE_GRID_CELL_SIZE;
 		const verticalShift =
 			Math.floor(numEmptyCellVertical / 2) * ONE_GRID_CELL_SIZE;
 
@@ -118,7 +119,8 @@ export default function ImageConverter({
 
 		const numEmptyCellHorizontal = numEmptyCellOnLeft + numEmptyCellOnRight;
 		const horizontalShift =
-			Math.floor(numEmptyCellHorizontal / 2) * ONE_GRID_CELL_SIZE;
+			(Math.floor(numEmptyCellHorizontal / 2) - numEmptyCellOnLeft) *
+			ONE_GRID_CELL_SIZE;
 		const verticalShift =
 			Math.floor(numEmptyCellVertical / 2) * ONE_GRID_CELL_SIZE;
 
@@ -130,7 +132,7 @@ export default function ImageConverter({
 			const halfWidth = Math.floor(block.size.width / 2) * ONE_GRID_CELL_SIZE;
 
 			const image = new Image(blockWidth, blockHeight);
-			image.src = `${block.id}.png`;
+			image.src = `/${block.id}.png`;
 			image.onload = () => {
 				canvasContext.drawImage(
 					image,
@@ -182,14 +184,21 @@ export default function ImageConverter({
 				drawResult();
 			}
 		}
+
+		setImageCanvasDataString(imageCanvasRef.current!.toDataURL('image/png'));
 	}, [blocksResult, isGridVisible, isBlockImage]);
 
 	return (
 		<div className={styles.container}>
 			<SectionSubHeader>Image Result</SectionSubHeader>
-			<Paragraph>When an image is downloaded, it will consistently position the structure at the center and incorporate the same texture as demonstrated here.</Paragraph>
+			<Paragraph>
+				When an image is downloaded, it will consistently position the structure
+				at the center and incorporate the same texture as demonstrated here.
+			</Paragraph>
 			<div className={styles.header}>
-				<Paragraph><strong>Settings</strong>:</Paragraph>
+				<Paragraph>
+					<strong>Settings</strong>:
+				</Paragraph>
 				<div className={styles.fieldGroup}>
 					<input
 						type='checkbox'
@@ -220,7 +229,7 @@ export default function ImageConverter({
 				<div className={styles.actions}>
 					<a
 						className={styles.standardBtn}
-						href={imageCanvasRef.current!.toDataURL('image/png')}
+						href={imageCanvasDataString}
 						download={`result_${String(fileCounter).padStart(2, '0')}.png`}
 					>
 						Download image

@@ -31,8 +31,7 @@ export default function Resources() {
 					Character-like Level Generation for Science Birds
 				</PageHeader>
 				<Section>
-					<SectionHeader>Useful Resources</SectionHeader>
-					<SectionSubHeader>Sample Prompt</SectionSubHeader>
+					<SectionHeader>Sample Prompt</SectionHeader>
 					<ReactHighlightSyntax
 						language={'PlainText'}
 						theme={'Base16Darcula'}
