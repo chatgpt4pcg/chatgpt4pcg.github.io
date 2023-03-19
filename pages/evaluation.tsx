@@ -1,3 +1,7 @@
+import 'katex/dist/katex.min.css';
+
+import { BlockMath, InlineMath } from 'react-katex';
+
 import Head from 'next/head';
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader/PageHeader';
@@ -7,7 +11,6 @@ import Paragraph from '@/components/Paragraph/Paragraph';
 import Section from '@/components/Section/Section';
 import SectionHeader from '@/components/SectionHeader/SectionHeader';
 import SectionSubHeader from '@/components/SectionSubHeader/SectionSubHeader';
-import SectionSubSubHeader from '@/components/SectionSubSubHeader/SectionSubSubHeader';
 
 export default function Rules() {
 	return (
@@ -51,55 +54,72 @@ export default function Rules() {
 						A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 					</Paragraph>
 					<SectionSubHeader>Scoring Policy</SectionSubHeader>
-					<Paragraph>In each trial of the specific character:</Paragraph>
-					<ol>
-						<li>
-							Stability: A stable level is one that can be constructed by{' '}
-							<a href='https://github.com/chatgpt4pcg/modified-science-birds'>
-								our modified version of Science Birds
-							</a>{' '}
-							without pieces moving due to the game&quot;s gravity within the
-							first 10 seconds of initialization. Each level will receive{' '}
-							<code>1</code> point if stable; otherwise, <code>0</code>.
-						</li>
-						<li>
-							The similarity score reflects the highest confidence of the OCR
-							model in predicting the correct character for the submitted level
-							compared to the target character. Each level will receive a
-							continuous value between <code>0</code> and <code>1</code>, which
-							represents the highest confidence that the model has in correctly
-							predicting the target character. If the model is unable to detect
-							the level as a character or if the predicted character with the
-							highest confidence is incorrect, the level will receive{' '}
-							<code>0</code> points.
-						</li>
-					</ol>
-					<SectionSubHeader>Ranking Policy</SectionSubHeader>
-					<Paragraph>Each team will be ranked based on its score.</Paragraph>
-					<SectionSubHeader>Tie-breaking Policy</SectionSubHeader>
 					<Paragraph>
-						In the event of a tie in the ranking, the following criteria will be
-						used to break the tie in the following order:
+						In each trial of the specific trial of a specific character:
 					</Paragraph>
 					<ol>
 						<li>
-							For stability, if there is a tie after ranking, the level with
-							<strong>a higher number of blocks</strong> will be ranked higher.
+							Stability: A level is considered stable if it can be constructed
+							by our{' '}
+							<a href='https://github.com/chatgpt4pcg/modified-science-birds'>
+								modified version of Science Birds
+							</a>{' '}
+							without pieces moving due to the game&apos;s gravity within the
+							first 10 seconds of initialization. Each level will receive{' '}
+							<code>1</code>
+							point if stable; otherwise, <code>0</code>, and for trial{' '}
+							<InlineMath math='i' /> of target character{' '}
+							<InlineMath math='j' />, its{' '}
+							<InlineMath math='stability\_score' /> is given as
+							<BlockMath math='stability\_score_{ij} = \begin{cases} 1\ \text{if stable}\\ 0\ \text{if unstable} \end{cases}' />
 						</li>
 						<li>
-							For similarity, if there is a tie after ranking, the level with
-							<strong>a higher confidence score</strong> will be ranked higher.
-						</li>
-						<li>
-							If the tie persists, the level with the
-							<strong>shorter prompt</strong> will be ranked higher.
-						</li>
-						<li>
-							If a tie remains, the team that submitted their work first, as
-							determined by the time we received the submission email, will be
-							ranked higher.
+							Similarity: The similarity score reflects the highest confidence
+							of the{' '}
+							<a href='https://github.com/naptha/tesseract.js'>OCR model</a> in
+							predicting the correct character for the submitted level compared
+							to the target character. Each level will receive a continuous
+							value between <code>0</code> and <code>1</code>, which represents
+							the <InlineMath math='confidence\_score' /> of the trial{' '}
+							<InlineMath math='i' /> of target character{' '}
+							<InlineMath math='j' /> that the model has in correctly predicted.
+							If the model is unable to detect the level as a character or if
+							the predicted character with the highest confidence is incorrect,
+							the level will receive <code>0</code> points. The{' '}
+							<InlineMath math='similarity\_score' /> is given as
+							<BlockMath math='similarity\_score_{ij} = \begin{cases} confidence\_score_{ij}\ \text{if it is correct prediction}\\0\ \text{if it is failed to detect}\\0\ \text{if it is wrong prediction}\end{cases}' />
 						</li>
 					</ol>
+					<Paragraph>
+						The <InlineMath math='trial\_score_{ij}' /> of trial{' '}
+						<InlineMath math='i' /> of target character <InlineMath math='j' />{' '}
+						is defined as follows:
+					</Paragraph>
+					<BlockMath math='trial\_score_{ij} = stability\_score_{ij} * similarity\_score_{ij}' />
+
+					<Paragraph>
+						The <InlineMath math='character\_score_{ij}' /> of target character{' '}
+						<InlineMath math='j' /> is defined as follows:
+					</Paragraph>
+					<BlockMath math='character\_score_{ij} = stability\_score_{ij} * similarity\_score_{ij}' />
+
+					<Paragraph>
+						The <InlineMath math='team\_score' /> is defined as follows:
+					</Paragraph>
+					<BlockMath math='team\_score = \frac{\sum_{j=1}^{n_{character}} character\_score_{j}}{n_{character}}' />
+
+					<Paragraph>
+						The <InlineMath math='team\_score' /> will be used for ranking.
+					</Paragraph>
+					<SectionSubHeader>Ranking Policy</SectionSubHeader>
+					<Paragraph>
+						The winner is the team with the highest{' '}
+						<InlineMath math='team\_score' /> rounded to two decimal points. In
+						case of multiple teams with the same highest score, the team with
+						the shortest prompt will be selected as the winner. However, if
+						multiple teams still have the same score and the shortest prompt,
+						they will be declared as co-winners.
+					</Paragraph>
 				</Section>
 				<Section>
 					<SectionHeader>Evaluation Tools</SectionHeader>

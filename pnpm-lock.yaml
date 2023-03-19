@@ -5,6 +5,7 @@ specifiers:
   '@types/node': ^18.11.5
   '@types/react': ^18.0.23
   '@types/react-dom': ^18.0.7
+  '@types/react-katex': ^3.0.0
   bignumber.js: ^9.1.1
   eslint: ^8.36.0
   next: latest
@@ -13,6 +14,7 @@ specifiers:
   react-dom: ^18.2.0
   react-drag-drop-files: ^2.3.9
   react-highlight-syntax: ^1.1.0
+  react-katex: ^3.0.1
   tesseract.js: ^4.0.2
   typescript: ^4.8.4
   words-count: ^2.0.2
@@ -26,6 +28,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-drag-drop-files: 2.3.9_biqbaboplfbrettd7655fr4n2y
   react-highlight-syntax: 1.1.0_biqbaboplfbrettd7655fr4n2y
+  react-katex: 3.0.1_react@18.2.0
   tesseract.js: 4.0.2_eslint@8.36.0
   words-count: 2.0.2
 
@@ -33,6 +36,7 @@ devDependencies:
   '@types/node': 18.15.3
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
+  '@types/react-katex': 3.0.0
   eslint: 8.36.0
   typescript: 4.9.5
 
@@ -442,6 +446,12 @@ packages:
       '@types/react': 18.0.28
     dev: true
 
+  /@types/react-katex/3.0.0:
+    resolution: {integrity: sha512-AiHHXh71a2M7Z6z1wj6iA23SkiRF9r0neHUdu8zjU/cT3MyLxDefYHbcceKhV/gjDEZgF3YaiNHyPNtoGUjPvg==}
+    dependencies:
+      '@types/react': 18.0.28
+    dev: true
+
   /@types/react/18.0.28:
     resolution: {integrity: sha512-RD0ivG1kEztNBdoAK7lekI9M+azSnitIn85h4iOiaLjaTrMjzslhaqCGaI4IyCJ1RljWiLCEu4jyrLLgqxBTew==}
     dependencies:
@@ -596,6 +606,11 @@ packages:
 
   /color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+
+  /commander/8.3.0:
+    resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
+    engines: {node: '>= 12'}
+    dev: false
 
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
@@ -957,6 +972,13 @@ packages:
   /json-stable-stringify-without-jsonify/1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
 
+  /katex/0.16.4:
+    resolution: {integrity: sha512-WudRKUj8yyBeVDI4aYMNxhx5Vhh2PjpzQw1GRu/LVGqL4m1AxwD1GcUp0IMbdJaf5zsjtj8ghP0DOQRYhroNkw==}
+    hasBin: true
+    dependencies:
+      commander: 8.3.0
+    dev: false
+
   /levn/0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -1213,6 +1235,16 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+    dev: false
+
+  /react-katex/3.0.1_react@18.2.0:
+    resolution: {integrity: sha512-wIUW1fU5dHlkKvq4POfDkHruQsYp3fM8xNb/jnc8dnQ+nNCnaj0sx5pw7E6UyuEdLRyFKK0HZjmXBo+AtXXy0A==}
+    peerDependencies:
+      prop-types: ^15.8.1
+      react: '>=15.3.2 <=18'
+    dependencies:
+      katex: 0.16.4
+      react: 18.2.0
     dev: false
 
   /react/18.2.0:

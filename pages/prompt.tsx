@@ -109,7 +109,7 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 										of the evaluation process. To check the behavior of the code
 										extractor, please refer to the{' '}
 										<Link href='/resources'>Resources</Link> page where you can
-										find an online tool.
+										find an online tool for this task.
 									</Paragraph>
 								</li>
 								<li>
@@ -248,7 +248,7 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 												<code>b31</code> is the only block in the level and is
 												placed at <code>x_position=4</code>, it will occupy
 												cells <code>(3, 0)</code>, <code>(4, 0)</code>, and{' '}
-												<code>(5, 0)</code>. An invalid position, like the
+												<code>(5, 0)</code>. An invalid position, like a
 												position where a block of interest intrudes on the grid
 												boundary, will result in an error.
 											</Paragraph>
@@ -256,28 +256,6 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 									</ol>
 								</li>
 							</ol>
-						</li>
-						<li>
-							<Paragraph>
-								We do not encourage the use of pre-defined prompting styles that
-								rely solely on if-then rules, as shown in the example.
-							</Paragraph>
-							<ReactHighlightSyntax
-								language={'PlainText'}
-								theme={'Base16Darcula'}
-								copy={true}
-								copyBtnTheme={'Dark'}
-							>{`If the task is to generate the character "I" then just do the following.
-ab_drop(b13, 9)
-ab_drop(b13, 9)
-ab_drop(b31, 9
-ab_drop(b11, 9)
-else if the task is to generate the character "U" then just do the following
-ab_drop(b11, 7)
-ab_drop(b13, 7
-ab_drop(b31, 9)
-ab_drop(b11, 11)
-ab_drop(b13, 11)`}</ReactHighlightSyntax>
 						</li>
 					</ol>
 				</Section>
