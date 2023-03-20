@@ -192,6 +192,12 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						</a>
 					</Paragraph>
 					<Paragraph>
+						Text-to-XML Converter Script -{' '}
+						<a href='https://github.com/chatgpt4pcg/text-to-xml-converter-script'>
+							https://github.com/chatgpt4pcg/text-to-xml-converter-script
+						</a>
+					</Paragraph>
+					<Paragraph>
 						Similarity Checking Script -{' '}
 						<a href='https://github.com/chatgpt4pcg/similarity-checking-script'>
 							https://github.com/chatgpt4pcg/similarity-checking-script

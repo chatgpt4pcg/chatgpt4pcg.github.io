@@ -218,7 +218,7 @@ export default function Rules() {
 							commands.
 						</li>
 						<li>
-							The converter script will load each code file and convert it into
+							The text-to-xml converter script will load each code file and convert it into
 							a Science Birds level.
 						</li>
 						<li>
