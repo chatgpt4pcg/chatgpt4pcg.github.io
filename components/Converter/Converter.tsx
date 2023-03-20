@@ -37,7 +37,11 @@ export default function Converter() {
 			setFileCounter(fileCounter + 1);
 			setBlocks(blocksResult);
 		} catch (e) {
-			alert(e);
+			if (e instanceof Error) {
+				alert(e.message);
+			} else if (typeof e === 'string') {
+				alert(e);
+			}
 		}
 	}
 
