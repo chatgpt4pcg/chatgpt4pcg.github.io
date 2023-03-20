@@ -6,7 +6,7 @@ specifiers:
   '@types/react': ^18.0.28
   '@types/react-dom': ^18.0.11
   '@types/react-katex': ^3.0.0
-  chatgpt4pcg: ^1.1.1
+  chatgpt4pcg: ^1.1.2
   eslint: ^8.36.0
   next: latest
   nextjs-google-analytics: ^2.3.3
@@ -19,7 +19,7 @@ specifiers:
 
 dependencies:
   '@heroicons/react': 2.0.16_react@18.2.0
-  chatgpt4pcg: 1.1.1_eslint@8.36.0
+  chatgpt4pcg: 1.1.2_eslint@8.36.0
   next: 13.2.4_biqbaboplfbrettd7655fr4n2y
   nextjs-google-analytics: 2.3.3_next@13.2.4+react@18.2.0
   react: 18.2.0
@@ -580,8 +580,8 @@ packages:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
 
-  /chatgpt4pcg/1.1.1_eslint@8.36.0:
-    resolution: {integrity: sha512-3M1n3PO9U7dMptGa9uEcaCGhNy8csCqkcfAmQLh0HFnUEe0W/lh+Hb0AnLiHLYUi6NlQR9G38rsq8NrXDueWfg==}
+  /chatgpt4pcg/1.1.2_eslint@8.36.0:
+    resolution: {integrity: sha512-1i/nsTVNYyw9LfHiyy5RX3psRpoIXhZ42BxSJqFt/v2EdAUzM/Cf3qyFYHVD9K9+nqZuKpKPw56DkqdSRVSTYw==}
     dependencies:
       bignumber.js: 9.1.1
       tesseract.js: 4.0.2_eslint@8.36.0

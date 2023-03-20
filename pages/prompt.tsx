@@ -59,7 +59,7 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						<li>
 							<Paragraph>
 								The prompt must be written in English using only alphanumeric
-								characters and the following symbols: /, , +, -, *, `, &#39;,
+								characters and the following symbols: ~, /, \, +, -, *, `, &#39;,
 								&quot;, ., ,, !, @, #, $, %, ^, &amp;, (, ), _, =, [, ], {'{'},{' '}
 								{'}'}, |, &lt;, and &gt;.
 							</Paragraph>
@@ -125,8 +125,8 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 							<Paragraph>
 								The prompt must include <code>&lt;OBJECT&gt;</code> to indicate
 								a section of the prompt that will be replaced by us with each
-								target character, such as &quot;A,&quot; &quot;B,&quot; or
-								&quot;X.&quot; Prompts without <code>&lt;OBJECT&gt;</code> will
+								target character, such as &quot;I&quot;, &quot;L&quot;, or
+								&quot;U&quot;. Prompts without <code>&lt;OBJECT&gt;</code> will
 								not be assessed.
 							</Paragraph>
 						</li>
