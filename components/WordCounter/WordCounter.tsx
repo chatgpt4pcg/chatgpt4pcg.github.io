@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
 import SectionSubHeader from '../SectionSubHeader/SectionSubHeader';
+import { countWords } from 'chatgpt4pcg';
 import styles from './WordCounter.module.css';
-import wordsCount from 'words-count';
 
 export default function WordCounter() {
 	const [rawData, setRawData] = useState('');
 	const [wordCount, setWordCount] = useState(0);
 
 	useEffect(() => {
-		setWordCount(wordsCount(rawData));
+		setWordCount(countWords(rawData));
 	}, [rawData]);
 
 	return (

@@ -1,13 +1,7 @@
-import {
-	GRID_HEIGHT,
-	GRID_WIDTH,
-	getHighestBlock,
-	getLeftMostBlock,
-	getRightMostBlock,
-} from '@/converter/converter';
+import { GRID_HEIGHT, GRID_WIDTH, getHighestBlock, getLeftMostBlock, getRightMostBlock } from 'chatgpt4pcg/lib/converter/converter';
 import React, { useEffect, useRef, useState } from 'react';
 
-import { Block } from '@/converter/models/block';
+import { Block } from 'chatgpt4pcg';
 import Paragraph from '@/components/Paragraph/Paragraph';
 import SectionSubHeader from '@/components/SectionSubHeader/SectionSubHeader';
 import styles from './ImageConverter.module.css';

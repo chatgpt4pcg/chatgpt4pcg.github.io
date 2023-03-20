@@ -1,11 +1,9 @@
+import { Block, convertTextToBlocks, convertTextToXML } from 'chatgpt4pcg';
 import React, { FormEvent, useEffect, useState } from 'react';
 
-import { Block } from '@/converter/models/block';
 import ImageConverter from './ImageConverter/ImageConverter';
 import SectionSubHeader from '../SectionSubHeader/SectionSubHeader';
 import XMLConverter from './XMLConverter/XMLConverter';
-import { convertToXML } from '@/converter/xml';
-import { getBlocksWithPosition } from '@/converter/converter';
 import styles from './Converter.module.css';
 
 export default function Converter() {
@@ -33,8 +31,8 @@ export default function Converter() {
 	function submitHandler(event: FormEvent) {
 		event.preventDefault();
 		try {
-			const xmlString = convertToXML(rawData.toLowerCase());
-			const [blocksResult] = getBlocksWithPosition(rawData.toLowerCase());
+			const xmlString = convertTextToXML(rawData.toLowerCase());
+			const [blocksResult] = convertTextToBlocks(rawData.toLowerCase());
 			setResult(xmlString);
 			setFileCounter(fileCounter + 1);
 			setBlocks(blocksResult);

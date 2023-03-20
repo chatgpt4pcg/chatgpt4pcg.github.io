@@ -6,7 +6,7 @@ import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import Paragraph from '../Paragraph/Paragraph';
 import SectionSubHeader from '../SectionSubHeader/SectionSubHeader';
 import SectionSubSubHeader from '../SectionSubSubHeader/SectionSubSubHeader';
-import Tesseract from 'tesseract.js';
+import { recognize } from 'chatgpt4pcg';
 import styles from './OCRRecognizer.module.css';
 
 const acceptedFileTypes = ['JPEG', 'PNG'];
@@ -18,9 +18,7 @@ export default function OCRRecognizer() {
 
 	async function fileChangeHandler(file: File) {
 		setIsLoading(true);
-		const {
-			data: { text, confidence },
-		} = await Tesseract.recognize(file, 'eng', { logger: () => {} });
+		const { text, confidence } = await recognize(file);
 		setIsLoading(false);
 		if (text.trim().length === 0) {
 			setRecognizedText('No text found in the image.');
@@ -28,7 +26,7 @@ export default function OCRRecognizer() {
 			return;
 		}
 		setRecognizedText(text);
-		setConfidence(confidence / 100);
+		setConfidence(confidence);
 	}
 
 	return (

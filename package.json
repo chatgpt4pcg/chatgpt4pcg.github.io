@@ -6,16 +6,14 @@
 	},
 	"dependencies": {
 		"@heroicons/react": "^2.0.16",
-		"bignumber.js": "^9.1.1",
+		"chatgpt4pcg": "^1.1.0",
 		"next": "latest",
 		"nextjs-google-analytics": "^2.3.3",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-drag-drop-files": "^2.3.9",
 		"react-highlight-syntax": "^1.1.0",
-		"react-katex": "^3.0.1",
-		"tesseract.js": "^4.0.2",
-		"words-count": "^2.0.2"
+		"react-katex": "^3.0.1"
 	},
 	"devDependencies": {
 		"@types/node": "^18.11.5",

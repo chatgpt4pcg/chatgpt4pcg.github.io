@@ -37,10 +37,15 @@ export default function Submission() {
 						same way as our rules. If not, your results may be unexpected.
 					</Paragraph>
 					<Paragraph>
-						To submit your prompt, send us two <code>.txt</code> files.
+						To submit your prompt, please visit{' '}
+						<a href='https://forms.gle/2QeGEoQVrXS633js7'>this form</a> (
+						<a href='https://forms.gle/2QeGEoQVrXS633js7'>
+							https://forms.gle/2QeGEoQVrXS633js7
+						</a>
+						).
 					</Paragraph>
 					<Paragraph>
-						The first file should only contain the prompt, and should be named
+						The prompt file should only contain the prompt, and should be named
 						after your team using this convention{' '}
 						<code>&lt;TEAM_NAME&gt;.txt</code>. For example,{' '}
 						<code>team1.txt</code>. The example of content in this file is as
@@ -69,29 +74,8 @@ b13, a vertical block whose width is 1 unit and height is 3 units
 Use the \`ab_drop()\` function to vertically drop a block from layer H such that its center is at slot y and drop earlier blocks representing more bottom parts of the structure.`}
 					</ReactHighlightSyntax>
 					<Paragraph>
-						The second file should contain the full names of all team members,
-						their affiliations, and contact email addresses, also named after
-						your team using this convention{' '}
-						<code>&lt;TEAM_NAME&gt;_members.txt</code>. For example,
-						<code>team1_members.txt</code>. The example of content in this file
-						is as follows:
-					</Paragraph>
-					<ReactHighlightSyntax
-						language={'PlainText'}
-						theme={'Base16Darcula'}
-						copy={true}
-						copyBtnTheme={'Dark'}
-					>
-						{`John Doe, Imaginary Unicorn University, example@example.com
-Jane Doe, Imaginary Unicorn University, example2@example.com`}
-					</ReactHighlightSyntax>
-					<Paragraph>
-						Both files should be submitted together via email to{' '}
-						<a href='mailto:chatgpt4pcg@gmail.com'>chatgpt4pcg@gmail.com</a>{' '}
-						with the subject <code>2023 ChatGPT4PCG - &lt;TEAM_NAME&gt;</code>.
-						Please ensure that your team name is consistent throughout both
-						files. If you have any questions, please contact us at the provided
-						email address.
+						If you have any questions, please contact us at this{' '}
+						<a href='mailto:chatgpt4pcg@gmail.com'>email address</a>.
 					</Paragraph>
 				</Section>
 				<Section>

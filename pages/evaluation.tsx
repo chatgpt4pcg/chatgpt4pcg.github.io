@@ -169,11 +169,7 @@ export default function Rules() {
 									</a>
 								</li>
 								<li>
-									Our automation scripts
-									<ul>
-										<li>Tesseract.js: 4.0.2</li>
-										<li>openai: 3.2.1</li>
-									</ul>
+									<a href="/resources">Our automation scripts</a>
 								</li>
 							</ul>
 						</li>
