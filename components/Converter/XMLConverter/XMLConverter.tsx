@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 
 import Paragraph from '@/components/Paragraph/Paragraph';
 import SectionSubHeader from '@/components/SectionSubHeader/SectionSubHeader';

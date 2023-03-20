@@ -80,7 +80,7 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						<a href='https://github.com/lucasnfe/science-birds'>
 							Science Birds
 						</a>{' '}
-						that supports blocks used in the competition. It provides with a
+						that supports blocks used in the competition. It provides a
 						converter feature that can convert a text consisting of a series of{' '}
 						<code>ab_drop()</code> functions into a valid Science Birds level.
 					</Paragraph>

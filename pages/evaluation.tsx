@@ -74,31 +74,28 @@ export default function Rules() {
 							<BlockMath math='stability\_score_{ij} = \begin{cases} 1\ \text{if stable}\\ 0\ \text{if unstable} \end{cases}' />
 						</li>
 						<li>
-							Similarity: The similarity score reflects the highest confidence
+							Similarity: The similarity score reflects the confidence
 							of the{' '}
 							<a href='https://github.com/naptha/tesseract.js'>OCR model</a> in
-							predicting the correct character for the submitted level compared
-							to the target character. Each level will receive a continuous
-							value between <code>0</code> and <code>1</code>, which represents
-							the <InlineMath math='confidence\_score' /> of the trial{' '}
+							inferring the target character from the character in the submitted
+							level. Each level will receive a continuous value between{' '}
+							<code>0</code> and <code>1</code>, which represents the{' '}
+							<InlineMath math='confidence\_score' /> for trial{' '}
 							<InlineMath math='i' /> of target character{' '}
-							<InlineMath math='j' /> that the model has in correctly predicted.
-							If the model is unable to detect the level as a character or if
-							the predicted character with the highest confidence is incorrect,
-							the level will receive <code>0</code> points. The{' '}
+							<InlineMath math='j' /> that the model outputs. The{' '}
 							<InlineMath math='similarity\_score' /> is given as
-							<BlockMath math='similarity\_score_{ij} = \begin{cases} confidence\_score_{ij}\ \text{if it is correct prediction}\\0\ \text{if it is failed to detect}\\0\ \text{if it is wrong prediction}\end{cases}' />
+							<BlockMath math='similarity\_score_{ij} = confidence\_score_{ij}' />
 						</li>
 					</ol>
 					<Paragraph>
-						The <InlineMath math='trial\_score_{ij}' /> of trial{' '}
+						The <InlineMath math='trial\_score_{ij}' /> for trial{' '}
 						<InlineMath math='i' /> of target character <InlineMath math='j' />{' '}
 						is defined as follows:
 					</Paragraph>
 					<BlockMath math='trial\_score_{ij} = stability\_score_{ij} * similarity\_score_{ij}' />
 
 					<Paragraph>
-						The <InlineMath math='character\_score_{ij}' /> of target character{' '}
+						The <InlineMath math='character\_score_{j}' /> of target character{' '}
 						<InlineMath math='j' /> is defined as follows:
 					</Paragraph>
 					<BlockMath math='character\_score_{ij} = stability\_score_{ij} * similarity\_score_{ij}' />
