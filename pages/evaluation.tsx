@@ -58,64 +58,18 @@ export default function Rules() {
 						In each trial of the specific trial of a specific character:
 					</Paragraph>
 					<ol>
-						<li>
-							Stability: A level is considered stable if it can be constructed
-							by our{' '}
-							<a href='https://github.com/chatgpt4pcg/modified-science-birds'>
-								modified version of Science Birds
-							</a>{' '}
-							without pieces moving due to the game&apos;s gravity within the
-							first 10 seconds of initialization. Each level will receive{' '}
-							<code>1</code>
-							point if stable; otherwise, <code>0</code>, and for trial{' '}
-							<InlineMath math='i' /> of target character{' '}
-							<InlineMath math='j' />, its{' '}
-							<InlineMath math='stability\_score' /> is given as
-							<BlockMath math='stability\_score_{ij} = \begin{cases} 1\ \text{if stable}\\ 0\ \text{if unstable} \end{cases}' />
-						</li>
-						<li>
-							Similarity: The similarity score reflects the confidence
-							of the{' '}
-							<a href='https://github.com/naptha/tesseract.js'>OCR model</a> in
-							inferring the target character from the character in the submitted
-							level. Each level will receive a continuous value between{' '}
-							<code>0</code> and <code>1</code>, which represents the{' '}
-							<InlineMath math='confidence\_score' /> for trial{' '}
-							<InlineMath math='i' /> of target character{' '}
-							<InlineMath math='j' /> that the model outputs. The{' '}
-							<InlineMath math='similarity\_score' /> is given as
-							<BlockMath math='similarity\_score_{ij} = confidence\_score_{ij}' />
-						</li>
+						<li>Stability: TBA</li>
+						<li>Similarity: TBA</li>
 					</ol>
-					<Paragraph>
-						The <InlineMath math='trial\_score_{ij}' /> for trial{' '}
-						<InlineMath math='i' /> of target character <InlineMath math='j' />{' '}
-						is defined as follows:
-					</Paragraph>
-					<BlockMath math='trial\_score_{ij} = stability\_score_{ij} * similarity\_score_{ij}' />
-
-					<Paragraph>
-						The <InlineMath math='character\_score_{j}' /> of target character{' '}
-						<InlineMath math='j' /> is defined as follows:
-					</Paragraph>
-					<BlockMath math='character\_score_{ij} = stability\_score_{ij} * similarity\_score_{ij}' />
-
-					<Paragraph>
-						The <InlineMath math='team\_score' /> is defined as follows:
-					</Paragraph>
-					<BlockMath math='team\_score = \frac{\sum_{j=1}^{n_{character}} character\_score_{j}}{n_{character}}' />
-
-					<Paragraph>
-						The <InlineMath math='team\_score' /> will be used for ranking.
-					</Paragraph>
+					<Paragraph>TBA</Paragraph>
 					<SectionSubHeader>Ranking Policy</SectionSubHeader>
 					<Paragraph>
-						The winner is the team with the highest{' '}
-						<InlineMath math='team\_score' /> rounded to two decimal points. In
-						case of multiple teams with the same highest score, the team with
-						the shortest prompt will be selected as the winner. However, if
-						multiple teams still have the same score and the shortest prompt,
-						they will be declared as co-winners.
+						The winner is the prompt (team) with the highest
+						<InlineMath math='normalized\_prompt\_score_{k}' /> rounded to two
+						decimal places. In case of multiple teams with the same highest
+						score, the team with the shortest prompt will be selected as the
+						winner. However, if multiple teams still have the same score and the
+						shortest prompt, they will be declared as co-winners.
 					</Paragraph>
 				</Section>
 				<Section>
@@ -169,7 +123,7 @@ export default function Rules() {
 									</a>
 								</li>
 								<li>
-									<a href="/resources">Our automation scripts</a>
+									<a href='/resources'>Our automation scripts</a>
 								</li>
 							</ul>
 						</li>
@@ -218,8 +172,8 @@ export default function Rules() {
 							commands.
 						</li>
 						<li>
-							The text-to-xml converter script will load each code file and convert it into
-							a Science Birds level.
+							The text-to-xml converter script will load each code file and
+							convert it into a Science Birds level.
 						</li>
 						<li>
 							<a href='https://github.com/chatgpt4pcg/modified-science-birds'>

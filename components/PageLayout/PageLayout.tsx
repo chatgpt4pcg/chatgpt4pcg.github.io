@@ -8,7 +8,7 @@ export default function PageLayout({ children }: PropsWithChildren) {
 	
 	return (
 		<>
-			{/* <NavBar /> */}
+			<NavBar />
 			<main className={styles.layout}>
 				{children}
 				<Footer />

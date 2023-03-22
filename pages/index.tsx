@@ -8,7 +8,7 @@ import Paragraph from '@/components/Paragraph/Paragraph';
 import Section from '@/components/Section/Section';
 import SectionHeader from '@/components/SectionHeader/SectionHeader';
 
-export default function Home() {
+export default function HomePage() {
 	return (
 		<>
 			<Head>
@@ -29,8 +29,9 @@ export default function Home() {
 				</PageHeader>
 				<PageHeader>
 					<span className='red'>
-						(Please stay tuned.<wbr /> We will finalize this competition site around
-						March 20, 2023.)
+						(Please stay tuned.
+						<wbr /> We will finalize this competition site around March 20,
+						2023.)
 					</span>
 				</PageHeader>
 				<Image src='logo.png' alt='Competition logo' />
@@ -64,7 +65,6 @@ export default function Home() {
 					</ol>
 				</Section>
 				<Section>
-					<SectionHeader>Description of the Competition</SectionHeader>
 					<Paragraph>
 						The 1st ChatGPT4PCG Competition challenges participants to utilize
 						the state-of-the-art natural language processing tool, ChatGPT, to
@@ -84,12 +84,12 @@ export default function Home() {
 						guidelines. We will then generate a number of samples, each of which
 						will undergo rigorous testing for stability and similarity.
 						Stability will be evaluated by loading the level in Science Birds
-						and examining that there is no movement for a duration of 10 seconds.
-						The similarity of each generated level to its corresponding English
-						character will be determined using an open-source optical character
-						recognition (OCR) model. The stability testing system and the
-						instructions to use the OCR model, as well as all the relevant
-						tools, will be provided.
+						and examining the ratio of remaining blocks after 10 seconds of the
+						initialization. The similarity of each generated level to its
+						corresponding English character will be determined using an
+						open-source Vision Transformer (ViT)-based classifier model. The
+						stability testing system and the instructions to use the classifier
+						model, as well as all the relevant tools, will be provided.
 					</Paragraph>
 					<Paragraph>
 						This competition offers a unique opportunity for the best prompt

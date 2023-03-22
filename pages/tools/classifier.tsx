@@ -1,12 +1,12 @@
 import Head from 'next/head';
-import OCRRecognizer from '@/components/OCRRecognizer/OCRRecognizer';
+import LetterClassifier from '@/components/LetterClassifier/LetterClassifier';
 import PageHeader from '@/components/PageHeader/PageHeader';
 import PageLayout from '@/components/PageLayout/PageLayout';
 import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
 import Section from '@/components/Section/Section';
 import SectionHeader from '@/components/SectionHeader/SectionHeader';
 
-export default function OCRPage() {
+export default function ClassifierPage() {
 	return (
 		<>
 			<Head>
@@ -26,8 +26,8 @@ export default function OCRPage() {
 					Character-like Level Generation for Science Birds
 				</PageHeader>
 				<Section>
-					<SectionHeader>OCR Recognizer</SectionHeader>
-					<OCRRecognizer />
+					<SectionHeader>Letter Classifier</SectionHeader>
+					<LetterClassifier />
 				</Section>
 			</PageLayout>
 		</>

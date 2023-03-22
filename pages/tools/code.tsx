@@ -5,6 +5,7 @@ import PageLayout from '@/components/PageLayout/PageLayout';
 import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
 import Section from '@/components/Section/Section';
 import SectionHeader from '@/components/SectionHeader/SectionHeader';
+import Paragraph from '@/components/Paragraph/Paragraph';
 
 export default function CodeExtractorPage() {
 	return (
@@ -27,6 +28,14 @@ export default function CodeExtractorPage() {
 				</PageHeader>
 				<Section>
 					<SectionHeader>Code Extractor</SectionHeader>
+					<Paragraph>
+						The online code extractor extracts a code block from ChatGPT API
+						responses, demonstrating the same algorithm used in the{' '}
+						<a href='https://github.com/chatgpt4pcg/code-extraction-script'>
+							code extraction script
+						</a>
+						.
+					</Paragraph>
 					<CodeExtractor />
 				</Section>
 			</PageLayout>

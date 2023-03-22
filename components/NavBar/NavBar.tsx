@@ -15,6 +15,11 @@ export default function NavBar() {
 				<Link href='/'>Home</Link>
 			</li>
 			<li className={`${styles.navItem} ${
+					router.pathname == '/prizes' ? styles.active : ''
+				}`}>
+				<Link href='/prizes'>Prizes</Link>
+			</li>
+			<li className={`${styles.navItem} ${
 					router.pathname == '/prompt' ? styles.active : ''
 				}`}>
 				<Link href='/prompt'>Prompt</Link>

@@ -1,13 +1,14 @@
 import Head from 'next/head';
+import HorizontalList from '@/components/HorizontalList/HorizontalList';
+import Image from '@/components/Image/Image';
 import PageHeader from '@/components/PageHeader/PageHeader';
 import PageLayout from '@/components/PageLayout/PageLayout';
 import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
 import Paragraph from '@/components/Paragraph/Paragraph';
 import Section from '@/components/Section/Section';
 import SectionHeader from '@/components/SectionHeader/SectionHeader';
-import WordCounter from '@/components/WordCounter/WordCounter';
 
-export default function WordCounterPage() {
+export default function PrizePage() {
 	return (
 		<>
 			<Head>
@@ -27,16 +28,8 @@ export default function WordCounterPage() {
 					Character-like Level Generation for Science Birds
 				</PageHeader>
 				<Section>
-					<SectionHeader>Word Counter</SectionHeader>
-					<Paragraph>
-						The word counter web app is a quick and efficient tool that uses the{' '}
-						<a href='https://www.npmjs.com/package/words-count'>
-							<code>words-count</code>
-						</a>{' '}
-						package - the same package used for our evaluation process - to
-						accurately count the number of words in your prompt.
-					</Paragraph>
-					<WordCounter />
+					<SectionHeader>Prizes</SectionHeader>
+					<Paragraph>TBA</Paragraph>
 				</Section>
 			</PageLayout>
 		</>

@@ -57,201 +57,148 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 					<SectionHeader>Prompt Rules</SectionHeader>
 					<ol>
 						<li>
-							<Paragraph>
-								The prompt must be written in English using only alphanumeric
-								characters and the following symbols: ~, /, \, +, -, *, `, &#39;,
-								&quot;, ., ,, !, @, #, $, %, ^, &amp;, (, ), _, =, [, ], {'{'},{' '}
-								{'}'}, |, &lt;, and &gt;.
-							</Paragraph>
+							The prompt must be written in English using only alphanumeric
+							characters and the following symbols: ~, /, \, +, -, *, `, &#39;,
+							&quot;, ., ,, !, @, #, $, %, ^, &amp;, (, ), _, =, [, ], {'{'},{' '}
+							{'}'}, |, &lt;, and &gt;.
 						</li>
 						<li>
-							<Paragraph>
-								The maximum word count for the prompt is{' '}
-								<strong>900 words</strong>. The number of words will be counted
-								by our tool which has the same algorithm as the online version
-								provided on the <Link href='/resources'>Resources</Link> page.
-							</Paragraph>
+							The maximum word count for the prompt is{' '}
+							<strong>900 words</strong>. The number of words will be counted by
+							our tool which has the same algorithm as the online version
+							provided on the <Link href='/resources'>Resources</Link> page.
 						</li>
 						<li>
-							<Paragraph>
-								Prompts must be designed for a one-round conversation, meaning
-								that there should be only one user request (the prompt) and one
-								response from ChatGPT. This ensures simplicity and fairness in
-								this year&quot;s competition.
-							</Paragraph>
+							Prompts must be designed for a one-round conversation, meaning
+							that there should be only one user request (the prompt) and one
+							response from ChatGPT. This ensures simplicity and fairness in
+							this year&apos;s competition.
 						</li>
 						<li>
-							<Paragraph>
-								Prompts exceeding this limit or containing disallowed characters
-								will result in automatic disqualification.
-							</Paragraph>
+							Prompts exceeding this limit or containing disallowed characters
+							will result in automatic disqualification.
 						</li>
 						<li>
-							<Paragraph>
-								Responses from the ChatGPT API must contain code blocks
-								indicated by the presence of three backticks (```) in the
-								output.
-							</Paragraph>
+							Responses from the ChatGPT API must contain code blocks indicated
+							by the presence of three backticks (```) in the output.
 							<ol>
 								<li>
-									<Paragraph>
-										The code extraction script will only extract the content
-										between the last pair of three backticks (```).
-									</Paragraph>
+									The <em>code extraction script</em> will only extract the
+									content between the last pair of three backticks (```).
 								</li>
 								<li>
-									<Paragraph>
-										The extracted code must not contain any loops. Any use of
-										loops will be ignored, resulting in only one instance of the
-										loop's content. The code should not use variables in the
-										call of <code>ab_drop()</code> function, as this will result
-										in an error and that response will be skipped for the rest
-										of the evaluation process. To check the behavior of the code
-										extractor, please refer to the{' '}
-										<Link href='/resources'>Resources</Link> page where you can
-										find an online tool for this task.
-									</Paragraph>
+									The extracted code must not contain any loops. Any use of
+									loops will be ignored, resulting in only one instance of the
+									loop&apos;s content. The code should not use variables in the
+									call of <code>ab_drop()</code> function, as this will result
+									in an error and that response will be skipped for the rest of
+									the evaluation process. To check the behavior of the code
+									extractor, please refer to the{' '}
+									<Link href='/resources'>Resources</Link> page where you can
+									find an online tool for this task.
 								</li>
 								<li>
-									<Paragraph>
-										If no code blocks are present or extracted code results in
-										an empty string, the response will be skipped, and its score
-										will be 0.
-									</Paragraph>
+									If no code blocks are present or extracted code results in an
+									empty string, the response will be skipped, and its score will
+									be 0.
 								</li>
 							</ol>
 						</li>
 						<li>
-							<Paragraph>
-								The prompt must include <code>&lt;OBJECT&gt;</code> to indicate
-								a section of the prompt that will be replaced by us with each
-								target character, such as &quot;I&quot;, &quot;L&quot;, or
-								&quot;U&quot;. Prompts without <code>&lt;OBJECT&gt;</code> will
-								not be assessed.
-							</Paragraph>
+							The prompt must include <code>&lt;OBJECT&gt;</code> to indicate a
+							section of the prompt that will be replaced by us with each target
+							character, such as &quot;I&quot;, &quot;L&quot;, or &quot;U&quot;.
+							Prompts without <code>&lt;OBJECT&gt;</code> will not be assessed.
 						</li>
 						<li>
-							<Paragraph>
-								The response to your prompt from ChatGPT must explicitly include
-								a series of <code>ab_drop()</code> , which will be executed in
-								that order by our tool to generate a character-like structure in
-								a Science Birds level.
-							</Paragraph>
+							The response to your prompt from ChatGPT must explicitly include a
+							series of <code>ab_drop()</code> , which will be executed in that
+							order by our tool to generate a character-like structure in a
+							Science Birds level.
 						</li>
 						<li>
-							<Paragraph>
-								The definition of the <code>ab_drop()</code> function is as
-								follows:
-							</Paragraph>
+							The definition of the <code>ab_drop()</code> function is as
+							follows:
 							<ol>
 								<li>
-									<Paragraph>
-										It drops a block vertically from the top so that its center
-										is located at slot <code>x_position</code>.
-									</Paragraph>
+									It drops a block vertically from the top so that its center is
+									located at slot <code>x_position</code>.
 								</li>
 								<li>
-									<Paragraph>
-										This function works on the following settings:
-									</Paragraph>
+									This function works on the following settings:
 									<ol>
 										<li>
-											<Paragraph>
-												A character is placed on a 2D grid with a width (
-												<code>W</code>) of 20 columns and a height (
-												<code>H</code>) of 16 rows. The grid is formed by 320
-												equal-size cells.
-											</Paragraph>
+											A character is placed on a 2D grid with a width (
+											<code>W</code>) of 20 columns and a height (<code>H</code>
+											) of 16 rows. The grid is formed by 320 equal-size cells.
 										</li>
 										<li>
-											<Paragraph>
-												Coordinates <code>(x, y)</code> are used to represent
-												the positions in the grid, where <code>x</code> and{' '}
-												<code>y</code> show the horizontal and vertical indices
-												of cells, respectively. For example, <code>(0, 0)</code>{' '}
-												denotes the bottom-left corner cell of the grid, and{' '}
-												<code>(W-1, H-1)</code> is the top-right corner cell.
-											</Paragraph>
+											Coordinates <code>(x, y)</code> are used to represent the
+											positions in the grid, where <code>x</code> and{' '}
+											<code>y</code> show the horizontal and vertical indices of
+											cells, respectively. For example, <code>(0, 0)</code>{' '}
+											denotes the bottom-left corner cell of the grid, and{' '}
+											<code>(W-1, H-1)</code> is the top-right corner cell.
 										</li>
 										<li>
-											<Paragraph>
-												A cell on the grid has a size of 1x1. Each cell has a
-												unique <code>(x, y)</code> coordinate associated with
-												it.
-											</Paragraph>
+											A cell on the grid has a size of 1x1. Each cell has a
+											unique <code>(x, y)</code> coordinate associated with it.
 										</li>
 									</ol>
 								</li>
 								<li>
-									<Paragraph>It has two parameters:</Paragraph>
+									It has two parameters:
 									<ol>
 										<li>
-											<Paragraph>
-												<code>block_type</code>: a value that indicates the type
-												of block to be placed. The possible values are
-												<code>b11</code>, <code>b13</code>, and <code>b31</code>
-												. An invalid block type will result in an error.
-											</Paragraph>
+											<code>block_type</code>: a value that indicates the type
+											of block to be placed. The possible values are
+											<code>b11</code>, <code>b13</code>, and <code>b31</code>.
+											An invalid block type will result in an error.
 											<ol>
 												<li>
-													<Paragraph>
-														<code>b11</code> denotes a square block whose size
-														is 1x1.
-													</Paragraph>
-													<Paragraph>
-														<Image
-															src='b11.png'
-															alt='b11 blocks'
-															noBorderRadius
-															width={24}
-														/>
-													</Paragraph>
+													<code>b11</code> denotes a square block whose size is
+													1x1.
+													<Image
+														src='b11.png'
+														alt='b11 blocks'
+														noBorderRadius
+														width={24}
+													/>
 												</li>
 												<li>
-													<Paragraph>
-														<code>b13</code> denotes a column block whose size
-														is 1x3.
-													</Paragraph>
-													<Paragraph>
-														<Image
-															src='b13.png'
-															alt='b13 blocks'
-															noBorderRadius
-															width={24}
-														/>
-													</Paragraph>
+													<code>b13</code> denotes a column block whose size is
+													1x3.
+													<Image
+														src='b13.png'
+														alt='b13 blocks'
+														noBorderRadius
+														width={24}
+													/>
 												</li>
 												<li>
-													<Paragraph>
-														<code>b31</code> denotes a row block whose size is
-														3x1.
-													</Paragraph>
-													<Paragraph>
-														<Image
-															src='b31.png'
-															alt='b31 blocks'
-															noBorderRadius
-															width={24 * 3}
-														/>
-													</Paragraph>
+													<code>b31</code> denotes a row block whose size is
+													3x1.
+													<Image
+														src='b31.png'
+														alt='b31 blocks'
+														noBorderRadius
+														width={24 * 3}
+													/>
 												</li>
 											</ol>
 										</li>
 										<li>
-											<Paragraph>
-												<code>x_position</code>: a horizontal index of a grid
-												cell, where <code>0</code> represents the leftmost
-												column of the grid, and <code>W-1</code> represents the
-												rightmost column of the grid. The{' '}
-												<code>x_position</code> parameter indicates the center
-												pivot point of the block being placed. For example, if{' '}
-												<code>b31</code> is the only block in the level and is
-												placed at <code>x_position=4</code>, it will occupy
-												cells <code>(3, 0)</code>, <code>(4, 0)</code>, and{' '}
-												<code>(5, 0)</code>. An invalid position, like a
-												position where a block of interest intrudes on the grid
-												boundary, will result in an error.
-											</Paragraph>
+											<code>x_position</code>: a horizontal index of a grid
+											cell, where <code>0</code> represents the leftmost column
+											of the grid, and <code>W-1</code> represents the rightmost
+											column of the grid. The <code>x_position</code> parameter
+											indicates the center pivot point of the block being
+											placed. For example, if <code>b31</code> is the only block
+											in the level and is placed at <code>x_position=4</code>,
+											it will occupy cells <code>(3, 0)</code>,{' '}
+											<code>(4, 0)</code>, and <code>(5, 0)</code>. An invalid
+											position, like a position where a block of interest
+											intrudes on the grid boundary, will result in an error.
 										</li>
 									</ol>
 								</li>

@@ -73,16 +73,16 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						<li>Start interact with the model.</li>
 					</ol>
 					<Divider />
-					<SectionSubHeader>Science Birds</SectionSubHeader>
+					<SectionSubHeader>Science Birds Evaluator</SectionSubHeader>
 					<Image src='science_birds.png' alt='Science Birds screenshot' />
 					<Paragraph>
 						This is a modified version of{' '}
 						<a href='https://github.com/lucasnfe/science-birds'>
 							Science Birds
 						</a>{' '}
-						that supports blocks used in the competition. It provides a
-						converter feature that can convert a text consisting of a series of{' '}
-						<code>ab_drop()</code> functions into a valid Science Birds level.
+						that supports blocks used in the competition. It provides a feature
+						that evaluates the stability of a particular level and generates an
+						image used for the similarity checking script.
 					</Paragraph>
 					<Paragraph>
 						You can download this version of Science Birds from{' '}
@@ -113,7 +113,7 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 					<Paragraph>
 						The converter is a tool that creates an XML file and an image from a
 						series of <code>ab_drop()</code> function string. The resulting XML
-						file provides a structured representation of the functions while the
+						file provides a structured representation of the functions while an
 						image shows the visual representation of the functions. It is
 						recommended to use the converter on a desktop device to ensure
 						optimal usage and accurate generation of output files.
@@ -124,17 +124,16 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 							<Link href='/tools/converter'>
 								https://chatgpt4pcg.github.io/tools/converter
 							</Link>
-							.
 						</li>
 						<li>
 							Paste the text into the first input box, ensuring that it is in
-							the correct format.
+							the correct format
 						</li>
 						<li>Click the &quot;Convert&quot; button.</li>
 						<li>
 							You can either copy or download the XML result and test it in
 							Science Birds. To download the image, click the &quot;Download
-							image&quot; button.
+							image&quot; button
 						</li>
 					</ol>
 					<Paragraph>
@@ -156,7 +155,8 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						<a href='https://www.npmjs.com/package/words-count'>
 							<code>words-count</code>
 						</a>{' '}
-						package to accurately count the number of words in your prompt.
+						package - the same package used for our evaluation process - to
+						accurately count the number of words in your prompt.
 					</Paragraph>
 					<Paragraph>
 						Visit our online word counter at{' '}
@@ -168,6 +168,14 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 					<Divider />
 					<SectionSubHeader>Online Code Extractor</SectionSubHeader>
 					<Paragraph>
+						The online code extractor extracts a code block from ChatGPT API
+						responses, demonstrating the same algorithm used in the{' '}
+						<a href='https://github.com/chatgpt4pcg/code-extraction-script'>
+							code extraction script
+						</a>
+						.
+					</Paragraph>
+					<Paragraph>
 						Visit our online code extractor at{' '}
 						<Link href='/tools/code'>
 							https://chatgpt4pcg.github.io/tools/code
@@ -175,30 +183,54 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						.
 					</Paragraph>
 					<Divider />
-					<SectionSubHeader>Online OCR Recognizer</SectionSubHeader>
+					<SectionSubHeader>Online Letter Classifier</SectionSubHeader>
 					<Paragraph>
-						Visit our online OCR recognizer at{' '}
-						<Link href='/tools/ocr'>
-							https://chatgpt4pcg.github.io/tools/ocr
+						<span className='red'>
+							Please note that the Online Letter Classifier embed in the tool
+							page is also available at{' '}
+							<a href='https://huggingface.co/spaces/pittawat/letter_recognizer'>
+								Hugging Face Spaces
+							</a>{' '}
+							and only shows the top five predicted classes with associated
+							percentage. For the full version of the model, please use the{' '}
+							<a href='https://github.com/chatgpt4pcg/similarity-checking-script'>
+								similarity checking script
+							</a>
+							. This model was a fine-tuned version of{' '}
+							<a href='https://huggingface.co/google/vit-base-patch16-224-in21k'>
+								Vision Transformer (ViT)
+							</a>{' '}
+							trained on{' '}
+							<a href='https://huggingface.co/datasets/pittawat/letter_recognition'>
+								this dataset
+							</a>
+							. More information on the dataset is also available on the same
+							page.
+						</span>
+					</Paragraph>
+					<Paragraph>
+						Visit our online Letter Classifier at{' '}
+						<Link href='/tools/classifier'>
+							https://chatgpt4pcg.github.io/tools/classifier
 						</Link>
 						.
 					</Paragraph>
 					<Divider />
 					<SectionSubHeader>Offline Scripts and Packages</SectionSubHeader>
 					<Paragraph>
-						Code Extraction Script -{' '}
+						Code extraction script -{' '}
 						<a href='https://github.com/chatgpt4pcg/code-extraction-script'>
 							https://github.com/chatgpt4pcg/code-extraction-script
 						</a>
 					</Paragraph>
 					<Paragraph>
-						Text-to-XML Converter Script -{' '}
+						Text-to-XML conversion script -{' '}
 						<a href='https://github.com/chatgpt4pcg/text-to-xml-converter-script'>
 							https://github.com/chatgpt4pcg/text-to-xml-converter-script
 						</a>
 					</Paragraph>
 					<Paragraph>
-						Similarity Checking Script -{' '}
+						Similarity checking script -{' '}
 						<a href='https://github.com/chatgpt4pcg/similarity-checking-script'>
 							https://github.com/chatgpt4pcg/similarity-checking-script
 						</a>

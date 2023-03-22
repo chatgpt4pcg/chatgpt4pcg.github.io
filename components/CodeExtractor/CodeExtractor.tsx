@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import SectionSubHeader from '../SectionSubHeader/SectionSubHeader';
-import { extractString } from '@/utils/code-extraction';
+import { extractCode } from 'chatgpt4pcg';
 import styles from './CodeExtractor.module.css';
 
 export default function CodeExtractor() {
@@ -20,7 +20,7 @@ export default function CodeExtractor() {
 	}, [fileCounter]);
 
 	useEffect(() => {
-		setExtractedCode(extractString(rawData) || '');
+		setExtractedCode(extractCode(rawData) || '');
 	}, [rawData]);
 
 	function copyToClipboard() {
