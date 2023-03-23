@@ -107,7 +107,7 @@ export default function Rules() {
 						Next, the weighted <InlineMath math='trial_{ijk}' /> score is
 						defined as follows:
 					</Paragraph>
-					<BlockMath math='trial_{ijk} = weight_{j}\ st_{ijk}\ si_{ijk}' />
+					<BlockMath math='trial_{ijk} = weight_{j}st_{ijk}si_{ijk}' />
 					<Paragraph>
 						A score for target character <InlineMath math='j' /> of prompt{' '}
 						<InlineMath math='k' />, <InlineMath math='char_{jk}' />, is defined
@@ -134,7 +134,7 @@ export default function Rules() {
 					<SectionSubHeader>Ranking Policy</SectionSubHeader>
 					<Paragraph>
 						The winner is the prompt (team) with the highest{' '}
-						<InlineMath math='norm\_prompt_{k}' /> rounded to two decimal
+						<InlineMath math='norm\_prompt_{k}' />, rounded to two decimal
 						places. In case of multiple teams with the same highest score, the
 						team with the shortest prompt will be selected as the winner.
 						However, if multiple teams still have the same score and the
