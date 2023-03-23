@@ -236,6 +236,12 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						</a>
 					</Paragraph>
 					<Paragraph>
+						Scoring and ranking script -{' '}
+						<a href='https://github.com/chatgpt4pcg/scoring-and-ranking-script'>
+							https://github.com/chatgpt4pcg/scoring-and-ranking-script
+						</a>
+					</Paragraph>
+					<Paragraph>
 						<code>chatgpt4pcg</code> npm package -{' '}
 						<a href='https://github.com/chatgpt4pcg/chatgpt4pcg'>
 							https://github.com/chatgpt4pcg/chatgpt4pcg

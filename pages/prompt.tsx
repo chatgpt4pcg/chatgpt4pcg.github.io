@@ -4,7 +4,6 @@ import Link from 'next/link';
 import PageHeader from '@/components/PageHeader/PageHeader';
 import PageLayout from '@/components/PageLayout/PageLayout';
 import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
-import Paragraph from '@/components/Paragraph/Paragraph';
 import ReactHighlightSyntax from 'react-highlight-syntax';
 import Section from '@/components/Section/Section';
 import SectionHeader from '@/components/SectionHeader/SectionHeader';
@@ -57,20 +56,20 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 					<SectionHeader>Prompt Rules</SectionHeader>
 					<ol>
 						<li>
-							The prompt must be written in English using only alphanumeric
+							Prompts must be written in English using only alphanumeric
 							characters and the following symbols: ~, /, \, +, -, *, `, &#39;,
 							&quot;, ., ,, !, @, #, $, %, ^, &amp;, (, ), _, =, [, ], {'{'},{' '}
 							{'}'}, |, &lt;, and &gt;.
 						</li>
 						<li>
-							The maximum word count for the prompt is{' '}
-							<strong>900 words</strong>. The number of words will be counted by
-							our tool which has the same algorithm as the online version
-							provided on the <Link href='/resources'>Resources</Link> page.
+							The maximum word count for a prompt is <strong>900 words</strong>.
+							The number of words will be counted by our tool which has the same
+							algorithm as the online version provided on the{' '}
+							<Link href='/resources'>Resources</Link> page.
 						</li>
 						<li>
-							Prompts must be designed for a one-round conversation, meaning
-							that there should be only one user request (the prompt) and one
+							Prompts must be designed for a one-round dialogue, meaning that
+							there should be only one user request (the prompt) and one
 							response from ChatGPT. This ensures simplicity and fairness in
 							this year&apos;s competition.
 						</li>
@@ -105,7 +104,7 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 							</ol>
 						</li>
 						<li>
-							The prompt must include <code>&lt;OBJECT&gt;</code> to indicate a
+							A prompt must include <code>&lt;OBJECT&gt;</code> to indicate a
 							section of the prompt that will be replaced by us with each target
 							character, such as &quot;I&quot;, &quot;L&quot;, or &quot;U&quot;.
 							Prompts without <code>&lt;OBJECT&gt;</code> will not be assessed.
@@ -141,8 +140,8 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 											<code>(W-1, H-1)</code> is the top-right corner cell.
 										</li>
 										<li>
-											A cell on the grid has a size of 1x1. Each cell has a
-											unique <code>(x, y)</code> coordinate associated with it.
+											A cell on the grid has a size of 1x1. Each cell has unique{' '}
+											<code>(x, y)</code> coordinates associated with it.
 										</li>
 									</ol>
 								</li>

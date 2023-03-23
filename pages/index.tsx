@@ -30,7 +30,7 @@ export default function HomePage() {
 				<PageHeader>
 					<span className='red'>
 						(Please stay tuned.
-						<wbr /> We will finalize this competition site around March 20,
+						<wbr /> We will finalize this competition site around March 23,
 						2023.)
 					</span>
 				</PageHeader>
