@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import LetterClassifier from '@/components/LetterClassifier/LetterClassifier';
-import PageHeader from '@/components/PageHeader/PageHeader';
-import PageLayout from '@/components/PageLayout/PageLayout';
-import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
-import Section from '@/components/Section/Section';
-import SectionHeader from '@/components/SectionHeader/SectionHeader';
+import LetterClassifier from '@/components/tools/LetterClassifier/LetterClassifier';
+import PageHeader from '@/components/ui/PageHeader/PageHeader';
+import PageLayout from '@/components/ui/PageLayout/PageLayout';
+import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
+import Section from '@/components/ui/Section/Section';
+import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 
 export default function ClassifierPage() {
 	return (

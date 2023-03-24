@@ -1,12 +1,10 @@
 import Head from 'next/head';
-import HorizontalList from '@/components/HorizontalList/HorizontalList';
-import Image from '@/components/Image/Image';
-import PageHeader from '@/components/PageHeader/PageHeader';
-import PageLayout from '@/components/PageLayout/PageLayout';
-import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
-import Paragraph from '@/components/Paragraph/Paragraph';
-import Section from '@/components/Section/Section';
-import SectionHeader from '@/components/SectionHeader/SectionHeader';
+import PageHeader from '@/components/ui/PageHeader/PageHeader';
+import PageLayout from '@/components/ui/PageLayout/PageLayout';
+import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
+import Paragraph from '@/components/ui/Paragraph/Paragraph';
+import Section from '@/components/ui/Section/Section';
+import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 
 export default function PrizePage() {
 	return (
@@ -14,7 +12,7 @@ export default function PrizePage() {
 			<Head>
 				<title>
 					The 1st ChatGPT4PCG Competition: Character-like Level Generation for
-					Science Birds
+					Science Birds - Prizes
 				</title>
 				<meta
 					name='description'

@@ -1,0 +1,16 @@
+.footer {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 0.8rem;
+  font-style: italic;
+  padding: 8px 0;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footer p {
+  text-align: center;
+}

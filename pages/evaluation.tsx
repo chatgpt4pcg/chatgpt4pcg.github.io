@@ -4,15 +4,15 @@ import { BlockMath, InlineMath } from 'react-katex';
 
 import Head from 'next/head';
 import Link from 'next/link';
-import PageHeader from '@/components/PageHeader/PageHeader';
-import PageLayout from '@/components/PageLayout/PageLayout';
-import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
-import Paragraph from '@/components/Paragraph/Paragraph';
-import Section from '@/components/Section/Section';
-import SectionHeader from '@/components/SectionHeader/SectionHeader';
-import SectionSubHeader from '@/components/SectionSubHeader/SectionSubHeader';
+import PageHeader from '@/components/ui/PageHeader/PageHeader';
+import PageLayout from '@/components/ui/PageLayout/PageLayout';
+import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
+import Paragraph from '@/components/ui/Paragraph/Paragraph';
+import Section from '@/components/ui/Section/Section';
+import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
+import SectionSubHeader from '@/components/ui/SectionSubHeader/SectionSubHeader';
 
-export default function Rules() {
+export default function RulesPage() {
 	return (
 		<>
 			<Head>
@@ -32,45 +32,43 @@ export default function Rules() {
 					Character-like Level Generation for Science Birds
 				</PageHeader>
 				<Section>
-					<SectionHeader>Evaluation</SectionHeader>
+					<SectionHeader id="evaluation">Evaluation</SectionHeader>
 					<Paragraph>
-						The submitted prompts will undergo a rigorous evaluation process,
-						which includes subjecting them to 10 trials for each of the 26
-						English uppercase alphabets. The levels generated for each character
-						will be evaluated based on their similarity and stability, and
-						scored using the criteria outlined in the scoring policy given
+						The submitted prompts will undergo an evaluation process that
+						involves subjecting them to 10 trials for each of the 26 uppercase
+						letters of the English alphabet (A-Z). The levels generated for each
+						character will be evaluated based on their similarity and stability,
+						and scored using the criteria outlined in the scoring policy given
 						below. The entire evaluation process will be conducted using
-						automated scripts and programs, which are accessible online via the{' '}
-						<Link href='/resources'>Resources</Link> page.
+						<Link href='/resources'>automated scripts and programs</Link>.
 					</Paragraph>
 					<Paragraph>
 						Please note that the evaluation process will be conducted twice, at
 						midterm and final stages. The number of trials and characters in the
 						evaluation set may be adjusted based on the number of teams.
 					</Paragraph>
-					<SectionSubHeader>Evaluation Set</SectionSubHeader>
+					<SectionSubHeader id="evaluation-set">Evaluation Set</SectionSubHeader>
 					<Paragraph>All 26 alphabetical uppercase characters.</Paragraph>
 					<Paragraph>
 						A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 					</Paragraph>
-					<SectionSubHeader>Scoring Policy</SectionSubHeader>
+					<SectionSubHeader id="scoring-policy">Scoring Policy</SectionSubHeader>
 					<Paragraph>
 						In trial <InlineMath math='i' /> of target character{' '}
-						<InlineMath math='j' /> for prompt
-						<InlineMath math='k' />:
+						<InlineMath math='j' /> for prompt <InlineMath math='k' />:
 					</Paragraph>
 					<ol>
 						<li>
 							Stability: The stability of a level is evaluated using our{' '}
 							<a href='https://github.com/chatgpt4pcg/modified-science-birds'>
-								modified version of Science Birds
+								Science Birds Evaluator
 							</a>
 							. Here, <InlineMath math='total\_blocks_{ijk}' /> is defined as
-							the total number of blocks at the time of initialization in
-							Science Birds. Then the program will calculate the value of{' '}
-							<InlineMath math='moving\_blocks_{ijk}' />
+							the number of blocks at the initialization step of loading the
+							level into the evaluator. Then the program will calculate the
+							value of <InlineMath math='moving\_blocks_{ijk}' />
 							which is defined as the number of moving blocks during the first
-							10 seconds after initialization. Each level will receive an{' '}
+							10 seconds after level initialization. Each level will receive an{' '}
 							<InlineMath math='st_{ijk}' /> score according to the following
 							equation. The score has a continuous value in{' '}
 							<InlineMath math='[0, 1]' />.
@@ -78,16 +76,18 @@ export default function Rules() {
 						<BlockMath math='st_{ijk} = \frac{total\_blocks_{ijk} - moving\_blocks_{ijk}}{total\_blocks_{ijk}}' />
 						<li>
 							Similarity: The similarity score reflects the softmax probability,{' '}
-							<InlineMath math='\sigma (z_{ijk})' />, obtained from a classifier
-							called{' '}
+							<InlineMath math='\sigma (z_{ijk})' />
+							of the model called{' '}
 							<a href='https://huggingface.co/pittawat/vit-base-letter'>
 								vit-base-letter
-							</a>{' '}
-							to infer target character <InlineMath math='j' /> in trial{' '}
-							<InlineMath math='i' /> from the image of the generated level
-							after the first 10 seconds of initialization. Each level will
-							receive a continuous value between <InlineMath math='[0, 1]' />.
-							This score, <InlineMath math='si_{ijk}' />, is given as
+							</a>
+							{', '}
+							which is used to infer target character <InlineMath math='j' /> in
+							trial <InlineMath math='i' /> from the image of the generated
+							level after the first 10 seconds of initialization. Each level
+							will receive a continuous value between{' '}
+							<InlineMath math='[0, 1]' />. This score,{' '}
+							<InlineMath math='si_{ijk}' />, is given as
 						</li>
 						<BlockMath math='si_{ijk} = \sigma (z_{ijk})' />
 					</ol>
@@ -102,6 +102,7 @@ export default function Rules() {
 					<BlockMath math='weight_{j} = w\_st_{j} \times w\_si_{j}\text{,}' />
 					<Paragraph>where</Paragraph>
 					<BlockMath math='w\_st_{j} = max(1 - \frac{\sum_{k=1}^{P} \sum_{i=1}^{T} st_{ijk}}{PT}, \frac{1}{C})' />
+					<Paragraph>and</Paragraph>
 					<BlockMath math='w\_si_{j} = max(1 - \frac{\sum_{k=1}^{P} \sum_{i=1}^{T} si_{ijk}}{PT}, \frac{1}{C})' />
 					<Paragraph>
 						Next, the weighted <InlineMath math='trial_{ijk}' /> score is
@@ -109,9 +110,9 @@ export default function Rules() {
 					</Paragraph>
 					<BlockMath math='trial_{ijk} = weight_{j}st_{ijk}si_{ijk}' />
 					<Paragraph>
-						A score for target character <InlineMath math='j' /> of prompt{' '}
-						<InlineMath math='k' />, <InlineMath math='char_{jk}' />, is defined
-						as follows:
+						The average score for for target character <InlineMath math='j' />{' '}
+						of prompt <InlineMath math='k' />, <InlineMath math='char_{jk}' />,
+						is defined as follows:
 					</Paragraph>
 					<BlockMath math='char_{jk} = \frac{\sum_{i=1}^{T} trial_{ijk}}{T}' />
 					<Paragraph>
@@ -119,30 +120,28 @@ export default function Rules() {
 					</Paragraph>
 					<BlockMath math='prompt_{k} = \frac{\sum_{j=1}^{C} char_{jk}}{C}' />
 					<Paragraph>
-						The <InlineMath math='competition' /> score is defined as follows:
-					</Paragraph>
-					<BlockMath math='competition = \sum_{k=1}^{P} prompt_{k}' />
-					<Paragraph>
 						Next, the normalized <InlineMath math='prompt_{k}' /> score,{' '}
 						<InlineMath math='norm\_prompt_{k}' />, is defined as follows:
 					</Paragraph>
-					<BlockMath math='norm\_prompt_{k} = 100\ \frac{prompt_{k}}{competition}' />
+					<BlockMath math='norm\_prompt_{k} = 100\ \frac{prompt_{k}}{competition}\text{,}' />
+					<Paragraph>where</Paragraph>
+					<BlockMath math='competition = \sum_{k=1}^{P} prompt_{k}' />
 					<Paragraph>
 						Finally, <InlineMath math='norm\_prompt_{k}' /> will be used for
 						ranking.
 					</Paragraph>
-					<SectionSubHeader>Ranking Policy</SectionSubHeader>
+					<SectionSubHeader id="ranking-policy">Ranking Policy</SectionSubHeader>
 					<Paragraph>
-						The winner is the prompt (team) with the highest{' '}
-						<InlineMath math='norm\_prompt_{k}' />, rounded to two decimal
-						places. In case of multiple teams with the same highest score, the
-						team with the shortest prompt will be selected as the winner.
-						However, if multiple teams still have the same score and the
-						shortest prompt, they will be declared as co-winners.
+						The team that has the highest <InlineMath math='norm\_prompt_{k}' />
+						, rounded to two decimal places, will be declared the winner. If
+						there are multiple teams with the same highest score, the one with
+						the shortest prompt will be chosen as the winner. However, if
+						multiple teams still have the same score and the shortest prompt,
+						they will be considered co-winners.
 					</Paragraph>
 				</Section>
 				<Section>
-					<SectionHeader>Evaluation Tools</SectionHeader>
+					<SectionHeader id="evaluation-tools">Evaluation Tools</SectionHeader>
 					<ol>
 						<li>
 							<a href='https://platform.openai.com/docs/models/overview'>
@@ -154,12 +153,10 @@ export default function Rules() {
 						</li>
 						<li>
 							<a href='https://github.com/chatgpt4pcg/modified-science-birds'>
-								Modified version of Science Birds
+								Science Birds Evaluator
 							</a>{' '}
 							with features to
 							<ol>
-								<li>Enable/disable gravity</li>
-								<li>Enable/disable the background</li>
 								<li>Automatically assess the stability</li>
 								<li>
 									Automatically export images using black-textured blocks on a
@@ -179,7 +176,7 @@ export default function Rules() {
 					</ol>
 				</Section>
 				<Section>
-					<SectionHeader>Evaluation Environment</SectionHeader>
+					<SectionHeader id="evaluation-env">Evaluation Environment</SectionHeader>
 					<ol>
 						<li>
 							Software:
@@ -207,7 +204,7 @@ export default function Rules() {
 					</ol>
 				</Section>
 				<Section>
-					<SectionHeader>Evaluation Process</SectionHeader>
+					<SectionHeader id="evaluation-process">Evaluation Process</SectionHeader>
 					<ol>
 						<li>
 							The <em>qualification script</em> will be first run to check for
@@ -243,21 +240,19 @@ export default function Rules() {
 						</li>
 						<li>
 							The <em>text-to-xml conversion script</em> will load each code
-							file and convert it into a Science Birds level.
+							file and convert it into a Science Birds level description XML
+							file.
 						</li>
 						<li>
-							<a href='https://github.com/chatgpt4pcg/modified-science-birds'>
-								A modified version of Science Birds
-							</a>
-							, <em>Science Birds Evaluator</em>, will individually load all
-							levels and assess their stability. The results of stability will
-							be recorded, and for each level an image of the structure with
-							black-textured blocks on a white background will be produced by
-							the program.
+							Next, <em>Science Birds Evaluator</em>, will individually load all
+							levels to assess their stability and capture thier images. The
+							results of stability will be recorded, and for each level an image
+							of the structure with black-textured blocks on a white background
+							will be produced by the program.
 						</li>
 						<li>
 							The <em>similarity checking script</em> will load each image and
-							pass it through{' '}
+							pass it through an open source-model called{' '}
 							<a href='https://huggingface.co/pittawat/vit-base-letter'>
 								vit-base-letter
 							</a>
@@ -265,8 +260,8 @@ export default function Rules() {
 						</li>
 						<li>
 							Finally, the <em>scoring and ranking</em> script will load all
-							similarity results and produce the final rank and score result for
-							all teams.
+							stability and similarity results and produce the final rank and
+							score result for all teams according to the scoring policy.
 						</li>
 					</ol>
 				</Section>

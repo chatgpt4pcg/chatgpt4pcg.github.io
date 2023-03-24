@@ -12,15 +12,6 @@ This competition offers a unique opportunity for the best prompt engineers from 
 
 > To obtain more information about the competition, please do not hesitate to visit our website, where you can find detailed information and updates regarding the event.
 
-## Organizers
-
-1. Pittawat Taveekitworachai, Graduate School of Information Science and Engineering, Ritsumeikan University
-2. Febri Abdullah, Graduate School of Information Science and Engineering, Ritsumeikan University
-3. Mury F. Dewantoro, Graduate School of Information Science and Engineering, Ritsumeikan University
-4. Ruck Thawonmas, College of Information Science and Engineering, Ritsumeikan University
-5. Julian Togelius, NYU Tandon School of Engineering, New York University
-6. Jochen Renz, School of Computing, The Australian National University
-
 ## Submission deadline
 
 Midterm: 19 May 2023 (23:59 JST)

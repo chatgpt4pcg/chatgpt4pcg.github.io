@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import HorizontalList from '@/components/ui/HorizontalList/HorizontalList';
 import Image from '@/components/ui/Image/Image';
-import Link from 'next/link';
 import PageHeader from '@/components/ui/PageHeader/PageHeader';
 import PageLayout from '@/components/ui/PageLayout/PageLayout';
 import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
@@ -10,7 +9,7 @@ import Section from '@/components/ui/Section/Section';
 import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 import SubmissionDeadline from '@/components/content/SubmissionDeadline';
 
-export default function HomePage() {
+export default function ReviewPage() {
 	return (
 		<>
 			<Head>
@@ -28,13 +27,6 @@ export default function HomePage() {
 				<PageSubHeader>The 1st ChatGPT4PCG Competition</PageSubHeader>
 				<PageHeader>
 					Character-like Level Generation for Science Birds
-				</PageHeader>
-				<PageHeader>
-					<span className='red'>
-						(@Reviewers of our paper: Please see{' '}
-						<Link href='/review'>this homepage</Link> instead, where the
-						organizers are anonymous.)
-					</span>
 				</PageHeader>
 				<Image src='logo.png' alt='Competition logo' />
 				<Section>
@@ -74,30 +66,12 @@ export default function HomePage() {
 				<Section>
 					<SectionHeader id='organizers'>Organizers</SectionHeader>
 					<ol>
-						<li>
-							Pittawat Taveekitworachai, Graduate School of Information Science
-							and Engineering, Ritsumeikan University
-						</li>
-						<li>
-							Febri Abdullah, Graduate School of Information Science and
-							Engineering, Ritsumeikan University
-						</li>
-						<li>
-							Mury F. Dewantoro, Graduate School of Information Science and
-							Engineering, Ritsumeikan University
-						</li>
-						<li>
-							Ruck Thawonmas, College of Information Science and Engineering,
-							Ritsumeikan University
-						</li>
-						<li>
-							Julian Togelius, NYU Tandon School of Engineering, New York
-							University
-						</li>
-						<li>
-							Jochen Renz, School of Computing, The Australian National
-							University
-						</li>
+						<li>anonymous</li>
+						<li>anonymous</li>
+						<li>anonymous</li>
+						<li>anonymous</li>
+						<li>anonymous</li>
+						<li>anonymous</li>
 					</ol>
 				</Section>
 				<Section>

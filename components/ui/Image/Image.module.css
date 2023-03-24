@@ -1,0 +1,20 @@
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 32px;
+  margin: 16px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+} 

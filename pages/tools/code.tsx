@@ -1,11 +1,11 @@
-import CodeExtractor from '@/components/CodeExtractor/CodeExtractor';
+import CodeExtractor from '@/components/tools/CodeExtractor/CodeExtractor';
 import Head from 'next/head';
-import PageHeader from '@/components/PageHeader/PageHeader';
-import PageLayout from '@/components/PageLayout/PageLayout';
-import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
-import Section from '@/components/Section/Section';
-import SectionHeader from '@/components/SectionHeader/SectionHeader';
-import Paragraph from '@/components/Paragraph/Paragraph';
+import PageHeader from '@/components/ui/PageHeader/PageHeader';
+import PageLayout from '@/components/ui/PageLayout/PageLayout';
+import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
+import Section from '@/components/ui/Section/Section';
+import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
+import Paragraph from '@/components/ui/Paragraph/Paragraph';
 
 export default function CodeExtractorPage() {
 	return (

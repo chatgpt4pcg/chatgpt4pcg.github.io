@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import PageHeader from '@/components/PageHeader/PageHeader';
-import PageLayout from '@/components/PageLayout/PageLayout';
-import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
-import Paragraph from '@/components/Paragraph/Paragraph';
-import Section from '@/components/Section/Section';
-import SectionHeader from '@/components/SectionHeader/SectionHeader';
+import PageHeader from '@/components/ui/PageHeader/PageHeader';
+import PageLayout from '@/components/ui/PageLayout/PageLayout';
+import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
+import Paragraph from '@/components/ui/Paragraph/Paragraph';
+import Section from '@/components/ui/Section/Section';
+import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 
-export default function Rules() {
+export default function RulesPage() {
 	return (
 		<>
 			<Head>
@@ -27,7 +27,7 @@ export default function Rules() {
 					Character-like Level Generation for Science Birds
 				</PageHeader>
 				<Section>
-					<SectionHeader>General</SectionHeader>
+					<SectionHeader id="general">General</SectionHeader>
 					<ol>
 						<li>
 							<Paragraph>
@@ -36,7 +36,7 @@ export default function Rules() {
 						</li>
 						<li>
 							<Paragraph>
-							ny intended attempts to harm the computing system used to conduct the evaluation process will result in automatic disqualification.
+							Any intended attempts to harm the computing system used to conduct the evaluation process will result in automatic disqualification.
 							</Paragraph>
 						</li>
 						<li>
@@ -47,28 +47,28 @@ export default function Rules() {
 					</ol>
 				</Section>
 				<Section>
-					<SectionHeader>Prompt</SectionHeader>
+					<SectionHeader id="prompt">Prompt</SectionHeader>
 					<Paragraph>
 						Please consult the <Link href='/prompt'>Prompt</Link> page for
 						information regarding the prompt rules and specifications.
 					</Paragraph>
 				</Section>
 				<Section>
-					<SectionHeader>Submission</SectionHeader>
+					<SectionHeader id="submission">Submission</SectionHeader>
 					<Paragraph>
 						Please refer to the <Link href='/submission'>Submission</Link> page
 						for information and guidelines on submitting your work.
 					</Paragraph>
 				</Section>
 				<Section>
-					<SectionHeader>Evaluation</SectionHeader>
+					<SectionHeader id="evaluation">Evaluation</SectionHeader>
 					<Paragraph>
 						Please refer to the <Link href='/evaluation'>Evaluation</Link> page
 						for information on the evaluation process and policies.
 					</Paragraph>
 				</Section>
 				<Section>
-					<SectionHeader>Pledge</SectionHeader>
+					<SectionHeader id="pledge">Pledge</SectionHeader>
 					<Paragraph>
 						We pledge to conduct the competition with fairness and impartiality.
 						We will ensure that the evaluation process is transparent by

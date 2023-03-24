@@ -1,20 +1,22 @@
 import Head from 'next/head';
-import Image from '@/components/Image/Image';
+import Image from '@/components/ui/Image/Image';
 import Link from 'next/link';
-import PageHeader from '@/components/PageHeader/PageHeader';
-import PageLayout from '@/components/PageLayout/PageLayout';
-import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
+import PageHeader from '@/components/ui/PageHeader/PageHeader';
+import PageLayout from '@/components/ui/PageLayout/PageLayout';
+import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
+import Paragraph from '@/components/ui/Paragraph/Paragraph';
 import ReactHighlightSyntax from 'react-highlight-syntax';
-import Section from '@/components/Section/Section';
-import SectionHeader from '@/components/SectionHeader/SectionHeader';
+import { SAMPLE_PROMPT } from '@/constants/prompt';
+import Section from '@/components/ui/Section/Section';
+import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 
-export default function Prompt() {
+export default function PromptPage() {
 	return (
 		<>
 			<Head>
 				<title>
 					The 1st ChatGPT4PCG Competition: Character-like Level Generation for
-					Science Birds
+					Science Birds - Prompt Rules and Guidelines
 				</title>
 				<meta
 					name='description'
@@ -28,49 +30,41 @@ export default function Prompt() {
 					Character-like Level Generation for Science Birds
 				</PageHeader>
 				<Section>
-					<SectionHeader>Sample Prompt</SectionHeader>
+					<SectionHeader id='sample-prompt'>Sample Prompt</SectionHeader>
 					<ReactHighlightSyntax
 						language={'PlainText'}
 						theme={'Base16Darcula'}
 						copy={true}
 						copyBtnTheme={'Dark'}
 					>
-						{`Use \`ab_drop()\` function to generate a stable structure that looks like the &lt;OBJECT&gt;—the goal. Dropping position and order are crucial.
-
-1. Definitions
-Slots: The map's width is equally partitioned into W slots where W = 20, with slots 0 and 19 being the most left and right, respectively.
-Layers: The map's height is equally partitioned into H layers where H = 16, with layers 0 and 15 being the bottom and top layers, respectively.
-Base: The bottom of the map, i.e., layer 0.
-
-2. Environment
-There are three block types as follows:
-b11, a square block whose width is 1 unit and height is 1 unit
-b31, a horizontal block whose width is 3 units and height is 1 unit
-b13, a vertical block whose width is 1 unit and height is 3 units
-
-3. Tool
-Use the \`ab_drop()\` function to vertically drop a block from layer H such that its center is at slot y and drop earlier blocks representing more bottom parts of the structure.`}
+						{SAMPLE_PROMPT}
 					</ReactHighlightSyntax>
+					<Paragraph>
+						Please see an improved version and its variants on{' '}
+						<Link href='/supplement'>this page</Link> and check this paper (TBA)
+						for their performance.
+					</Paragraph>
 				</Section>
 				<Section>
-					<SectionHeader>Prompt Rules</SectionHeader>
+					<SectionHeader id="rules">Prompt Rules</SectionHeader>
 					<ol>
 						<li>
 							Prompts must be written in English using only alphanumeric
-							characters and the following symbols: ~, /, \, +, -, *, `, &#39;,
-							&quot;, ., ,, !, @, #, $, %, ^, &amp;, (, ), _, =, [, ], {'{'},{' '}
-							{'}'}, |, &lt;, and &gt;.
+							characters, space, and the following symbols: ~ / \ + - * ` '
+							&quot; . : ; ? &mdash; , ! @ # $ % ^ &amp; ( ) _ = [ ] {} | &lt;
+							&gt;.
 						</li>
 						<li>
 							The maximum word count for a prompt is <strong>900 words</strong>.
-							The number of words will be counted by our tool which has the same
-							algorithm as the online version provided on the{' '}
-							<Link href='/resources'>Resources</Link> page.
+							The number of words will be counted by{' '}
+							<Link href='/tools/word-counter'>our tool</Link> which has the
+							same algorithm as the online version provided on the.
 						</li>
 						<li>
-							Prompts must be designed for a one-round dialogue, meaning that
-							there should be only one user request (the prompt) and one
-							response from ChatGPT. This ensures simplicity and fairness in
+							Prompts designed for this competition must be created for a
+							one-round conversation. This means that each prompt&apos;s
+							interaction with ChatGPT should consist one user request to and
+							one response from ChatGPT. This ensures simplicity and fairness in
 							this year&apos;s competition.
 						</li>
 						<li>
@@ -78,8 +72,15 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 							will result in automatic disqualification.
 						</li>
 						<li>
-							Responses from the ChatGPT API must contain code blocks indicated
-							by the presence of three backticks (```) in the output.
+							The prompt must include <code>&lt;OBJECT&gt;</code> to indicate a
+							section of the prompt that will be replaced by us with each target
+							character, such as &quot;I&quot;, &quot;L&quot;, or &quot;U&quot;.
+							Prompts without <code>&lt;OBJECT&gt;</code> will not be assessed.
+						</li>
+						<li>
+							To ensure that code blocks can be extracted successfully from
+							responses generated by the ChatGPT API, each output must include
+							three backticks (```).
 							<ol>
 								<li>
 									The <em>code extraction script</em> will only extract the
@@ -104,10 +105,15 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 							</ol>
 						</li>
 						<li>
-							A prompt must include <code>&lt;OBJECT&gt;</code> to indicate a
-							section of the prompt that will be replaced by us with each target
-							character, such as &quot;I&quot;, &quot;L&quot;, or &quot;U&quot;.
-							Prompts without <code>&lt;OBJECT&gt;</code> will not be assessed.
+							The use of{' '}
+							<a href='https://openai.com/blog/chatgpt-plugins'>
+								ChatGPT plugins
+							</a>{' '}
+							is not supported, i.e., all plugins are disabled during the
+							evaluation process. This helps ensure fairness since the plugins
+							only available to limited people, a small number of invited
+							developers and web-based ChatGPT Plus users, and ChatGPT API does
+							not support plugins, as of now (Mar 24, 2023 JST).
 						</li>
 						<li>
 							The response to your prompt from ChatGPT must explicitly include a
@@ -120,16 +126,18 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 							follows:
 							<ol>
 								<li>
-									It drops a block vertically from the top so that its center is
-									located at slot <code>x_position</code>.
+									It drops a block vertically drop a block from the top and
+									center it at a specific slot, denoted by{' '}
+									<code>x_position</code>.
 								</li>
 								<li>
 									This function works on the following settings:
 									<ol>
 										<li>
-											A character is placed on a 2D grid with a width (
+											A structure is situated on a 2D grid with a width (
 											<code>W</code>) of 20 columns and a height (<code>H</code>
-											) of 16 rows. The grid is formed by 320 equal-size cells.
+											) of 16 rows. The grid consists of 320 cells, each of
+											equal size.
 										</li>
 										<li>
 											Coordinates <code>(x, y)</code> are used to represent the
@@ -146,7 +154,7 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 									</ol>
 								</li>
 								<li>
-									It has two parameters:
+									This function accepts two parameters:
 									<ol>
 										<li>
 											<code>block_type</code>: a value that indicates the type

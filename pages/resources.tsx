@@ -1,24 +1,25 @@
-import Divider from '@/components/Divider/Divider';
+import Divider from '@/components/ui/Divider/Divider';
 import Head from 'next/head';
-import Image from '@/components/Image/Image';
+import Image from '@/components/ui/Image/Image';
 import Link from 'next/link';
-import PageHeader from '@/components/PageHeader/PageHeader';
-import PageLayout from '@/components/PageLayout/PageLayout';
-import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
-import Paragraph from '@/components/Paragraph/Paragraph';
+import PageHeader from '@/components/ui/PageHeader/PageHeader';
+import PageLayout from '@/components/ui/PageLayout/PageLayout';
+import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
+import Paragraph from '@/components/ui/Paragraph/Paragraph';
 import ReactHighlightSyntax from 'react-highlight-syntax';
-import Section from '@/components/Section/Section';
-import SectionHeader from '@/components/SectionHeader/SectionHeader';
-import SectionSubHeader from '@/components/SectionSubHeader/SectionSubHeader';
-import SectionSubSubHeader from '@/components/SectionSubSubHeader/SectionSubSubHeader';
+import { SAMPLE_PROMPT } from '@/constants/prompt';
+import Section from '@/components/ui/Section/Section';
+import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
+import SectionSubHeader from '@/components/ui/SectionSubHeader/SectionSubHeader';
+import SectionSubSubHeader from '@/components/ui/SectionSubSubHeader/SectionSubSubHeader';
 
-export default function Resources() {
+export default function ResourcesPage() {
 	return (
 		<>
 			<Head>
 				<title>
 					The 1st ChatGPT4PCG Competition: Character-like Level Generation for
-					Science Birds - Useful Resources
+					Science Birds - Resources
 				</title>
 				<meta
 					name='description'
@@ -32,33 +33,19 @@ export default function Resources() {
 					Character-like Level Generation for Science Birds
 				</PageHeader>
 				<Section>
-					<SectionHeader>Sample Prompt</SectionHeader>
+					<SectionHeader id='sample-prompt'>Sample Prompt</SectionHeader>
 					<ReactHighlightSyntax
 						language={'PlainText'}
 						theme={'Base16Darcula'}
 						copy={true}
 						copyBtnTheme={'Dark'}
 					>
-						{`Use \`ab_drop()\` function to generate a stable structure that looks like the &lt;OBJECT&gt;—the goal. Dropping position and order are crucial.
-
-1. Definitions
-Slots: The map's width is equally partitioned into W slots where W = 20, with slots 0 and 19 being the most left and right, respectively.
-Layers: The map's height is equally partitioned into H layers where H = 16, with layers 0 and 15 being the bottom and top layers, respectively.
-Base: The bottom of the map, i.e., layer 0.
-
-2. Environment
-There are three block types as follows:
-b11, a square block whose width is 1 unit and height is 1 unit
-b31, a horizontal block whose width is 3 units and height is 1 unit
-b13, a vertical block whose width is 1 unit and height is 3 units
-
-3. Tool
-Use the \`ab_drop()\` function to vertically drop a block from layer H such that its center is at slot y and drop earlier blocks representing more bottom parts of the structure.`}
+						{SAMPLE_PROMPT}
 					</ReactHighlightSyntax>
 				</Section>
 				<Section>
-					<SectionHeader>Tools</SectionHeader>
-					<SectionSubHeader>ChatGPT</SectionSubHeader>
+					<SectionHeader id='tools'>Tools</SectionHeader>
+					<SectionSubHeader id='chatgpt'>ChatGPT</SectionSubHeader>
 					<ol>
 						<li>
 							Open your preferred web browser (such as Chrome, Firefox, or
@@ -73,7 +60,9 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						<li>Start interact with the model.</li>
 					</ol>
 					<Divider />
-					<SectionSubHeader>Science Birds Evaluator</SectionSubHeader>
+					<SectionSubHeader id='science-birds-evaluator'>
+						Science Birds Evaluator
+					</SectionSubHeader>
 					<Image src='science_birds.png' alt='Science Birds screenshot' />
 					<Paragraph>
 						This is a modified version of{' '}
@@ -91,7 +80,9 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						</a>
 						.
 					</Paragraph>
-					<SectionSubSubHeader>Installation Instruction</SectionSubSubHeader>
+					<SectionSubSubHeader id='sbe-installation'>
+						Installation Instruction
+					</SectionSubSubHeader>
 					<ol>
 						<li>
 							Download <a href='https://unity.com/download'>Unity Hub</a>
@@ -108,8 +99,9 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						repository.
 					</Paragraph>
 					<Divider />
-
-					<SectionSubHeader>Online Converter</SectionSubHeader>
+					<SectionSubHeader id='online-converter'>
+						Online Converter
+					</SectionSubHeader>
 					<Paragraph>
 						The converter is a tool that creates an XML file and an image from a
 						series of <code>ab_drop()</code> function string. The resulting XML
@@ -149,7 +141,9 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						</a>
 					</span>
 					<Divider />
-					<SectionSubHeader>Online Word Counter</SectionSubHeader>
+					<SectionSubHeader id='online-work-counter'>
+						Online Word Counter
+					</SectionSubHeader>
 					<Paragraph>
 						The word counter web app is a quick and efficient tool that uses the{' '}
 						<a href='https://www.npmjs.com/package/words-count'>
@@ -166,7 +160,9 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						.
 					</Paragraph>
 					<Divider />
-					<SectionSubHeader>Online Code Extractor</SectionSubHeader>
+					<SectionSubHeader id='online-code-extractor'>
+						Online Code Extractor
+					</SectionSubHeader>
 					<Paragraph>
 						The online code extractor extracts a code block from ChatGPT API
 						responses, demonstrating the same algorithm used in the{' '}
@@ -183,7 +179,9 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						.
 					</Paragraph>
 					<Divider />
-					<SectionSubHeader>Online Letter Classifier</SectionSubHeader>
+					<SectionSubHeader id='online-letter-classifier'>
+						Online Letter Classifier
+					</SectionSubHeader>
 					<Paragraph>
 						<span className='red'>
 							Please note that the Online Letter Classifier embed in the tool
@@ -216,7 +214,21 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 						.
 					</Paragraph>
 					<Divider />
-					<SectionSubHeader>Offline Scripts and Packages</SectionSubHeader>
+					<SectionSubHeader id='offline-scripts-packgaes'>
+						Offline Scripts and Packages
+					</SectionSubHeader>
+					<Paragraph>
+						Qualification checking script -{' '}
+						<a href='https://github.com/chatgpt4pcg/qualification-checking-script'>
+							https://github.com/chatgpt4pcg/qualification-checking-script
+						</a>
+					</Paragraph>
+					<Paragraph>
+						Response gathering script -{' '}
+						<a href='https://github.com/chatgpt4pcg/response-gathering-script'>
+							https://github.com/chatgpt4pcg/response-gathering-script
+						</a>
+					</Paragraph>
 					<Paragraph>
 						Code extraction script -{' '}
 						<a href='https://github.com/chatgpt4pcg/code-extraction-script'>

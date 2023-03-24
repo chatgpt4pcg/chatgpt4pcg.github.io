@@ -1,20 +1,22 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import PageHeader from '@/components/PageHeader/PageHeader';
-import PageLayout from '@/components/PageLayout/PageLayout';
-import PageSubHeader from '@/components/PageSubHeader/PageSubHeader';
-import Paragraph from '@/components/Paragraph/Paragraph';
+import PageHeader from '@/components/ui/PageHeader/PageHeader';
+import PageLayout from '@/components/ui/PageLayout/PageLayout';
+import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
+import Paragraph from '@/components/ui/Paragraph/Paragraph';
 import ReactHighlightSyntax from 'react-highlight-syntax';
-import Section from '@/components/Section/Section';
-import SectionHeader from '@/components/SectionHeader/SectionHeader';
+import { SAMPLE_PROMPT } from '@/constants/prompt';
+import Section from '@/components/ui/Section/Section';
+import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
+import SubmissionDeadline from '@/components/content/SubmissionDeadline';
 
-export default function Submission() {
+export default function SubmissionPage() {
 	return (
 		<>
 			<Head>
 				<title>
 					The 1st ChatGPT4PCG Competition: Character-like Level Generation for
-					Science Birds
+					Science Birds - Submission
 				</title>
 				<meta
 					name='description'
@@ -28,7 +30,7 @@ export default function Submission() {
 					Character-like Level Generation for Science Birds
 				</PageHeader>
 				<Section>
-					<SectionHeader>Submission Guideline</SectionHeader>
+					<SectionHeader id='guideline'>Submission Guideline</SectionHeader>
 					<Paragraph>
 						Before submitting, please ensure that your prompt follows our
 						guidelines by checking the <Link href='/rules'>Rules</Link> and{' '}
@@ -57,50 +59,16 @@ export default function Submission() {
 						copy={true}
 						copyBtnTheme={'Dark'}
 					>
-						{`Use \`ab_drop()\` function to generate a stable structure that looks like the &lt;OBJECT&gt;—the goal. Dropping position and order are crucial.
-
-1. Definitions
-Slots: The map's width is equally partitioned into W slots where W = 20, with slots 0 and 19 being the most left and right, respectively.
-Layers: The map's height is equally partitioned into H layers where H = 16, with layers 0 and 15 being the bottom and top layers, respectively.
-Base: The bottom of the map, i.e., layer 0.
-
-2. Environment
-There are three block types as follows:
-b11, a square block whose width is 1 unit and height is 1 unit
-b31, a horizontal block whose width is 3 units and height is 1 unit
-b13, a vertical block whose width is 1 unit and height is 3 units
-
-3. Tool
-Use the \`ab_drop()\` function to vertically drop a block from layer H such that its center is at slot y and drop earlier blocks representing more bottom parts of the structure.`}
+						{SAMPLE_PROMPT}
 					</ReactHighlightSyntax>
 					<Paragraph>
 						If you have any questions, please contact us at this{' '}
 						<a href='mailto:chatgpt4pcg@gmail.com'>email address</a>.
 					</Paragraph>
 				</Section>
+				<SubmissionDeadline />
 				<Section>
-					<SectionHeader>Submission Deadline</SectionHeader>
-					<Paragraph>Midterm: 19 May 2023 (23:59 JST)</Paragraph>
-					<Paragraph>Final: 21 July 2023 (23:59 JST)</Paragraph>
-					<Paragraph>
-						If OpenAI releases an update to free-version web-based ChatGPT one
-						week before the deadline (either for the midterm or final), we will
-						extend the deadline by one week to give participants enough time to
-						adjust their prompts. We will notify all participants who have
-						submitted their work by email if this occurs. We will also make an
-						announcement on our website.
-					</Paragraph>
-					<Paragraph>
-						Midterm submission is optional, although we recommend it. Any team
-						that submits during the mid-term submission will be notified of the
-						preliminary results. However, all teams, whether they submit during
-						the midterm or not, must submit during the final submission period.
-						Only submissions during the final submission period will be
-						considered for the final ranking.
-					</Paragraph>
-				</Section>
-				<Section>
-					<SectionHeader>Submission Rules</SectionHeader>
+					<SectionHeader id='rules'>Submission Rules</SectionHeader>
 					<ol>
 						<li>
 							If a team submits multiple entries during a stage, midterm or
@@ -118,7 +86,9 @@ Use the \`ab_drop()\` function to vertically drop a block from layer H such that
 					</ol>
 				</Section>
 				<Section>
-					<SectionHeader>Result Announcement</SectionHeader>
+					<SectionHeader id='result-announcement'>
+						Result Announcement
+					</SectionHeader>
 					<Paragraph>
 						All participating teams will receive email notifications of their
 						results using the email addresses provided in the submission email.
