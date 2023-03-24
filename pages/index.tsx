@@ -111,7 +111,7 @@ export default function HomePage() {
 				<Section>
 					<SectionHeader id='paper'>Paper</SectionHeader>
 					<Paragraph>
-						Please see our paper about this competition at TBA.
+						Please see our paper about this competition (TBA).
 					</Paragraph>
 				</Section>
 				<Section>

@@ -40,7 +40,7 @@ export default function PromptPage() {
 						{SAMPLE_PROMPT}
 					</ReactHighlightSyntax>
 					<Paragraph>
-						Please see an improved version and its variants on{' '}
+						Please see a modified version and its variants on{' '}
 						<Link href='/supplement'>this page</Link> and check this paper (TBA)
 						for their performance.
 					</Paragraph>
