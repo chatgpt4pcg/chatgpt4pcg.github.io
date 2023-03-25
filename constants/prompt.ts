@@ -1,4 +1,4 @@
-export const SAMPLE_PROMPT = `Use \`ab_drop()\` function to generate a stable structure that looks like the &lt;OBJECT&gt;—the goal. Dropping position and order are crucial.
+export const SAMPLE_PROMPT = `Use \`ab_drop()\` function to generate a stable structure that looks like the <OBJECT>—the goal. Dropping position and order are crucial.
 
 1. Definitions
 Slots: The map's width is equally partitioned into W slots where W = 20, with slots 0 and 19 being the most left and right, respectively.

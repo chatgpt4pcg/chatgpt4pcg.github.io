@@ -32,7 +32,7 @@ export default function PromptPage() {
 					<Paragraph>
 						Please see a modified version and its variants on{' '}
 						<Link href='/supplement'>this page</Link> and check this paper (TBA)
-						for their performance.
+						and <a href="/files/supplementary_material.pdf">its supplementary document</a> for their performance.
 					</Paragraph>
 				</Section>
 				<Section>

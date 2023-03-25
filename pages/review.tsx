@@ -73,12 +73,6 @@ export default function ReviewPage() {
 				</Section>
 				<SubmissionDeadline />
 				<Section>
-					<SectionHeader id='paper'>Paper</SectionHeader>
-					<Paragraph>
-						Please see our paper about this competition (TBA).
-					</Paragraph>
-				</Section>
-				<Section>
 					<SectionHeader id='other-info'>Other information</SectionHeader>
 					<HorizontalList
 						header='Keywords'
