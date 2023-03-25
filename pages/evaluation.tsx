@@ -22,7 +22,7 @@ export default function RulesPage() {
 					Character-like Level Generation for Science Birds
 				</PageHeader>
 				<Section>
-					<SectionHeader id="evaluation">Evaluation</SectionHeader>
+					<SectionHeader id='evaluation'>Evaluation</SectionHeader>
 					<Paragraph>
 						The submitted prompts will undergo an evaluation process that
 						involves subjecting them to 10 trials for each of the 26 uppercase
@@ -37,12 +37,16 @@ export default function RulesPage() {
 						midterm and final stages. The number of trials and characters in the
 						evaluation set may be adjusted based on the number of teams.
 					</Paragraph>
-					<SectionSubHeader id="evaluation-set">Evaluation Set</SectionSubHeader>
+					<SectionSubHeader id='evaluation-set'>
+						Evaluation Set
+					</SectionSubHeader>
 					<Paragraph>All 26 alphabetical uppercase characters.</Paragraph>
 					<Paragraph>
 						A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 					</Paragraph>
-					<SectionSubHeader id="scoring-policy">Scoring Policy</SectionSubHeader>
+					<SectionSubHeader id='scoring-policy'>
+						Scoring Policy
+					</SectionSubHeader>
 					<Paragraph>
 						In trial <InlineMath math='i' /> of target character{' '}
 						<InlineMath math='j' /> for prompt <InlineMath math='k' />:
@@ -100,9 +104,9 @@ export default function RulesPage() {
 					</Paragraph>
 					<BlockMath math='trial_{ijk} = weight_{j}st_{ijk}si_{ijk}' />
 					<Paragraph>
-						The average score for target character <InlineMath math='j' />{' '}
-						of prompt <InlineMath math='k' />, <InlineMath math='char_{jk}' />,
-						is defined as follows:
+						The average score for target character <InlineMath math='j' /> of
+						prompt <InlineMath math='k' />, <InlineMath math='char_{jk}' />, is
+						defined as follows:
 					</Paragraph>
 					<BlockMath math='char_{jk} = \frac{\sum_{i=1}^{T} trial_{ijk}}{T}' />
 					<Paragraph>
@@ -120,7 +124,9 @@ export default function RulesPage() {
 						Finally, <InlineMath math='norm\_prompt_{k}' /> will be used for
 						ranking.
 					</Paragraph>
-					<SectionSubHeader id="ranking-policy">Ranking Policy</SectionSubHeader>
+					<SectionSubHeader id='ranking-policy'>
+						Ranking Policy
+					</SectionSubHeader>
 					<Paragraph>
 						The team that has the highest <InlineMath math='norm\_prompt_{k}' />
 						, rounded to two decimal places, will be declared the winner. If
@@ -131,7 +137,7 @@ export default function RulesPage() {
 					</Paragraph>
 				</Section>
 				<Section>
-					<SectionHeader id="evaluation-tools">Evaluation Tools</SectionHeader>
+					<SectionHeader id='evaluation-tools'>Evaluation Tools</SectionHeader>
 					<ol>
 						<li>
 							<a href='https://platform.openai.com/docs/models/overview'>
@@ -166,7 +172,9 @@ export default function RulesPage() {
 					</ol>
 				</Section>
 				<Section>
-					<SectionHeader id="evaluation-env">Evaluation Environment</SectionHeader>
+					<SectionHeader id='evaluation-env'>
+						Evaluation Environment
+					</SectionHeader>
 					<ol>
 						<li>
 							Software:
@@ -194,11 +202,16 @@ export default function RulesPage() {
 					</ol>
 				</Section>
 				<Section>
-					<SectionHeader id="evaluation-process">Evaluation Process</SectionHeader>
+					<SectionHeader id='evaluation-process'>
+						Evaluation Process
+					</SectionHeader>
 					<ol>
 						<li>
-							The <em>qualification script</em> will be first run to check for
-							rule violations, including:
+							The{' '}
+							<a href='https://github.com/chatgpt4pcg/qualification-checking-script'>
+								qualification checking script
+							</a>{' '}
+							will be first run to check for rule violations, including:
 							<ol>
 								<li>Whether the prompt contains disallowed characters.</li>
 								<li>
@@ -211,11 +224,14 @@ export default function RulesPage() {
 							</ol>
 						</li>
 						<li>
-							The <em>response gathering script</em> will load each qualified
-							team&apos;s prompt and repeat the following two steps for each
-							character -- (1) replacing <code>&lt;OBJECT&gt;</code> with the
-							target character and (2) contacting the ChatGPT API for a specific
-							number of trials.
+							The{' '}
+							<a href='https://github.com/chatgpt4pcg/response-gathering-script'>
+								response gathering script
+							</a>{' '}
+							will load each qualified team&apos;s prompt and repeat the
+							following two steps for each character -- (1) replacing{' '}
+							<code>&lt;OBJECT&gt;</code> with the target character and (2)
+							contacting the ChatGPT API for a specific number of trials.
 							<ol>
 								<li>
 									Each trial will always start from scratch and will contain no
@@ -224,34 +240,51 @@ export default function RulesPage() {
 							</ol>
 						</li>
 						<li>
-							The <em>code extraction script</em> will load each response and
-							produce a new file containing only a series of{' '}
-							<code>ab_drop()</code> commands.
+							The{' '}
+							<a href='https://github.com/chatgpt4pcg/code-extraction-script'>
+								code extraction script
+							</a>{' '}
+							will load each response and produce a new file containing only a
+							series of <code>ab_drop()</code> commands.
 						</li>
 						<li>
-							The <em>text-to-xml conversion script</em> will load each code
-							file and convert it into a Science Birds level description XML
-							file.
+							The{' '}
+							<a href='https://github.com/chatgpt4pcg/text-to-xml-converter-script'>
+								text-to-xml conversion script
+							</a>{' '}
+							will load each code file and convert it into a Science Birds level
+							description XML file.
 						</li>
 						<li>
-							Next, <em>Science Birds Evaluator</em>, will individually load all
-							levels to assess their stability and capture thier images. The
-							results of stability will be recorded, and for each level an image
-							of the structure with black-textured blocks on a white background
-							will be produced by the program.
+							Next,{' '}
+							<a href='https://github.com/chatgpt4pcg/modified-science-birds'>
+								Science Birds Evaluator
+							</a>
+							, will individually load all levels to assess their stability and
+							capture thier images. The results of stability will be recorded,
+							and for each level an image of the structure with black-textured
+							blocks on a white background will be produced by the program.
 						</li>
 						<li>
-							The <em>similarity checking script</em> will load each image and
-							pass it through an open source-model called{' '}
+							The{' '}
+							<a href='https://github.com/chatgpt4pcg/similarity-checking-script'>
+								similarity checking script
+							</a>{' '}
+							will load each image and pass it through an open source-model
+							called{' '}
 							<a href='https://huggingface.co/pittawat/vit-base-letter'>
 								vit-base-letter
 							</a>
 							. It will then record the similarity result.
 						</li>
 						<li>
-							Finally, the <em>scoring and ranking</em> script will load all
-							stability and similarity results and produce the final rank and
-							score result for all teams according to the scoring policy.
+							Finally, the{' '}
+							<a href='https://github.com/chatgpt4pcg/scoring-and-ranking-script'>
+								scoring and ranking script
+							</a>{' '}
+							will load all stability and similarity results and produce the
+							final rank and score result for all teams according to the scoring
+							policy.
 						</li>
 					</ol>
 				</Section>
