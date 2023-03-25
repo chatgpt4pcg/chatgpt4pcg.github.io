@@ -33,7 +33,7 @@ export default function HomePage() {
 					<span className='red'>
 						(@Reviewers of our paper: Please see{' '}
 						<Link href='/review'>this homepage</Link> instead, where the
-						organizers are anonymous.)
+						organizers are anonymized.)
 					</span>
 				</PageHeader>
 				<Image src='logo.png' alt='Competition logo' />
