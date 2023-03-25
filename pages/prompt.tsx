@@ -1,8 +1,8 @@
-import Head from 'next/head';
 import Image from '@/components/ui/Image/Image';
 import Link from 'next/link';
 import PageHeader from '@/components/ui/PageHeader/PageHeader';
 import PageLayout from '@/components/ui/PageLayout/PageLayout';
+import PageMeta from '@/components/content/PageMeta';
 import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
 import Paragraph from '@/components/ui/Paragraph/Paragraph';
 import ReactHighlightSyntax from 'react-highlight-syntax';
@@ -13,17 +13,7 @@ import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 export default function PromptPage() {
 	return (
 		<>
-			<Head>
-				<title>
-					The 1st ChatGPT4PCG Competition: Character-like Level Generation for
-					Science Birds - Prompt Rules and Guidelines
-				</title>
-				<meta
-					name='description'
-					content='The ChatGPT4PCG Competition invites participants to use ChatGPT to generate stable levels for Science Birds resembling English characters. Participants must submit a prompt and instructions, and the generated levels will undergo testing for stability and similarity using an OCR model, offering a chance to showcase prompt engineering skills and push the boundaries of natural language processing and procedural content generation.'
-				/>
-				<meta name='viewport' content='width=device-width, initial-scale=1' />
-			</Head>
+			<PageMeta pageTitle='Prompt Rules and Guidelines' />
 			<PageLayout>
 				<PageSubHeader>The 1st ChatGPT4PCG Competition</PageSubHeader>
 				<PageHeader>
@@ -46,7 +36,7 @@ export default function PromptPage() {
 					</Paragraph>
 				</Section>
 				<Section>
-					<SectionHeader id="rules">Prompt Rules</SectionHeader>
+					<SectionHeader id='rules'>Prompt Rules</SectionHeader>
 					<ol>
 						<li>
 							Prompts must be written in English using only alphanumeric
@@ -63,7 +53,7 @@ export default function PromptPage() {
 						<li>
 							Prompts designed for this competition must be created for a
 							one-round conversation. This means that each prompt&apos;s
-							interaction with ChatGPT should consist one user request to and
+							interaction with ChatGPT should consist of one user request to and
 							one response from ChatGPT. This ensures simplicity and fairness in
 							this year&apos;s competition.
 						</li>

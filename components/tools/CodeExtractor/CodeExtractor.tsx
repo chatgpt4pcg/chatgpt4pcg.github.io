@@ -45,6 +45,14 @@ export default function CodeExtractor() {
 						setRawData(event.target.value);
 					}}
 					rows={8}
+					placeholder={`To generate a structure like a character "I", you can use the following code:
+\`\`\`
+# drop the first square block
+ab_drop('b11', 1)
+
+# drop the second square block
+ab_drop('b11', 1)
+\`\`\``}
 				/>
 			</div>
 			<div className={styles.formField}>

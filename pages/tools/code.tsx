@@ -1,26 +1,16 @@
 import CodeExtractor from '@/components/tools/CodeExtractor/CodeExtractor';
-import Head from 'next/head';
 import PageHeader from '@/components/ui/PageHeader/PageHeader';
 import PageLayout from '@/components/ui/PageLayout/PageLayout';
+import PageMeta from '@/components/content/PageMeta';
 import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
+import Paragraph from '@/components/ui/Paragraph/Paragraph';
 import Section from '@/components/ui/Section/Section';
 import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
-import Paragraph from '@/components/ui/Paragraph/Paragraph';
 
 export default function CodeExtractorPage() {
 	return (
 		<>
-			<Head>
-				<title>
-					The 1st ChatGPT4PCG Competition: Character-like Level Generation for
-					Science Birds
-				</title>
-				<meta
-					name='description'
-					content='The ChatGPT4PCG Competition invites participants to use ChatGPT to generate stable levels for Science Birds resembling English characters. Participants must submit a prompt and instructions, and the generated levels will undergo testing for stability and similarity using an OCR model, offering a chance to showcase prompt engineering skills and push the boundaries of natural language processing and procedural content generation.'
-				/>
-				<meta name='viewport' content='width=device-width, initial-scale=1' />
-			</Head>
+			<PageMeta pageTitle='Tools - Online Code Extractor' />
 			<PageLayout>
 				<PageSubHeader>The 1st ChatGPT4PCG Competition</PageSubHeader>
 				<PageHeader>
@@ -35,6 +25,11 @@ export default function CodeExtractorPage() {
 							code extraction script
 						</a>
 						.
+					</Paragraph>
+					<Paragraph>
+						This tool automatically extracts any code between the last pairs of
+						three backticks (```). Paste any response from ChatGPT that includes
+						three backticks to see the extracted code.
 					</Paragraph>
 					<CodeExtractor />
 				</Section>
