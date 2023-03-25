@@ -20,19 +20,12 @@ export default function HomePage() {
 				<PageHeader>
 					Character-like Level Generation for Science Birds
 				</PageHeader>
-				{/* <AlertBox header='@Reviewers of our paper'>
+				<AlertBox header='@Reviewers of our paper'>
 					<Paragraph>
 						Please see <Link href='/review'>this homepage</Link> instead, where
 						the organizers are anonymized.
 					</Paragraph>
-				</AlertBox> */}
-				<PageHeader>
-					<span className='red'>
-						(@Reviewers of our paper: Please see{' '}
-						<Link href='/review'>this homepage</Link> instead, where the
-						organizers are anonymized.)
-					</span>
-				</PageHeader>
+				</AlertBox>
 				<Image src='/images/logo.png' alt='Competition logo' />
 				<Section>
 					<Paragraph>
