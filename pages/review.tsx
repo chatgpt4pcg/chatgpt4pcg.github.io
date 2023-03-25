@@ -18,7 +18,7 @@ export default function ReviewPage() {
 				<PageHeader>
 					Character-like Level Generation for Science Birds
 				</PageHeader>
-				<Image src='logo.png' alt='Competition logo' />
+				<Image src='/images/logo.png' alt='Competition logo' />
 				<Section>
 					<Paragraph>
 						The 1st ChatGPT4PCG Competition challenges participants to utilize

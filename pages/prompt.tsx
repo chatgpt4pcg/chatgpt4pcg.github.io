@@ -156,7 +156,7 @@ export default function PromptPage() {
 													<code>b11</code> denotes a square block whose size is
 													1x1.
 													<Image
-														src='b11.png'
+														src='/images/b11.png'
 														alt='b11 blocks'
 														noBorderRadius
 														width={24}
@@ -166,7 +166,7 @@ export default function PromptPage() {
 													<code>b13</code> denotes a column block whose size is
 													1x3.
 													<Image
-														src='b13.png'
+														src='/images/b13.png'
 														alt='b13 blocks'
 														noBorderRadius
 														width={24}
@@ -176,7 +176,7 @@ export default function PromptPage() {
 													<code>b31</code> denotes a row block whose size is
 													3x1.
 													<Image
-														src='b31.png'
+														src='/images/b31.png'
 														alt='b31 blocks'
 														noBorderRadius
 														width={24 * 3}

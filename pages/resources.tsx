@@ -53,7 +53,7 @@ export default function ResourcesPage() {
 					<SectionSubHeader id='science-birds-evaluator'>
 						Science Birds Evaluator
 					</SectionSubHeader>
-					<Image src='science_birds.png' alt='Science Birds screenshot' />
+					<Image src='/images/science_birds.png' alt='Science Birds screenshot' />
 					<Paragraph>
 						This is a modified version of{' '}
 						<a href='https://github.com/lucasnfe/science-birds'>

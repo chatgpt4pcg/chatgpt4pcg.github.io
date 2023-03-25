@@ -26,7 +26,7 @@ export default function HomePage() {
 						organizers are anonymized.)
 					</span>
 				</PageHeader>
-				<Image src='logo.png' alt='Competition logo' />
+				<Image src='/images/logo.png' alt='Competition logo' />
 				<Section>
 					<Paragraph>
 						The 1st ChatGPT4PCG Competition challenges participants to utilize

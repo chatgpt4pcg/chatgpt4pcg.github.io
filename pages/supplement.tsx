@@ -33,7 +33,7 @@ export default function SupplementaryMaterialPage() {
 					</Paragraph>
 					<Paragraph>
 						For the full version of supplementary material containing experiment
-						data, please download this file. (TBA)
+						data, please download <a href="/files/supplementary_material.zip">this file</a>.
 					</Paragraph>
 					<Divider />
 					<SectionSubHeader id='v1'>V1</SectionSubHeader>
