@@ -92,6 +92,7 @@ export default function ResourcesPage() {
 					<SectionSubHeader id='online-converter'>
 						Online Converter
 					</SectionSubHeader>
+					<Image src='/images/converter.png' alt='Online Converter screenshot' />
 					<Paragraph>
 						The converter is a tool that creates an XML file and an image from a
 						series of <code>ab_drop()</code> function string. The resulting XML
@@ -134,6 +135,7 @@ export default function ResourcesPage() {
 					<SectionSubHeader id='online-work-counter'>
 						Online Word Counter
 					</SectionSubHeader>
+					<Image src='/images/word.png' alt='Online Word Counter screenshot' />
 					<Paragraph>
 						The word counter web app is a quick and efficient tool that uses the{' '}
 						<a href='https://www.npmjs.com/package/words-count'>
@@ -153,6 +155,7 @@ export default function ResourcesPage() {
 					<SectionSubHeader id='online-code-extractor'>
 						Online Code Extractor
 					</SectionSubHeader>
+					<Image src='/images/code.png' alt='Online Code Extractor screenshot' />
 					<Paragraph>
 						The online code extractor extracts a code block from ChatGPT API
 						responses, demonstrating the same algorithm used in the{' '}
@@ -172,6 +175,7 @@ export default function ResourcesPage() {
 					<SectionSubHeader id='online-letter-classifier'>
 						Online Letter Classifier
 					</SectionSubHeader>
+					<Image src='/images/classifier.png' alt='Online Letter Classifier screenshot' />
 					<Paragraph>
 						<span className='red'>
 							Please note that the Online Letter Classifier embed in the tool
