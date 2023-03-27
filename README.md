@@ -1,6 +1,7 @@
 # The 1st ChatGPT4PCG Competition: Character-like Level Generation for Science Birds
 
-![Logo](https://github.com/chatgpt4pcg/chatgpt4pcg.github.io/raw/main/public/logo.png)
+![image](https://user-images.githubusercontent.com/11158905/227910064-b9cf5e7a-a619-4ff3-b385-73de89068d84.png)
+
 
 The 1st ChatGPT4PCG Competition challenges participants to utilize the state-of-the-art natural language processing tool, ChatGPT, to generate visually appealing and structurally sound levels for Science Birds, an Angry Birds clone created for research purposes.
 As a participant, your goal is to create a prompt that instructs ChatGPT to generate a level in Science Birds that resembles an English capital letter while ensuring that the level is stable and able to withstand gravity. You are encouraged to use various prompt engineering techniques to develop the most effective prompt possible.
