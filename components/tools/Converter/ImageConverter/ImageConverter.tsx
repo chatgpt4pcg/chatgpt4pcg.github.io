@@ -26,15 +26,20 @@ export default function ImageConverter({
 	const [imageCanvasDataString, setImageCanvasDataString] = useState('');
 
 	function drawGrid() {
-		clearCanvas();
 		const canvasContext = canvasRef.current!.getContext('2d')!;
 		const imageCanvasContext = imageCanvasRef.current!.getContext('2d')!;
 
 		canvasContext.canvas.width = CANVAS_WIDTH;
 		canvasContext.canvas.height = CANVAS_HEIGHT;
 
+		canvasContext.fillStyle = 'white';
+		canvasContext.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
 		imageCanvasContext.canvas.width = CANVAS_WIDTH;
 		imageCanvasContext.canvas.height = CANVAS_HEIGHT;
+
+		imageCanvasContext.fillStyle = 'white';
+		imageCanvasContext.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
 		canvasContext.strokeStyle = 'lightgray';
 
@@ -126,7 +131,7 @@ export default function ImageConverter({
 			const halfWidth = Math.floor(block.size.width / 2) * ONE_GRID_CELL_SIZE;
 
 			const image = new Image(blockWidth, blockHeight);
-			image.src = `/${block.id}.png`;
+			image.src = `/images/${block.id}.png`;
 			image.onload = () => {
 				canvasContext.drawImage(
 					image,
