@@ -29,11 +29,17 @@ export default function SupplementaryMaterialPage() {
 				<Section>
 					<SectionHeader id='improved-prompts'>Improved Prompts</SectionHeader>
 					<Paragraph>
-						Please see their performance on our paper. (TBA)
+						Please see their performance on our paper. (TBA;{' '}
+						<span className='red'>
+							@our paper's reviewers, please do not click the link since it
+							contains author information
+						</span>
+						)
 					</Paragraph>
 					<Paragraph>
 						For the full version of supplementary material containing experiment
-						data, please download <a href="/files/supplementary_material.zip">this file</a>.
+						data, please download{' '}
+						<a href='/files/supplementary_material.zip'>this file</a>.
 					</Paragraph>
 					<Divider />
 					<SectionSubHeader id='v1'>V1</SectionSubHeader>

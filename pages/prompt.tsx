@@ -31,8 +31,16 @@ export default function PromptPage() {
 					</ReactHighlightSyntax>
 					<Paragraph>
 						Please see a modified version and its variants on{' '}
-						<Link href='/supplement'>this page</Link> and check this paper (TBA)
-						and <a href="/files/supplementary_material.pdf">its supplementary document</a> for their performance.
+						<Link href='/supplement'>this page</Link> and check this paper (TBA;{' '}
+						<span className='red'>
+							@our paper's reviewers, please do not click the link since it
+							contains author information
+						</span>
+						) and{' '}
+						<a href='/files/supplementary_material.pdf'>
+							its supplementary document
+						</a>{' '}
+						for their performance.
 					</Paragraph>
 				</Section>
 				<Section>
