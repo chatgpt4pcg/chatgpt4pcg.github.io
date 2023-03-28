@@ -168,6 +168,7 @@ export default function PromptPage() {
 														alt='b11 blocks'
 														noBorderRadius
 														width={24}
+														height={24}
 													/>
 												</li>
 												<li>
@@ -178,6 +179,7 @@ export default function PromptPage() {
 														alt='b13 blocks'
 														noBorderRadius
 														width={24}
+														height={24 * 3}
 													/>
 												</li>
 												<li>
@@ -188,6 +190,7 @@ export default function PromptPage() {
 														alt='b31 blocks'
 														noBorderRadius
 														width={24 * 3}
+														height={24}
 													/>
 												</li>
 											</ol>

@@ -140,15 +140,15 @@ export default function ImageConverter({
 					blockWidth,
 					blockHeight
 				);
-
-				imageCanvasContext.drawImage(
-					image,
-					blockX - halfWidth + horizontalShift,
-					CANVAS_HEIGHT - blockHeight - blockY - verticalShift,
-					blockWidth,
-					blockHeight
-				);
 			};
+
+			imageCanvasContext.fillStyle = 'black';
+			imageCanvasContext.fillRect(
+				blockX - halfWidth + horizontalShift,
+				CANVAS_HEIGHT - blockHeight - blockY - verticalShift,
+				blockWidth,
+				blockHeight
+			);
 		});
 	}
 
