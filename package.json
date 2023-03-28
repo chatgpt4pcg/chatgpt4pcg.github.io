@@ -2,12 +2,14 @@
 	"private": true,
 	"scripts": {
 		"dev": "next",
-		"deploy": "next build && mkdir -p docs/ && next export -o docs/ && touch docs/.nojekyll && git add docs/ && git commit -m 'chore: update for GitHub Page' && git subtree push --prefix docs origin gh-pages"
+		"export" : "next build && mkdir -p docs/ && next export -o docs/ && next-image-export-optimizer --exportFolderPath docs/",
+		"deploy": "npm run export && touch docs/.nojekyll && git add docs/ && git commit -m 'chore: update for GitHub Page' && git subtree push --prefix docs origin gh-pages"
 	},
 	"dependencies": {
 		"@heroicons/react": "^2.0.16",
 		"chatgpt4pcg": "^1.2.0",
 		"next": "latest",
+		"next-image-export-optimizer": "^1.4.1",
 		"nextjs-google-analytics": "^2.3.3",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
