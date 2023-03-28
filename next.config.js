@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
+  output: 'docs',
+  basePath: '/',
 }
 
 module.exports = nextConfig

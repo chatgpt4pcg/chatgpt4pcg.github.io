@@ -2,7 +2,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next",
-		"build": "next build && mkdir -p docs/ && next export -o docs/ && touch docs/.nojekyll && git add docs/ && git commit -m 'chore: update for GitHub Page' && git push origin main"
+		"deploy": "next build && mkdir -p docs/ && next export -o docs/ && touch docs/.nojekyll && git add docs/ && git commit -m 'chore: update for GitHub Page' && git subtree push origin gh-pages"
 	},
 	"dependencies": {
 		"@heroicons/react": "^2.0.16",
