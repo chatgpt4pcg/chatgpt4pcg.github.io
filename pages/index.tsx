@@ -101,8 +101,15 @@ export default function HomePage() {
 				<Section>
 					<SectionHeader id='paper'>Paper</SectionHeader>
 					<Paragraph>
-						Please see our paper about this competition (TBA) and <a href="/files/supplementary_material.pdf">its
-						supplementary document</a>.
+						Please see{' '}
+						<a target='_blank' href='https://arxiv.org/abs/2303.15662'>
+							our paper
+						</a>{' '}
+						about this competition and{' '}
+						<a href='/files/supplementary_material.pdf'>
+							its supplementary document
+						</a>
+						.
 					</Paragraph>
 				</Section>
 				<Section>

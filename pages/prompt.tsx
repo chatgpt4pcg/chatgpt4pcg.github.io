@@ -31,7 +31,8 @@ export default function PromptPage() {
 					</ReactHighlightSyntax>
 					<Paragraph>
 						Please see a modified version and its variants on{' '}
-						<Link href='/supplement'>this page</Link> and check this paper (TBA;{' '}
+						<Link href='/supplement'>this page</Link> and check{' '}
+						<a target="_blank" href='https://arxiv.org/abs/2303.15662'>this paper</a> (
 						<span className='red'>
 							@our paper's reviewers, please do not click the link since it
 							contains author information

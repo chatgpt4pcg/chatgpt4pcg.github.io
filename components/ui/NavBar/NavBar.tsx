@@ -66,7 +66,7 @@ export default function NavBar() {
 					<Link href='/supplement'>Supplementary Material</Link>
 				</li>
 				<li className={`${styles.navItem} ${styles.special}`}>
-					<a href='https://github.com/chatgpt4pcg/chatgpt4pcg.github.io'>
+					<a target="_blank" href='https://github.com/chatgpt4pcg/chatgpt4pcg.github.io'>
 						GitHub{' '}
 						<ArrowUpRightIcon
 							style={{
