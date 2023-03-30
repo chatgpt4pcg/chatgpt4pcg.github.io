@@ -10,6 +10,7 @@ import Paragraph from '@/components/ui/Paragraph/Paragraph';
 import Section from '@/components/ui/Section/Section';
 import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 import SubmissionDeadline from '@/components/content/SubmissionDeadline';
+import YouTube from 'react-youtube';
 
 export default function HomePage() {
 	return (
@@ -60,6 +61,14 @@ export default function HomePage() {
 						skills. Join us in this exciting challenge to push the boundaries of
 						prompt engineering and procedural content generation!
 					</Paragraph>
+					<YouTube
+						videoId='9AJhqIkDbxs'
+						title='The 1st ChatGPT4PCG Competition: Character-like Level Generation for Science Birds'
+						className='youtube-player'
+						opts={
+							{innerWidth: 540}
+						}
+					/>
 				</Section>
 				<Section>
 					<SectionHeader id='organizers'>Organizers</SectionHeader>

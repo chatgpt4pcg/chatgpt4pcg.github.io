@@ -106,3 +106,11 @@ code {
 		-0.4px 34.8px 44.1px -1.3px hsl(var(--shadow-color) / 0.28),
 		-0.5px 49.9px 63.3px -1.5px hsl(var(--shadow-color) / 0.3);
 }
+
+.youtube-player {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 32px;
+}

@@ -2,7 +2,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next",
-		"export" : "next build && mkdir -p docs/ && next export -o docs/ && next-image-export-optimizer --exportFolderPath docs/",
+		"export": "next build && mkdir -p docs/ && next export -o docs/ && next-image-export-optimizer --exportFolderPath docs/",
 		"deploy": "npm run export && touch docs/.nojekyll && git add -f docs/ && git commit -m 'chore: update for GitHub Page' && git subtree push --prefix docs origin gh-pages"
 	},
 	"dependencies": {
@@ -14,7 +14,8 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-highlight-syntax": "^1.1.0",
-		"react-katex": "^3.0.1"
+		"react-katex": "^3.0.1",
+		"react-youtube": "^10.1.0"
 	},
 	"devDependencies": {
 		"@types/node": "^18.15.7",
