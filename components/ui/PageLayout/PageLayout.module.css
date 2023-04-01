@@ -2,6 +2,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 64px 64px;
+  padding-top: 72px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -10,5 +11,6 @@
 @media (max-width: 768px) {
   .layout {
     padding: 32px;
+    padding-top: 84px;
   }
 }
