@@ -87,6 +87,7 @@
 		border: none;
 		color: white;
 		cursor: pointer;
+		padding: 0;
 	}
 
 	.navContainer.mobileActive {
