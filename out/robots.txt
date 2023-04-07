@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://chatgpt4pcg.github.io
+
+# Sitemaps
+Sitemap: https://chatgpt4pcg.github.io/sitemap.xml
