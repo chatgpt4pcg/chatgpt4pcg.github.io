@@ -13,9 +13,6 @@ dependencies:
   next-image-export-optimizer:
     specifier: ^1.4.1
     version: 1.4.1(next@13.3.0)(react@18.2.0)
-  next-sitemap:
-    specifier: ^4.0.6
-    version: 4.0.6(@next/env@13.3.0)(next@13.3.0)
   nextjs-google-analytics:
     specifier: ^2.3.3
     version: 2.3.3(next@13.3.0)(react@18.2.0)
@@ -62,10 +59,6 @@ devDependencies:
     version: 4.9.5
 
 packages:
-
-  /@corex/deepmerge@4.0.37:
-    resolution: {integrity: sha512-PX90bEnrLdxd5e6rSFWsghExMuSw0Uov3fWJuuaoFuUQIS/446diu/4seExK5b+43L+SOBbd2uBGwYUkG1JfCw==}
-    dev: false
 
   /@eslint-community/eslint-utils@4.4.0(eslint@8.36.0):
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
@@ -905,20 +898,6 @@ packages:
       react: 18.2.0
       sharp: 0.31.3
       typescript: 4.9.5
-    dev: false
-
-  /next-sitemap@4.0.6(@next/env@13.3.0)(next@13.3.0):
-    resolution: {integrity: sha512-pZ9tynYe6mRR189qZqcOlWVgM1Gxo07BJQW0AjerKmLwQOt+6FQMdaDgifgCt6jDT3Y3EG/+NUDDZRcd0gbPkA==}
-    engines: {node: '>=14.18'}
-    hasBin: true
-    peerDependencies:
-      '@next/env': '*'
-      next: '*'
-    dependencies:
-      '@corex/deepmerge': 4.0.37
-      '@next/env': 13.3.0
-      minimist: 1.2.8
-      next: 13.3.0(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
   /next@13.3.0(react-dom@18.2.0)(react@18.2.0):
