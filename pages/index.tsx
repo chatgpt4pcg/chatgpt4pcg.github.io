@@ -67,6 +67,7 @@ export default function HomePage() {
 						title='The 1st ChatGPT4PCG Competition: Character-like Level Generation for Science Birds'
 						className='youtube-player'
 						opts={{ innerWidth: 540 }}
+						loading='lazy'
 					/>
 				</Section>
 				<Section>

@@ -60,6 +60,7 @@ export default function ReviewPage() {
 						opts={
 							{innerWidth: 540}
 						}
+						loading='lazy'
 					/>
 				</Section>
 				<Section>
