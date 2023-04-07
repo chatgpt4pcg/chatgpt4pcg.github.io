@@ -11,6 +11,7 @@ import Section from '@/components/ui/Section/Section';
 import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 import SubmissionDeadline from '@/components/content/SubmissionDeadline';
 import YouTube from 'react-youtube';
+import styles from './index.module.css';
 
 export default function HomePage() {
 	return (
@@ -65,9 +66,7 @@ export default function HomePage() {
 						videoId='9AJhqIkDbxs'
 						title='The 1st ChatGPT4PCG Competition: Character-like Level Generation for Science Birds'
 						className='youtube-player'
-						opts={
-							{innerWidth: 540}
-						}
+						opts={{ innerWidth: 540 }}
 					/>
 				</Section>
 				<Section>
@@ -146,6 +145,18 @@ export default function HomePage() {
 					<HorizontalList header='Competitive' items={['New Competition']} />
 					<HorizontalList header='Barrier of entry' items={['Low']} />
 				</Section>
+				<div className={styles.cogLogoContainer}>
+					<h4 className={styles.cogLogoHeader}>As a part of </h4>
+					<div className={styles.cogLogo}>
+						<a target='_blank' href='https://2023.ieee-cog.org/competitions/'>
+							<Image
+								src='/images/cog-2023-logo.png'
+								alt='Competition logo'
+								noBorderRadius
+							/>
+						</a>
+					</div>
+				</div>
 			</PageLayout>
 		</>
 	);

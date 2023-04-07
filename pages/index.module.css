@@ -1,0 +1,28 @@
+.cogLogoHeader {
+	font-family: sans-serif;
+	color: #0e8388;
+  font-size: 1.7rem;
+}
+
+.cogLogoContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.cogLogo {
+	width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+	.cogLogoContainer {
+		margin-top: 32px;
+	}
+
+	.cogLogo {
+		width: 100%;
+	}
+}
