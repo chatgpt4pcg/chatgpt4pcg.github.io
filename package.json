@@ -2,8 +2,8 @@
 	"private": true,
 	"scripts": {
 		"dev": "next",
-		"export": "next build && mkdir -p docs/ && next export -o docs/ && next-image-export-optimizer --exportFolderPath docs/",
-		"deploy": "npm run export && touch docs/.nojekyll && git add -f docs/ && git commit -m 'chore: update for GitHub Page' && git subtree push --prefix docs origin gh-pages"
+		"export": "next build && mkdir -p out/ && next export -o out/ && next-image-export-optimizer --exportFolderPath out/",
+		"deploy": "npm run export && touch out/.nojekyll && git add -f out/ && git commit -m 'chore: update for GitHub Page' && git subtree push --prefix out origin gh-pages"
 	},
 	"dependencies": {
 		"@heroicons/react": "^2.0.16",
