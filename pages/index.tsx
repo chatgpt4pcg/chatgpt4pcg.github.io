@@ -22,12 +22,6 @@ export default function HomePage() {
 				<PageHeader>
 					Character-like Level Generation for Science Birds
 				</PageHeader>
-				<AlertBox header='@Reviewers of our paper'>
-					<Paragraph>
-						Please see <Link href='/review'>this homepage</Link> instead, where
-						the organizers are anonymized.
-					</Paragraph>
-				</AlertBox>
 				<Image src='/images/logo.png' alt='Competition logo' />
 				<Section>
 					<Paragraph>
@@ -111,7 +105,7 @@ export default function HomePage() {
 					<SectionHeader id='paper'>Paper</SectionHeader>
 					<Paragraph>
 						Please see{' '}
-						<a target='_blank' href='https://arxiv.org/abs/2303.15662'>
+						<a rel='noopener' target='_blank' href='https://arxiv.org/abs/2303.15662'>
 							our paper
 						</a>{' '}
 						about this competition and{' '}
@@ -149,7 +143,7 @@ export default function HomePage() {
 				<div className={styles.cogLogoContainer}>
 					<h4 className={styles.cogLogoHeader}>As a part of </h4>
 					<div className={styles.cogLogo}>
-						<a target='_blank' href='https://2023.ieee-cog.org/competitions/'>
+						<a rel='noopener' target='_blank' href='https://2023.ieee-cog.org/competitions/'>
 							<Image
 								src='/images/cog-2023-logo.png'
 								alt='Competition logo'

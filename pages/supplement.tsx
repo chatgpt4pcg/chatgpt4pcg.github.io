@@ -30,12 +30,7 @@ export default function SupplementaryMaterialPage() {
 					<SectionHeader id='improved-prompts'>Improved Prompts</SectionHeader>
 					<Paragraph>
 						Please see their performance on{' '}
-						<a target="_blank" href='https://arxiv.org/abs/2303.15662'>our paper</a>. (
-						<span className='red'>
-							@our paper's reviewers, please do not click the link since it
-							contains author information
-						</span>
-						)
+						<a rel='noopener' target="_blank" href='https://arxiv.org/abs/2303.15662'>our paper</a>.
 					</Paragraph>
 					<Paragraph>
 						For the full version of supplementary material containing experiment

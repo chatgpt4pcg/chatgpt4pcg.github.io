@@ -32,12 +32,7 @@ export default function PromptPage() {
 					<Paragraph>
 						Please see a modified version and its variants on{' '}
 						<Link href='/supplement'>this page</Link> and check{' '}
-						<a target="_blank" href='https://arxiv.org/abs/2303.15662'>this paper</a> (
-						<span className='red'>
-							@our paper's reviewers, please do not click the link since it
-							contains author information
-						</span>
-						) and{' '}
+						<a rel='noopener' target="_blank" href='https://arxiv.org/abs/2303.15662'>this paper</a> and{' '}
 						<a href='/files/supplementary_material.pdf'>
 							its supplementary document
 						</a>{' '}
