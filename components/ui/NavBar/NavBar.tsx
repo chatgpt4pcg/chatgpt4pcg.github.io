@@ -111,10 +111,18 @@ export default function NavBar() {
 					>
 						<Link href='/supplement'>Supplementary Material</Link>
 					</li>
+					<li
+						className={`${styles.navItem} ${
+							router.pathname == '/changelog' ? styles.active : ''
+						}`}
+					>
+						<Link href='/changelog'>Changelog</Link>
+					</li>
 					<li className={`${styles.navItem} ${styles.special}`}>
 						<a
 							target='_blank'
 							href='https://github.com/chatgpt4pcg/chatgpt4pcg.github.io'
+							rel='noopener'
 						>
 							GitHub{' '}
 							<ArrowUpRightIcon

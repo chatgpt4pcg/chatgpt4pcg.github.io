@@ -1,4 +1,5 @@
 import AlertBox from '@/components/ui/AlertBox/AlertBox';
+import Divider from '@/components/ui/Divider/Divider';
 import HorizontalList from '@/components/ui/HorizontalList/HorizontalList';
 import Image from '@/components/ui/Image/Image';
 import Link from 'next/link';
@@ -22,6 +23,25 @@ export default function HomePage() {
 				<PageHeader>
 					Character-like Level Generation for Science Birds
 				</PageHeader>
+				<AlertBox header='Announcement'>
+					<Paragraph>
+						<strong>Latest update: May 23, 2023</strong>
+					</Paragraph>
+					<ul>
+						<li>
+							<Link href='/changelog'>Changelog</Link> has been added to the
+							website. Please visit it to see the latest updates.
+						</li>
+					</ul>
+					<Divider style={{ borderColor: '#77E9C9' }} />
+					<Paragraph>
+						We are excited to announce that the mid-term submission phase has
+						officially come to a close. Thank you to all the participants who
+						submitted their work. We are greatly appreciated! For those who
+						couldn't submit during the mid-term phase, don't worry! We encourage
+						you to join us for the final submission.
+					</Paragraph>
+				</AlertBox>
 				<Image src='/images/logo.png' alt='Competition logo' />
 				<Section>
 					<Paragraph>
@@ -105,7 +125,11 @@ export default function HomePage() {
 					<SectionHeader id='paper'>Paper</SectionHeader>
 					<Paragraph>
 						Please see{' '}
-						<a rel='noopener' target='_blank' href='https://arxiv.org/abs/2303.15662'>
+						<a
+							rel='noopener'
+							target='_blank'
+							href='https://arxiv.org/abs/2303.15662'
+						>
 							our paper
 						</a>{' '}
 						about this competition and{' '}
@@ -143,7 +167,11 @@ export default function HomePage() {
 				<div className={styles.cogLogoContainer}>
 					<h4 className={styles.cogLogoHeader}>As a part of </h4>
 					<div className={styles.cogLogo}>
-						<a rel='noopener' target='_blank' href='https://2023.ieee-cog.org/competitions/'>
+						<a
+							rel='noopener'
+							target='_blank'
+							href='https://2023.ieee-cog.org/competitions/'
+						>
 							<Image
 								src='/images/cog-2023-logo.png'
 								alt='Competition logo'

@@ -32,7 +32,14 @@ export default function PromptPage() {
 					<Paragraph>
 						Please see a modified version and its variants on{' '}
 						<Link href='/supplement'>this page</Link> and check{' '}
-						<a rel='noopener' target="_blank" href='https://arxiv.org/abs/2303.15662'>this paper</a> and{' '}
+						<a
+							rel='noopener'
+							target='_blank'
+							href='https://arxiv.org/abs/2303.15662'
+						>
+							this paper
+						</a>{' '}
+						and{' '}
 						<a href='/files/supplementary_material.pdf'>
 							its supplementary document
 						</a>{' '}
@@ -45,8 +52,8 @@ export default function PromptPage() {
 						<li>
 							Prompts must be written in English using only alphanumeric
 							characters, space, and the following symbols: ~ / \ + - * ` '
-							&quot; . : ; ? &mdash; , ! @ # $ % ^ &amp; ( ) _ = [ ] {} | &lt;
-							&gt;.
+							&quot; &lsquo; &rsquo; &ldquo; &rdquo; . : ; ? &mdash; , ! @ # $ %
+							^ &amp; ( ) _ = [ ] {} | &lt; &gt;.
 						</li>
 						<li>
 							The maximum word count for a prompt is <strong>900 words</strong>.

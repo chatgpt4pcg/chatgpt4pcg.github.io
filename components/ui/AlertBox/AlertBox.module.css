@@ -4,18 +4,30 @@
   justify-content: center;
   box-shadow: var(--shadow-elevation-medium);
   border-radius: 16px;
-  /* background-color: #FDD2BF; */
   padding: 32px;
   font-family: sans-serif;
-  font-weight: bold;
   font-size: 1.2rem;
   margin-top: 8px;
   margin-bottom: 32px;
   color: #012443;
   border: 2px solid #012443;
+  line-height: 1.5;
 }
 
 .header {
   font-size: 1.4rem;
+  line-height: 1.25;
+}
+
+.error {
   color: #B61919;
+}
+
+.info {
+  color: #19B6A0;
+}
+
+
+.warning {
+  color: #B6A019;
 }

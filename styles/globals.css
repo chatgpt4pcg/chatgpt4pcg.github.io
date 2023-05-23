@@ -84,8 +84,8 @@ code {
 	font-size: 0.9rem;
 }
 
-.red {
-	color: red;
+.line-through {
+	text-decoration: line-through
 }
 
 :root {

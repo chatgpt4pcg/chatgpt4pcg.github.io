@@ -128,12 +128,11 @@ export default function RulesPage() {
 						Ranking Policy
 					</SectionSubHeader>
 					<Paragraph>
-						The team that has the highest <InlineMath math='norm\_prompt_{k}' />
-						, rounded to two decimal places, will be declared the winner. If
-						there are multiple teams with the same highest score, the one with
-						the shortest prompt will be chosen as the winner. However, if
-						multiple teams still have the same score and the shortest prompt,
-						they will be considered co-winners.
+						The team that has the highest <InlineMath math='norm\_prompt_{k}' />{' '}
+						will be declared the winner. If there are multiple teams with the
+						same highest score, the one with the shortest prompt will be chosen
+						as the winner. However, if multiple teams still have the same score
+						and the shortest prompt, they will be considered co-winners.
 					</Paragraph>
 				</Section>
 				<Section>
