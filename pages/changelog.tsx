@@ -1,3 +1,5 @@
+import 'katex/dist/katex.min.css';
+
 import { InlineMath } from 'react-katex';
 import Link from 'next/link';
 import PageHeader from '@/components/ui/PageHeader/PageHeader';
