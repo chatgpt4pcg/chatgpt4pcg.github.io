@@ -21,6 +21,14 @@ export default function ChangelogPage() {
 				</PageHeader>
 				<Section>
 					<SectionHeader id='changelog'>Changelog</SectionHeader>
+					<SectionSubHeader>June 16, 2023</SectionSubHeader>
+					<ul>
+						<li>
+							We have added information about prizes to the{' '}
+							<Link href='/prizes'>prizes page</Link> (previously labeled as
+							"TBA").
+						</li>
+					</ul>
 					<SectionSubHeader>May 23, 2023</SectionSubHeader>
 					<ul>
 						<li>

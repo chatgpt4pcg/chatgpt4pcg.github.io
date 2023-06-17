@@ -25,9 +25,12 @@ export default function HomePage() {
 				</PageHeader>
 				<AlertBox header='Announcement'>
 					<Paragraph>
-						<strong>Latest update: May 23, 2023</strong>
+						<strong>Latest update: June 16, 2023</strong>
 					</Paragraph>
 					<ul>
+						<li>
+							<Link href='/prizes'>Prizes</Link> information has been updated.
+						</li>
 						<li>
 							<Link href='/changelog'>Changelog</Link> has been added to the
 							website. Please visit it to see the latest updates.

@@ -17,7 +17,20 @@ export default function PrizePage() {
 				</PageHeader>
 				<Section>
 					<SectionHeader>Prizes</SectionHeader>
-					<Paragraph>TBA</Paragraph>
+					<Paragraph>
+						🥇 <strong>1st Place - 500 USD</strong>
+					</Paragraph>
+					<Paragraph>
+						The prize is sponsored by the IEEE CIS Education Competition
+						Subcommittee. The organizers would like to express their gratitude
+						to the IEEE CIS Education Competition Subcommittee for their
+						generous support.
+					</Paragraph>
+					<Paragraph>
+						If you are the winner and eligible to receive the prize, you agree
+						that your email address associated with the submission will be
+						shared with the IEEE CIS Education Competition Subcommittee.
+					</Paragraph>
 				</Section>
 			</PageLayout>
 		</>
