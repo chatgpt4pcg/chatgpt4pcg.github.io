@@ -10,7 +10,7 @@ export default function SubmissionDeadline() {
 				Submission deadline
 			</SectionHeader>
 			<Paragraph><span className="line-through">Midterm: 19 May 2023 (23:59 JST)</span></Paragraph>
-			<Paragraph>Final: 21 July 2023 (23:59 JST)</Paragraph>
+			<Paragraph>Final: <strong>29 July 2023</strong> <s>21 July 2023</s> (23:59 JST)</Paragraph>
 			<Paragraph>
 				If OpenAI releases an update to free-version web-based ChatGPT one week
 				before the deadline (either for the midterm or final), we will extend

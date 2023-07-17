@@ -25,9 +25,12 @@ export default function HomePage() {
 				</PageHeader>
 				<AlertBox header='Announcement'>
 					<Paragraph>
-						<strong>Latest update: June 16, 2023</strong>
+						<strong>Latest update: July 17, 2023</strong>
 					</Paragraph>
 					<ul>
+						<li>
+							We extended the deadline for final submission to <strong>July 29, 2023</strong>.
+						</li>
 						<li>
 							<Link href='/prizes'>Prizes</Link> information has been updated.
 						</li>

@@ -21,6 +21,12 @@ export default function ChangelogPage() {
 				</PageHeader>
 				<Section>
 					<SectionHeader id='changelog'>Changelog</SectionHeader>
+					<SectionSubHeader>July 17, 2023</SectionSubHeader>
+					<ul>
+						<li>
+							We extended the deadline for final submission to <strong>July 29, 2023</strong>.
+						</li>
+					</ul>
 					<SectionSubHeader>June 16, 2023</SectionSubHeader>
 					<ul>
 						<li>

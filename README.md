@@ -16,7 +16,7 @@ This competition offers a unique opportunity for the best prompt engineers from 
 
 Midterm: 19 May 2023 (23:59 JST)
 
-Final: 21 July 2023 (23:59 JST)
+Final: **29 July 2023** ~~21 July 2023~~ (23:59 JST)
 
 If OpenAI releases an update to free-version web-based ChatGPT one week before the deadline (either for the midterm or final), we will extend the deadline by one week to give participants enough time to adjust their prompts. We will notify all participants who have submitted their work by email if this occurs. We will also make an announcement on our website.
 
