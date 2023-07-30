@@ -25,27 +25,9 @@ export default function HomePage() {
 				</PageHeader>
 				<AlertBox header='Announcement'>
 					<Paragraph>
-						<strong>Latest update: July 17, 2023</strong>
-					</Paragraph>
-					<ul>
-						<li>
-							We extended the deadline for final submission to <strong>July 29, 2023</strong>.
-						</li>
-						<li>
-							<Link href='/prizes'>Prizes</Link> information has been updated.
-						</li>
-						<li>
-							<Link href='/changelog'>Changelog</Link> has been added to the
-							website. Please visit it to see the latest updates.
-						</li>
-					</ul>
-					<Divider style={{ borderColor: '#77E9C9' }} />
-					<Paragraph>
-						We are excited to announce that the mid-term submission phase has
-						officially come to a close. Thank you to all the participants who
-						submitted their work. We are greatly appreciated! For those who
-						couldn't submit during the mid-term phase, don't worry! We encourage
-						you to join us for the final submission.
+						The final submission deadline has passed. We would like to express
+						our sincerest gratitude to all of our participants. Please stay
+						tuned for the result announcement at CoG 2023!
 					</Paragraph>
 				</AlertBox>
 				<Image src='/images/logo.png' alt='Competition logo' />

@@ -29,14 +29,6 @@ export default function SubmissionPage() {
 						same way as our rules. If not, your results may be unexpected.
 					</Paragraph>
 					<Paragraph>
-						To submit your prompt, please visit{' '}
-						<a href='https://forms.gle/2QeGEoQVrXS633js7'>this form</a> (
-						<a href='https://forms.gle/2QeGEoQVrXS633js7'>
-							https://forms.gle/2QeGEoQVrXS633js7
-						</a>
-						).
-					</Paragraph>
-					<Paragraph>
 						The prompt file should only contain the prompt, and should be named
 						after your team using this convention{' '}
 						<code>&lt;TEAM_NAME&gt;.txt</code>. For example,{' '}
