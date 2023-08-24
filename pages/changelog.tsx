@@ -21,10 +21,18 @@ export default function ChangelogPage() {
 				</PageHeader>
 				<Section>
 					<SectionHeader id='changelog'>Changelog</SectionHeader>
+					<SectionSubHeader>August 22, 2023</SectionSubHeader>
+					<ul>
+						<li>
+							We have released the{' '}
+							<Link href='/result'>result of the competition</Link>.
+						</li>
+					</ul>
 					<SectionSubHeader>July 17, 2023</SectionSubHeader>
 					<ul>
 						<li>
-							We extended the deadline for final submission to <strong>July 29, 2023</strong>.
+							We extended the deadline for final submission to{' '}
+							<strong>July 29, 2023</strong>.
 						</li>
 					</ul>
 					<SectionSubHeader>June 16, 2023</SectionSubHeader>

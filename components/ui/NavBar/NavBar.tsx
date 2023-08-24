@@ -99,6 +99,13 @@ export default function NavBar() {
 					</li>
 					<li
 						className={`${styles.navItem} ${
+							router.pathname == '/result' ? styles.active : ''
+						}`}
+					>
+						<Link href='/result'>Result</Link>
+					</li>
+					<li
+						className={`${styles.navItem} ${
 							router.pathname == '/resources' ? styles.active : ''
 						}`}
 					>

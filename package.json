@@ -7,6 +7,7 @@
 	},
 	"dependencies": {
 		"@heroicons/react": "^2.0.16",
+		"@tanstack/react-table": "^8.9.3",
 		"chatgpt4pcg": "^1.2.0",
 		"next": "latest",
 		"next-image-export-optimizer": "^1.4.1",

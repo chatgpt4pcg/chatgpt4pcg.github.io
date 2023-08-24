@@ -1,5 +1,4 @@
 import AlertBox from '@/components/ui/AlertBox/AlertBox';
-import Divider from '@/components/ui/Divider/Divider';
 import HorizontalList from '@/components/ui/HorizontalList/HorizontalList';
 import Image from '@/components/ui/Image/Image';
 import Link from 'next/link';
@@ -25,10 +24,11 @@ export default function HomePage() {
 				</PageHeader>
 				<AlertBox header='Announcement'>
 					<Paragraph>
-						The final submission deadline has passed. We would like to express
-						our sincerest gratitude to all of our participants. Please stay
-						tuned for the result announcement at CoG 2023!
+						Congratulations to the <Link href='/result'>winner</Link> of the
+						1st ChatGPT4PCG Competition! 🎉And thank you to all the participants
+						for your hard work and dedication! 🙏
 					</Paragraph>
+					<Paragraph>See you in the next edition of the competition!</Paragraph>
 				</AlertBox>
 				<Image src='/images/logo.png' alt='Competition logo' />
 				<Section>

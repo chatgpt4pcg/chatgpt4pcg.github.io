@@ -1,0 +1,116 @@
+[
+    {
+        "teamName": "The Organizer",
+        "normalizedPromptScore": 47.842497838406445,
+        "promptScore": 0.31872584700552214,
+        "rank": 1
+    },
+    {
+        "teamName": "dereventsolve",
+        "normalizedPromptScore": 31.154672940802573,
+        "promptScore": 0.2075518622538557,
+        "rank": 2
+    },
+    {
+        "teamName": "Soda",
+        "normalizedPromptScore": 4.7587720476567235,
+        "promptScore": 0.031702852487313034,
+        "rank": 3
+    },
+    {
+        "teamName": "AdrienTeam",
+        "normalizedPromptScore": 3.351259548963993,
+        "promptScore": 0.022326029921904068,
+        "rank": 4
+    },
+    {
+        "teamName": "Saltyfish1884",
+        "normalizedPromptScore": 2.1244192933714134,
+        "promptScore": 0.014152842540991167,
+        "rank": 5
+    },
+    {
+        "teamName": "zeilde",
+        "normalizedPromptScore": 2.1232507651190216,
+        "promptScore": 0.01414505782711081,
+        "rank": 6
+    },
+    {
+        "teamName": "Team Staciiaz",
+        "normalizedPromptScore": 1.9550068789161095,
+        "promptScore": 0.013024220129324963,
+        "rank": 7
+    },
+    {
+        "teamName": "Harry Single Group",
+        "normalizedPromptScore": 1.8616125174168334,
+        "promptScore": 0.012402028598378172,
+        "rank": 8
+    },
+    {
+        "teamName": "hachi",
+        "normalizedPromptScore": 1.5703542108697772,
+        "promptScore": 0.010461671078477062,
+        "rank": 9
+    },
+    {
+        "teamName": "Back to the future",
+        "normalizedPromptScore": 1.377335973681154,
+        "promptScore": 0.009175787106798842,
+        "rank": 10
+    },
+    {
+        "teamName": "v1_sample",
+        "normalizedPromptScore": 1.1891175665354141,
+        "promptScore": 0.007921879515222427,
+        "rank": -1
+    },
+    {
+        "teamName": "JUSTIN",
+        "normalizedPromptScore": 0.5243094845566109,
+        "promptScore": 0.0034929402123353,
+        "rank": 11
+    },
+    {
+        "teamName": "Hope",
+        "normalizedPromptScore": 0.14882878814214628,
+        "promptScore": 0.0009914946690206296,
+        "rank": 12
+    },
+    {
+        "teamName": "albatross",
+        "normalizedPromptScore": 0.016219412863255827,
+        "promptScore": 0.00010805343233194499,
+        "rank": 13
+    },
+    {
+        "teamName": "Prompt_Wranglers",
+        "normalizedPromptScore": 0.002342732698527933,
+        "promptScore": 1.560724245978707e-05,
+        "rank": 14
+    },
+    {
+        "teamName": "For500",
+        "normalizedPromptScore": 0.0,
+        "promptScore": 0.0,
+        "rank": 15
+    },
+    {
+        "teamName": "BirdBirdBird",
+        "normalizedPromptScore": -1,
+        "promptScore": -1,
+        "rank": -2
+    },
+    {
+        "teamName": "BirdsTeam",
+        "normalizedPromptScore": -1,
+        "promptScore": -1,
+        "rank": -2
+    },
+    {
+        "teamName": "pixelArt",
+        "normalizedPromptScore": -1,
+        "promptScore": -1,
+        "rank": -2
+    }
+]
