@@ -22,41 +22,46 @@ export default function PrizePage() {
 					Character-like Level Generation for Science Birds
 				</PageHeader>
 				<Section>
-					<SectionHeader id="result">Result</SectionHeader>
+					<SectionHeader id='result'>Result</SectionHeader>
 					<p className={styles.winnerMessage}>
-						🎉 Congratulations to "<span className={styles.winner}>dereventsolve</span>" for winning
+						🎉 Congratulations to "
+						<span className={styles.winner}>dereventsolve</span>" for winning
 						the competition! 🎉
 					</p>
 					<ResultTable />
 				</Section>
 				<Section>
-					<SectionHeader id="competition-data">Competition Data</SectionHeader>
+					<SectionHeader id='competition-data'>Competition Data</SectionHeader>
 					<WeightsTable />
 					<Paragraph>
-						Trial and character scores for every submission can be downloaded in
-						the following links:{' '}
-						<a href='/files/character_scores.csv' download>
-							Character Scores
-						</a>{' '}
-						and{' '}
-						<a href='/files/trial_scores.csv' download>
-							Trial Scores
-						</a>
-						.
-					</Paragraph>
-					<Paragraph>
-						Competition results in JSON format can be downloaded{' '}
-						<a href='/files/result.json' download>
-							here
-						</a>
-						.
-					</Paragraph>
-					<Paragraph>
-						Weights used in the competition in JSON format can be downloaded{' '}
-						<a href='/files/constants.json' download>
-							here
-						</a>
-						.
+						Competition related data can be downloaded from the following links:
+						<ul>
+							<li>
+								<a href='/files/trial_scores.csv' download>
+									Trial scores - trial_scores.csv
+								</a>
+							</li>
+							<li>
+								<a href='/files/character_scores.csv' download>
+									Character scores - character_scores.csv
+								</a>
+							</li>
+							<li>
+								<a href='/files/result.json' download>
+									Competition results - result.json
+								</a>
+							</li>
+							<li>
+								<a href='/files/constants.json' download>
+									Weights and constant values - constants.json
+								</a>
+							</li>
+							<li>
+								<a href='/files/prompts.zip' download>
+									Prompts - prompts.zip
+								</a>
+							</li>
+						</ul>
 					</Paragraph>
 				</Section>
 			</PageLayout>
