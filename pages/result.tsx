@@ -9,20 +9,17 @@ import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 import WeightsTable from '@/components/content/WeightsTable';
 import styles from './result.module.css';
 
-export default function PrizePage() {
-	// character and trial scores for download
-	// competition score
-
+export default function ResultsPage() {
 	return (
 		<>
-			<PageMeta pageTitle='Prizes' />
+			<PageMeta pageTitle='Results' />
 			<PageLayout>
 				<PageSubHeader>The 1st ChatGPT4PCG Competition</PageSubHeader>
 				<PageHeader>
 					Character-like Level Generation for Science Birds
 				</PageHeader>
 				<Section>
-					<SectionHeader id='result'>Result</SectionHeader>
+					<SectionHeader id='result'>Results</SectionHeader>
 					<p className={styles.winnerMessage}>
 						🎉 Congratulations to "
 						<span className={styles.winner}>dereventsolve</span>" for winning
