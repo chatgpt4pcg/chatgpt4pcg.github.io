@@ -10,9 +10,9 @@ type AlertBoxProps = {
 
 export default function AlertBox({ header, children, level = 'info' }: PropsWithChildren<AlertBoxProps>) {
 	const borderColor = {
-		info:'#77E9C9' ,
-		warning: 'rgb(233, 201, 119)',
-		error: '#E97777',
+		info:'var(--primary-color)' ,
+		warning: 'var(--warning-color)',
+		error: 'var(--error-color)',
 	}[level];
 
 	return (

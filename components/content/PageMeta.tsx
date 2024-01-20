@@ -7,7 +7,7 @@ type PageMetaProps = {
 
 export default function PageMeta({ pageTitle }: PageMetaProps) {
 	let title =
-		'The 1st ChatGPT4PCG Competition: Character-like Level Generation for Science Birds';
+		'The 2nd ChatGPT4PCG Competition: Character-like Level Generation for Science Birds';
 
 	if (pageTitle) {
 		title = `${title} - ${pageTitle}`;
@@ -17,7 +17,7 @@ export default function PageMeta({ pageTitle }: PageMetaProps) {
 			<title>{title}</title>
 			<meta
 				name='description'
-				content='The 1st ChatGPT4PCG Competition challenges participants to use ChatGPT to generate a Science Birds level resembling an English capital letter, with stability and similarity to the letter being evaluated through testing, and offers a chance for prompt engineers to demonstrate their creativity and skills.'
+				content='The 2nd ChatGPT4PCG Competition challenges participants to use ChatGPT to generate a Science Birds level resembling an English capital letter, with stability and similarity to the letter being evaluated through testing, and offers a chance for prompt engineers to demonstrate their creativity and skills.'
 			/>
 			<meta name="google-site-verification" content="zP3knJHTSO5RclPqlwXpxPbPT3Paw17OMhL69EbHW0E" />
 			<meta name='viewport' content='width=device-width, initial-scale=1' />

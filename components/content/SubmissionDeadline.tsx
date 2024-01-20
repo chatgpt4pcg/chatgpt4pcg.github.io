@@ -9,22 +9,8 @@ export default function SubmissionDeadline() {
 			<SectionHeader id='submission-deadline'>
 				Submission deadline
 			</SectionHeader>
-			<Paragraph>
-				<span className='line-through'>Midterm: 19 May 2023 (23:59 JST)</span>
-			</Paragraph>
-			<Paragraph>
-				<span className='line-through'>
-					Final: 29 July 2023 21 July 2023 (23:59 JST)
-				</span>
-			</Paragraph>
-			<Paragraph>
-				If OpenAI releases an update to free-version web-based ChatGPT one week
-				before the deadline (either for the midterm or final), we will extend
-				the deadline by one week to give participants enough time to adjust
-				their prompts. We will notify all participants who have submitted their
-				work by email if this occurs. We will also make an announcement on our
-				website.
-			</Paragraph>
+			<Paragraph>Midterm: 24 May 2024 (23:59 JST)</Paragraph>
+			<Paragraph>Final: 26 July 2024 (23:59 JST)</Paragraph>
 			<Paragraph>
 				Midterm submission is optional, although we recommend it. Any team that
 				submits during the mid-term submission will be notified of the

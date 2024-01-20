@@ -9,7 +9,7 @@ export default function LetterClassifier() {
 				<span className='red'>
 					Please note that the Online Letter Classifier embed in this page is
 					also available at{' '}
-					<a href='https://huggingface.co/spaces/pittawat/letter_recognizer'>
+					<a href='https://huggingface.co/spaces/pittawat/vit-base-uppercase-english-characters'>
 						Hugging Face Spaces
 					</a>{' '}
 					and only shows the top five predicted classes with associated percentage.
@@ -22,14 +22,14 @@ export default function LetterClassifier() {
 						Vision Transformer (ViT)
 					</a>{' '}
 					trained on{' '}
-					<a href='https://huggingface.co/datasets/pittawat/letter_recognition'>
+					<a href='https://huggingface.co/datasets/pittawat/uppercase-english-characters'>
 						this dataset
 					</a>
 					. More information on the dataset is also available on the same page.
 				</span>
 			</Paragraph>
 			<iframe
-				src='https://pittawat-letter-recognizer.hf.space'
+				src='https://pittawat-vit-base-uppercase-english-characters.hf.space'
 				className={styles.iframe}
 			></iframe>
 		</div>

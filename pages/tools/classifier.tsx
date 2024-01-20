@@ -1,8 +1,7 @@
 import LetterClassifier from '@/components/tools/LetterClassifier/LetterClassifier';
-import PageHeader from '@/components/ui/PageHeader/PageHeader';
 import PageLayout from '@/components/ui/PageLayout/PageLayout';
 import PageMeta from '@/components/content/PageMeta';
-import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
+import PageTitle from '@/components/content/PageTitle';
 import Section from '@/components/ui/Section/Section';
 import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 
@@ -11,10 +10,7 @@ export default function ClassifierPage() {
 		<>
 			<PageMeta pageTitle='Tools - Online Letter Classifier' />
 			<PageLayout>
-				<PageSubHeader>The 1st ChatGPT4PCG Competition</PageSubHeader>
-				<PageHeader>
-					Character-like Level Generation for Science Birds
-				</PageHeader>
+				<PageTitle />
 				<Section>
 					<SectionHeader>Letter Classifier</SectionHeader>
 					<LetterClassifier />

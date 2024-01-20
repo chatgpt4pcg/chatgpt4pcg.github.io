@@ -34,20 +34,20 @@
 }
 
 .standardBtn:hover {
-	color: #ffffff;
-	background-color: #0e8388;
+	color: var(--white-color);
+	background-color: var(--primary-color);
 }
 
 .standardBtn {
 	font-weight: bold;
 	font-family: sans-serif;
-	background-color: white;
+	background-color: var(--white-color);
 	text-align: center;
 	text-decoration: none;
-	border: 2px solid #0e8388;
+	border: 2px solid var(--primary-color);
 	padding: 10px 20px 10px 20px;
 	border-radius: 2px;
-	color: #0e8388;
+	color: var(--primary-color);
 	margin: 5px;
 	cursor: pointer;
 }

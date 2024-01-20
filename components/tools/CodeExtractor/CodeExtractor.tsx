@@ -23,7 +23,10 @@ export default function CodeExtractor() {
 		setExtractedCode(extractCode(rawData) || '');
 	}, [rawData]);
 
-	function copyToClipboard() {
+	function copyToClipboard(
+		event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+	) {
+		event.preventDefault();
 		resultRef.current!.select();
 		resultRef.current!.setSelectionRange(0, 99999);
 
@@ -62,6 +65,7 @@ ab_drop('b11', 1)
 					readOnly
 					ref={resultRef}
 					id='result-field'
+					title='Result'
 					value={extractedCode}
 					rows={15}
 				/>
@@ -74,11 +78,11 @@ ab_drop('b11', 1)
 					<a
 						className={styles.standardBtn}
 						href={URL.createObjectURL(
-							new Blob([extractedCode], { type: 'application/xml' })
+							new Blob([extractedCode], { type: 'text/plain' })
 						)}
-						download={`result_${String(fileCounter).padStart(2, '0')}.xml`}
+						download={`result_${String(fileCounter).padStart(2, '0')}.txt`}
 					>
-						Download XML file
+						Download TXT file
 					</a>
 				</div>
 			)}

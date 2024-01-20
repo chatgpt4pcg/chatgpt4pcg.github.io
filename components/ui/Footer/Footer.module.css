@@ -1,16 +1,18 @@
 .footer {
-  font-family: sans-serif;
-  text-align: center;
-  font-size: 0.8rem;
-  font-style: italic;
-  padding: 8px 0;
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+	font-family: sans-serif;
+	text-align: center;
+	padding: 8px 0;
+	margin-top: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+  gap: 8px;
 }
 
-.footer p {
-  text-align: center;
+.footerQuote {
+	font-size: 0.8rem;
+	font-style: italic;
 }

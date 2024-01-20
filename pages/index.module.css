@@ -1,6 +1,6 @@
 .cogLogoHeader {
 	font-family: sans-serif;
-	color: #0e8388;
+	color: var(--primary-color);
   font-size: 1.7rem;
 }
 

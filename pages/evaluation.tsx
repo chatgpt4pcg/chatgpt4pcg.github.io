@@ -3,10 +3,9 @@ import 'katex/dist/katex.min.css';
 import { BlockMath, InlineMath } from 'react-katex';
 
 import Link from 'next/link';
-import PageHeader from '@/components/ui/PageHeader/PageHeader';
 import PageLayout from '@/components/ui/PageLayout/PageLayout';
 import PageMeta from '@/components/content/PageMeta';
-import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
+import PageTitle from '@/components/content/PageTitle';
 import Paragraph from '@/components/ui/Paragraph/Paragraph';
 import Section from '@/components/ui/Section/Section';
 import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
@@ -17,20 +16,17 @@ export default function RulesPage() {
 		<>
 			<PageMeta pageTitle='Rules and Evaluation Guidelines' />
 			<PageLayout>
-				<PageSubHeader>The 1st ChatGPT4PCG Competition</PageSubHeader>
-				<PageHeader>
-					Character-like Level Generation for Science Birds
-				</PageHeader>
+				<PageTitle />
 				<Section>
 					<SectionHeader id='evaluation'>Evaluation</SectionHeader>
 					<Paragraph>
 						The submitted prompts will undergo an evaluation process that
 						involves subjecting them to 10 trials for each of the 26 uppercase
 						letters of the English alphabet (A-Z). The levels generated for each
-						character will be evaluated based on their similarity and stability,
-						and scored using the criteria outlined in the scoring policy given
-						below. The entire evaluation process will be conducted using{' '}
-						<Link href='/resources'>automated scripts and programs</Link>.
+						character will be evaluated based on their similarity, stability,
+						and diversity, and scored using the criteria outlined in the scoring
+						policy given below. The entire evaluation process will be conducted
+						using <Link href='/resources'>automated scripts and programs</Link>.
 					</Paragraph>
 					<Paragraph>
 						Please note that the evaluation process will be conducted twice, at
@@ -84,6 +80,7 @@ export default function RulesPage() {
 							<InlineMath math='si_{ijk}' />, is given as
 						</li>
 						<BlockMath math='si_{ijk} = \sigma (z_{ijk})' />
+						<li>Diversity: TBA</li>
 					</ol>
 					<Paragraph>
 						Given that <InlineMath math='P' />, <InlineMath math='T' />, and{' '}
@@ -93,11 +90,12 @@ export default function RulesPage() {
 						more difficult target character, <InlineMath math='weight_{j}' />{' '}
 						for target character <InlineMath math='j' /> is defined as follows:
 					</Paragraph>
-					<BlockMath math='weight_{j} = w\_st_{j} \times w\_si_{j}\text{,}' />
+					<BlockMath math='weight_{j} = w\_st_{j} \times w\_si_{j} \times w\_di_{j}\text{,}' />
 					<Paragraph>where</Paragraph>
-					<BlockMath math='w\_st_{j} = max(1 - \frac{\sum_{k=1}^{P} \sum_{i=1}^{T} st_{ijk}}{PT}, \frac{1}{C})' />
+					<BlockMath math='w\_st_{j} = max(1 - \frac{\sum_{k=1}^{P} \sum_{i=1}^{T} st_{ijk}}{PT}, \frac{1}{C})\text{,}' />
+					<BlockMath math='w\_si_{j} = max(1 - \frac{\sum_{k=1}^{P} \sum_{i=1}^{T} si_{ijk}}{PT}, \frac{1}{C})\text{,}' />
 					<Paragraph>and</Paragraph>
-					<BlockMath math='w\_si_{j} = max(1 - \frac{\sum_{k=1}^{P} \sum_{i=1}^{T} si_{ijk}}{PT}, \frac{1}{C})' />
+					<BlockMath math='w\_di_{j} = max(1 - \frac{\sum_{k=1}^{P} di_{jk}}{PT}, \frac{1}{C})' />
 					<Paragraph>
 						Next, the weighted <InlineMath math='trial_{ijk}' /> score is
 						defined as follows:
@@ -108,7 +106,7 @@ export default function RulesPage() {
 						prompt <InlineMath math='k' />, <InlineMath math='char_{jk}' />, is
 						defined as follows:
 					</Paragraph>
-					<BlockMath math='char_{jk} = \frac{\sum_{i=1}^{T} trial_{ijk}}{T}' />
+					<BlockMath math='char_{jk} = \frac{\sum_{i=1}^{T} trial_{ijk}di_{jk}}{T}' />
 					<Paragraph>
 						The <InlineMath math='prompt_{k}' /> score is defined as follows:
 					</Paragraph>
@@ -160,8 +158,8 @@ export default function RulesPage() {
 							</ol>
 						</li>
 						<li>
-							<a href='https://huggingface.co/pittawat/vit-base-letter'>
-								vit-base-letter
+							<a href='https://huggingface.co/pittawat/vit-base-uppercase-english-characters'>
+								vit-base-uppercase-english-characters
 							</a>
 						</li>
 						<li>
@@ -178,8 +176,8 @@ export default function RulesPage() {
 						<li>
 							Software:
 							<ul>
-								<li>OS: Windows 11 Pro</li>
-								<li>Node.js: 18.15.0 LTS</li>
+								<li>OS: Ubuntu 22.04.3 LTS</li>
+								<li>Node.js: 20.xx.xx LTS</li>
 								<li>Unity: 2019.4.40f1</li>
 								<li>
 									<a href='https://github.com/chatgpt4pcg/modified-science-birds'>
@@ -194,8 +192,9 @@ export default function RulesPage() {
 						<li>
 							Hardware:
 							<ul>
-								<li>CPU: Intel(R) Xeon(R) W-2135 CPU @ 3.70GHz</li>
-								<li>RAM: 16 GB</li>
+								<li>CPU: Intel(R) Xeon(R) Gold CPU 6430x128</li>
+								<li>RAM: 250 GB</li>
+								<li>GPU: NVIDIA L40S 48GB</li>
 							</ul>
 						</li>
 					</ol>
@@ -206,37 +205,11 @@ export default function RulesPage() {
 					</SectionHeader>
 					<ol>
 						<li>
-							The{' '}
-							<a href='https://github.com/chatgpt4pcg/qualification-checking-script'>
-								qualification checking script
-							</a>{' '}
-							will be first run to check for rule violations, including:
-							<ol>
-								<li>Whether the prompt contains disallowed characters.</li>
-								<li>
-									Whether the prompt length exceeds the maximum number of words.
-								</li>
-								<li>
-									Whether the prompt does not contain the{' '}
-									<code>&lt;OBJECT&gt;</code>.
-								</li>
-							</ol>
+							We manually inspect each submitted program for potential violation
+							of rules.
 						</li>
 						<li>
-							The{' '}
-							<a href='https://github.com/chatgpt4pcg/response-gathering-script'>
-								response gathering script
-							</a>{' '}
-							will load each qualified team&apos;s prompt and repeat the
-							following two steps for each character -- (1) replacing{' '}
-							<code>&lt;OBJECT&gt;</code> with the target character and (2)
-							contacting the ChatGPT API for a specific number of trials.
-							<ol>
-								<li>
-									Each trial will always start from scratch and will contain no
-									previous conversation.
-								</li>
-							</ol>
+							Qualified program will be run to gather responses from ChatGPT.
 						</li>
 						<li>
 							The{' '}
@@ -277,11 +250,14 @@ export default function RulesPage() {
 							. It will then record the similarity result.
 						</li>
 						<li>
+							The diversity checking script: TBA
+						</li>
+						<li>
 							Finally, the{' '}
 							<a href='https://github.com/chatgpt4pcg/scoring-and-ranking-script'>
 								scoring and ranking script
 							</a>{' '}
-							will load all stability and similarity results and produce the
+							will load all stability, similarity, and diversity results and produce the
 							final rank and score result for all teams according to the scoring
 							policy.
 						</li>

@@ -23,9 +23,9 @@ export default function Image({
 				src={src}
 				alt={alt}
 				className={styles.image}
-				layout="responsive"
 				width={width}
 				height={height}
+				layout='responsive'
 				style={noBorderRadius ? { borderRadius: 0 } : undefined}
 			/>
 		</div>

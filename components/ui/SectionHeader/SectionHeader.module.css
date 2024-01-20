@@ -1,7 +1,7 @@
 .sectionHeader {
 	font-family: sans-serif;
 	margin-bottom: 32px;
-	color: #0E8388;
+	color: var(--primary-color);
 }
 
 .sectionHeader a {

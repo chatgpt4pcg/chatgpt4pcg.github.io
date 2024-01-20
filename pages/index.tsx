@@ -2,10 +2,9 @@ import AlertBox from '@/components/ui/AlertBox/AlertBox';
 import HorizontalList from '@/components/ui/HorizontalList/HorizontalList';
 import Image from '@/components/ui/Image/Image';
 import Link from 'next/link';
-import PageHeader from '@/components/ui/PageHeader/PageHeader';
 import PageLayout from '@/components/ui/PageLayout/PageLayout';
 import PageMeta from '@/components/content/PageMeta';
-import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
+import PageTitle from '@/components/content/PageTitle';
 import Paragraph from '@/components/ui/Paragraph/Paragraph';
 import Section from '@/components/ui/Section/Section';
 import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
@@ -18,33 +17,46 @@ export default function HomePage() {
 		<>
 			<PageMeta />
 			<PageLayout>
-				<PageSubHeader>The 1st ChatGPT4PCG Competition</PageSubHeader>
-				<PageHeader>
-					Character-like Level Generation for Science Birds
-				</PageHeader>
+				<PageTitle />
 				<AlertBox header='Announcement'>
 					<Paragraph>
-						Congratulations to the <Link href='/result'>winner</Link> of the
-						1st ChatGPT4PCG Competition! 🎉And thank you to all the participants
-						for your hard work and dedication! 🙏
+						Please stay tuned for further details about the upcoming second
+						edition of the ChatGPT4PCG Competition!
 					</Paragraph>
-					<Paragraph>See you in the next edition of the competition!</Paragraph>
+					<Paragraph>
+						Please note that we are currently working on finalizing the details
+						of this edition of the competition, and the current details are not
+						final. They are subject to frequent changes in the near future. We
+						will update the website as soon as we have more information.
+					</Paragraph>
 				</AlertBox>
 				<Image src='/images/logo.png' alt='Competition logo' />
 				<Section>
 					<Paragraph>
-						The 1st ChatGPT4PCG Competition challenges participants to utilize
-						the state-of-the-art natural language processing tool, ChatGPT, to
-						generate visually appealing and structurally sound levels for
-						Science Birds, an Angry Birds clone created for research purposes.
+						The 2nd ChatGPT4PCG Competition continues the challenging and
+						exciting spirit of the first competition. In this edition, we not
+						only challenge participants to come up with a prompt to construct
+						stable Science Birds levels resembling uppercase English characters,
+						but we also open up the possibility of incorporating more complex
+						prompt engineering techniques. This time, we allow the submission of
+						a program in which participants can build on top of our examples and
+						packages, enabling the use of conditions and iterations in
+						programming to develop their own advanced prompt engineering
+						techniques, and potentially create new ones!
 					</Paragraph>
 					<Paragraph>
-						As a participant, your goal is to create a prompt that instructs
-						ChatGPT to generate a level in Science Birds that resembles an
-						English capital letter while ensuring that the level is stable and
-						able to withstand gravity. You are encouraged to use various prompt
-						engineering techniques to develop the most effective prompt
-						possible.
+						We welcome participants of all levels, whether you only modify the
+						prompt of the example or come up with a complex logic through prompt
+						engineering. All programs will be inspected for qualification,
+						subject to the competition rules, and used to generate levels for
+						each target English uppercase character. The generated levels are
+						then tested for stability using our Science Birds Evaluator and
+						checked for similarity with the new and upgraded Vision Transformer
+						classifier. This edition also introduces a new metric--diversity,
+						making it more challenging. Now, not only do the prompts and/or
+						prompt engineering techniques developed by participants need to
+						generate stable and similar levels, but they also need to generate
+						diverse levels.
 					</Paragraph>
 					<Paragraph>
 						To participate, you must submit your prompt according to our
@@ -59,18 +71,10 @@ export default function HomePage() {
 						model, as well as all the relevant tools, will be provided.
 					</Paragraph>
 					<Paragraph>
-						This competition offers a unique opportunity for the best prompt
-						engineers from around the world to showcase their creativity and
-						skills. Join us in this exciting challenge to push the boundaries of
-						prompt engineering and procedural content generation!
+						We hope that this edition will be more exciting and contribute to
+						collective learning and discovery in the world of prompt engineering
+						through this game competition!
 					</Paragraph>
-					<YouTube
-						videoId='9AJhqIkDbxs'
-						title='The 1st ChatGPT4PCG Competition: Character-like Level Generation for Science Birds'
-						className='youtube-player'
-						opts={{ innerWidth: 540 }}
-						loading='lazy'
-					/>
 				</Section>
 				<Section>
 					<SectionHeader id='organizers'>Organizers</SectionHeader>
@@ -85,6 +89,14 @@ export default function HomePage() {
 						</li>
 						<li>
 							Mury F. Dewantoro, Graduate School of Information Science and
+							Engineering, Ritsumeikan University
+						</li>
+						<li>
+							Yi Xia, Graduate School of Information Science and Engineering,
+							Ritsumeikan University
+						</li>
+						<li>
+							Pratch Suntichaikul, Graduate School of Information Science and
 							Engineering, Ritsumeikan University
 						</li>
 						<li>
@@ -120,7 +132,7 @@ export default function HomePage() {
 						>
 							our paper
 						</a>{' '}
-						about this competition and{' '}
+						about the previous edition of the competition and{' '}
 						<a href='/files/supplementary_material.pdf'>
 							its supplementary document
 						</a>
@@ -145,29 +157,12 @@ export default function HomePage() {
 					<HorizontalList
 						header='Programming languages'
 						items={[
-							'N/A. However, having general programming knowledge can be useful.',
+							'Not mandatory: Participants may choose to modify only the prompt. However, possessing general programming knowledge can be beneficial. Examples of prompt engineering programs are provided in Python.',
 						]}
 					/>
 					<HorizontalList header='Complexity' items={['Low-Medium']} />
-					<HorizontalList header='Competitive' items={['New Competition']} />
 					<HorizontalList header='Barrier of entry' items={['Low']} />
 				</Section>
-				<div className={styles.cogLogoContainer}>
-					<h4 className={styles.cogLogoHeader}>As a part of </h4>
-					<div className={styles.cogLogo}>
-						<a
-							rel='noopener'
-							target='_blank'
-							href='https://2023.ieee-cog.org/competitions/'
-						>
-							<Image
-								src='/images/cog-2023-logo.png'
-								alt='Competition logo'
-								noBorderRadius
-							/>
-						</a>
-					</div>
-				</div>
 			</PageLayout>
 		</>
 	);

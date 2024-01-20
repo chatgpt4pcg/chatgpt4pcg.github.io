@@ -1,8 +1,7 @@
 import CodeExtractor from '@/components/tools/CodeExtractor/CodeExtractor';
-import PageHeader from '@/components/ui/PageHeader/PageHeader';
 import PageLayout from '@/components/ui/PageLayout/PageLayout';
 import PageMeta from '@/components/content/PageMeta';
-import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
+import PageTitle from '@/components/content/PageTitle';
 import Paragraph from '@/components/ui/Paragraph/Paragraph';
 import Section from '@/components/ui/Section/Section';
 import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
@@ -12,10 +11,7 @@ export default function CodeExtractorPage() {
 		<>
 			<PageMeta pageTitle='Tools - Online Code Extractor' />
 			<PageLayout>
-				<PageSubHeader>The 1st ChatGPT4PCG Competition</PageSubHeader>
-				<PageHeader>
-					Character-like Level Generation for Science Birds
-				</PageHeader>
+				<PageTitle />
 				<Section>
 					<SectionHeader>Code Extractor</SectionHeader>
 					<Paragraph>

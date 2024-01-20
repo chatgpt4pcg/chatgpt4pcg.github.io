@@ -64,13 +64,6 @@ export default function NavBar() {
 					</li>
 					<li
 						className={`${styles.navItem} ${
-							router.pathname == '/prizes' ? styles.active : ''
-						}`}
-					>
-						<Link href='/prizes'>Prizes</Link>
-					</li>
-					<li
-						className={`${styles.navItem} ${
 							router.pathname == '/prompt' ? styles.active : ''
 						}`}
 					>
@@ -99,24 +92,10 @@ export default function NavBar() {
 					</li>
 					<li
 						className={`${styles.navItem} ${
-							router.pathname == '/result' ? styles.active : ''
-						}`}
-					>
-						<Link href='/result'>Result</Link>
-					</li>
-					<li
-						className={`${styles.navItem} ${
 							router.pathname == '/resources' ? styles.active : ''
 						}`}
 					>
 						<Link href='/resources'>Resources</Link>
-					</li>
-					<li
-						className={`${styles.navItem} ${
-							router.pathname == '/supplement' ? styles.active : ''
-						}`}
-					>
-						<Link href='/supplement'>Supplementary Material</Link>
 					</li>
 					<li
 						className={`${styles.navItem} ${
