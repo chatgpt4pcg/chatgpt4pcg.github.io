@@ -8,9 +8,13 @@ type AlertBoxProps = {
 	level?: 'info' | 'warning' | 'error';
 };
 
-export default function AlertBox({ header, children, level = 'info' }: PropsWithChildren<AlertBoxProps>) {
+export default function AlertBox({
+	header,
+	children,
+	level = 'info',
+}: PropsWithChildren<AlertBoxProps>) {
 	const borderColor = {
-		info:'var(--primary-color)' ,
+		info: 'var(--primary-color)',
 		warning: 'var(--warning-color)',
 		error: 'var(--error-color)',
 	}[level];
@@ -22,12 +26,20 @@ export default function AlertBox({ header, children, level = 'info' }: PropsWith
 					<header className={`${styles.header} ${styles[level]}`}>
 						<h1>{header}</h1>
 					</header>
-					<Divider style={{
-            borderColor,
-          }} />
+					<Divider
+						style={{
+							borderColor,
+						}}
+					/>
 				</>
 			)}
-      {children}
+			<div
+				style={{
+					color: borderColor,
+				}}
+			>
+				{children}
+			</div>
 		</section>
 	);
 }

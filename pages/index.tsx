@@ -18,7 +18,7 @@ export default function HomePage() {
 			<PageMeta />
 			<PageLayout>
 				<PageTitle />
-				<AlertBox header='Announcement'>
+				<AlertBox header='Announcement' level='error'>
 					<Paragraph>
 						Please stay tuned for further details about the upcoming second
 						edition of the ChatGPT4PCG Competition!
