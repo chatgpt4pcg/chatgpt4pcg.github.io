@@ -41,6 +41,9 @@ dependencies:
   react-youtube:
     specifier: ^10.1.0
     version: 10.1.0(react@18.2.0)
+  sharp:
+    specifier: ^0.33.2
+    version: 0.33.2
 
 devDependencies:
   '@types/node':

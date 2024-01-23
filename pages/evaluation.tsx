@@ -94,8 +94,7 @@ export default function RulesPage() {
 					<Paragraph>where</Paragraph>
 					<BlockMath math='w\_st_{j} = max(1 - \frac{\sum_{k=1}^{P} \sum_{i=1}^{T} st_{ijk}}{PT}, \frac{1}{C})\text{,}' />
 					<BlockMath math='w\_si_{j} = max(1 - \frac{\sum_{k=1}^{P} \sum_{i=1}^{T} si_{ijk}}{PT}, \frac{1}{C})\text{,}' />
-					<Paragraph>and</Paragraph>
-					<BlockMath math='w\_di_{j} = max(1 - \frac{\sum_{k=1}^{P} di_{jk}}{PT}, \frac{1}{C})' />
+					<Paragraph>and TBA.</Paragraph>
 					<Paragraph>
 						Next, the weighted <InlineMath math='trial_{ijk}' /> score is
 						defined as follows:
