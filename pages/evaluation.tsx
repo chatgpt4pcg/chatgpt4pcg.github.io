@@ -243,8 +243,8 @@ export default function RulesPage() {
 							</a>{' '}
 							will load each image and pass it through an open source-model
 							called{' '}
-							<a href='https://huggingface.co/pittawat/vit-base-letter'>
-								vit-base-letter
+							<a href='https://huggingface.co/pittawat/vit-base-uppercase-english-characters'>
+								vit-base-uppercase-english-characters
 							</a>
 							. It will then record the similarity result.
 						</li>
