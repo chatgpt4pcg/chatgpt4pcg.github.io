@@ -1,5 +1,4 @@
 import Divider from '@/components/ui/Divider/Divider';
-import Image from '@/components/ui/Image/Image';
 import Link from 'next/link';
 import PageLayout from '@/components/ui/PageLayout/PageLayout';
 import PageMeta from '@/components/content/PageMeta';
@@ -49,10 +48,6 @@ export default function ResourcesPage() {
 					<SectionSubHeader id='science-birds-evaluator'>
 						Science Birds Evaluator
 					</SectionSubHeader>
-					<Image
-						src='/images/science_birds.png'
-						alt='Science Birds screenshot'
-					/>
 					<Paragraph>
 						This is a modified version of{' '}
 						<a href='https://github.com/lucasnfe/science-birds'>
@@ -91,10 +86,6 @@ export default function ResourcesPage() {
 					<SectionSubHeader id='online-converter'>
 						Online Converter
 					</SectionSubHeader>
-					<Image
-						src='/images/converter.png'
-						alt='Online Converter screenshot'
-					/>
 					<Paragraph>
 						The converter is a tool that creates an XML file and an image from a
 						series of <code>drop_block()</code> function string. The resulting
@@ -137,10 +128,6 @@ export default function ResourcesPage() {
 					<SectionSubHeader id='online-code-extractor'>
 						Online Code Extractor
 					</SectionSubHeader>
-					<Image
-						src='/images/code.png'
-						alt='Online Code Extractor screenshot'
-					/>
 					<Paragraph>
 						The online code extractor extracts a code block from ChatGPT API
 						responses, demonstrating the same algorithm used in the{' '}
@@ -160,15 +147,11 @@ export default function ResourcesPage() {
 					<SectionSubHeader id='online-letter-classifier'>
 						Online Letter Classifier
 					</SectionSubHeader>
-					<Image
-						src='/images/classifier.png'
-						alt='Online Letter Classifier screenshot'
-					/>
 					<Paragraph>
 						<span className='red'>
 							Please note that the Online Letter Classifier embed in the tool
 							page is also available at{' '}
-							<a href='https://huggingface.co/spaces/pittawat/letter_recognizer'>
+							<a href='https://huggingface.co/spaces/pittawat/vit-base-uppercase-english-characters'>
 								Hugging Face Spaces
 							</a>{' '}
 							and only shows the top five predicted classes with associated
@@ -181,7 +164,7 @@ export default function ResourcesPage() {
 								Vision Transformer (ViT)
 							</a>{' '}
 							trained on{' '}
-							<a href='https://huggingface.co/datasets/pittawat/letter_recognition'>
+							<a href='https://huggingface.co/datasets/pittawat/uppercase-english-characters'>
 								this dataset
 							</a>
 							. More information on the dataset is also available on the same
