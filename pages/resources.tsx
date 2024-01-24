@@ -200,18 +200,6 @@ export default function ResourcesPage() {
 						Offline Scripts and Packages
 					</SectionSubHeader>
 					<Paragraph>
-						Qualification checking script -{' '}
-						<a href='https://github.com/chatgpt4pcg/qualification-checking-script'>
-							https://github.com/chatgpt4pcg/qualification-checking-script
-						</a>
-					</Paragraph>
-					<Paragraph>
-						Response gathering script -{' '}
-						<a href='https://github.com/chatgpt4pcg/response-gathering-script'>
-							https://github.com/chatgpt4pcg/response-gathering-script
-						</a>
-					</Paragraph>
-					<Paragraph>
 						Code extraction script -{' '}
 						<a href='https://github.com/chatgpt4pcg/code-extraction-script'>
 							https://github.com/chatgpt4pcg/code-extraction-script
@@ -245,6 +233,12 @@ export default function ResourcesPage() {
 						<code>chatgpt4pcg</code> npm package -{' '}
 						<a href='https://github.com/chatgpt4pcg/chatgpt4pcg'>
 							https://github.com/chatgpt4pcg/chatgpt4pcg
+						</a>
+					</Paragraph>
+					<Paragraph>
+						<code>chatgpt4pcg</code> Python package -{' '}
+						<a href='https://github.com/chatgpt4pcg/chatgpt4pcg-python'>
+							https://github.com/chatgpt4pcg/chatgpt4pcg-python
 						</a>
 					</Paragraph>
 				</Section>

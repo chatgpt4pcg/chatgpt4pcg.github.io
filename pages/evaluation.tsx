@@ -249,10 +249,14 @@ export default function RulesPage() {
 							. It will then record the similarity result.
 						</li>
 						<li>
-							The diversity checking script:{' '}
+							The{' '}
 							<a href='https://github.com/chatgpt4pcg/diversity-checking-script'>
 								diversity checking script
-							</a>
+							</a>{' '}
+							assesses the diversity of the levels by averaging cosine distance
+							of non-duplicated all-pairs of outputs from softmax for each level
+							across trial of the same target character as described in the{' '}
+							<Link href='/evaluation'>Evaluation</Link>.
 						</li>
 						<li>
 							Finally, the{' '}
