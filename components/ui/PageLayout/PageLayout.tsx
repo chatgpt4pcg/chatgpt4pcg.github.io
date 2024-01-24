@@ -4,7 +4,7 @@ import Footer from '../Footer/Footer';
 import NavBar from '../NavBar/NavBar';
 import styles from './PageLayout.module.css';
 
-export default function PageLayout({ children }: PropsWithChildren) {
+export default function PageLayout({ children }: Readonly<PropsWithChildren>) {
 	
 	return (
 		<>

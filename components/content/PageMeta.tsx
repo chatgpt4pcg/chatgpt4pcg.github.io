@@ -5,7 +5,7 @@ type PageMetaProps = {
 	pageTitle?: string;
 };
 
-export default function PageMeta({ pageTitle }: PageMetaProps) {
+export default function PageMeta({ pageTitle }: Readonly<PageMetaProps>) {
 	let title =
 		'The 2nd ChatGPT4PCG Competition: Character-like Level Generation for Science Birds';
 

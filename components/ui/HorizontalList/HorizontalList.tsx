@@ -6,7 +6,7 @@ type HorizontalListProps = {
 	items: Array<string>;
 };
 
-export default function HorizontalList({ header, items }: HorizontalListProps) {
+export default function HorizontalList({ header, items }: Readonly<HorizontalListProps>) {
 	return (
 		<figure className={styles.container}>
 			<figcaption className={styles.listHeader}>{header}: </figcaption>

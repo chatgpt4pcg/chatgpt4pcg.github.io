@@ -16,7 +16,7 @@ export default function ConverterPage() {
 					<SectionHeader>Converter</SectionHeader>
 					<Paragraph>
 						The converter is a tool that creates an XML file and an image from a
-						series of ab_drop() function string. The resulting XML file provides
+						series of drop_block() function string. The resulting XML file provides
 						a structured representation of the functions while the image shows
 						the visual representation of the functions. It is recommended to use
 						the converter on a desktop device to ensure optimal usage and

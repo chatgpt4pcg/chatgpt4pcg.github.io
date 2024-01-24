@@ -97,9 +97,9 @@ export default function ResourcesPage() {
 					/>
 					<Paragraph>
 						The converter is a tool that creates an XML file and an image from a
-						series of <code>ab_drop()</code> function string. The resulting XML
-						file provides a structured representation of the functions while an
-						image shows the visual representation of the functions. It is
+						series of <code>drop_block()</code> function string. The resulting
+						XML file provides a structured representation of the functions while
+						an image shows the visual representation of the functions. It is
 						recommended to use the converter on a desktop device to ensure
 						optimal usage and accurate generation of output files.
 					</Paragraph>
@@ -229,7 +229,12 @@ export default function ResourcesPage() {
 							https://github.com/chatgpt4pcg/similarity-checking-script
 						</a>
 					</Paragraph>
-					<Paragraph>Diversity checking script - TBA</Paragraph>
+					<Paragraph>
+						Diversity checking script -{' '}
+						<a href='https://github.com/chatgpt4pcg/diversity-checking-script'>
+							https://github.com/chatgpt4pcg/diversity-checking-script
+						</a>
+					</Paragraph>
 					<Paragraph>
 						Scoring and ranking script -{' '}
 						<a href='https://github.com/chatgpt4pcg/scoring-and-ranking-script'>

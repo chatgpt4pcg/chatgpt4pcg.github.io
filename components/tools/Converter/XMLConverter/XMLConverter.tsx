@@ -12,7 +12,7 @@ type XMLConverterProps = {
 export default function XMLConverter({
 	fileCounter,
 	xmlResult,
-}: XMLConverterProps) {
+}: Readonly<XMLConverterProps>) {
 	const resultRef = useRef<HTMLTextAreaElement>(null);
 
 	function copyToClipboard() {

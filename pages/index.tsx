@@ -1,7 +1,6 @@
 import AlertBox from '@/components/ui/AlertBox/AlertBox';
 import HorizontalList from '@/components/ui/HorizontalList/HorizontalList';
 import Image from '@/components/ui/Image/Image';
-import Link from 'next/link';
 import PageLayout from '@/components/ui/PageLayout/PageLayout';
 import PageMeta from '@/components/content/PageMeta';
 import PageTitle from '@/components/content/PageTitle';
@@ -9,8 +8,6 @@ import Paragraph from '@/components/ui/Paragraph/Paragraph';
 import Section from '@/components/ui/Section/Section';
 import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 import SubmissionDeadline from '@/components/content/SubmissionDeadline';
-import YouTube from 'react-youtube';
-import styles from './index.module.css';
 
 export default function HomePage() {
 	return (

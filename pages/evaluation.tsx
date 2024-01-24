@@ -216,7 +216,7 @@ export default function RulesPage() {
 								code extraction script
 							</a>{' '}
 							will load each response and produce a new file containing only a
-							series of <code>ab_drop()</code> commands.
+							series of <code>drop_block()</code> commands.
 						</li>
 						<li>
 							The{' '}
@@ -249,16 +249,19 @@ export default function RulesPage() {
 							. It will then record the similarity result.
 						</li>
 						<li>
-							The diversity checking script: TBA
+							The diversity checking script:{' '}
+							<a href='https://github.com/chatgpt4pcg/diversity-checking-script'>
+								diversity checking script
+							</a>
 						</li>
 						<li>
 							Finally, the{' '}
 							<a href='https://github.com/chatgpt4pcg/scoring-and-ranking-script'>
 								scoring and ranking script
 							</a>{' '}
-							will load all stability, similarity, and diversity results and produce the
-							final rank and score result for all teams according to the scoring
-							policy.
+							will load all stability, similarity, and diversity results and
+							produce the final rank and score result for all teams according to
+							the scoring policy.
 						</li>
 					</ol>
 				</Section>

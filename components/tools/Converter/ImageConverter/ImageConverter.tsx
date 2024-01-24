@@ -18,7 +18,7 @@ type ImageConverterProps = {
 export default function ImageConverter({
 	blocksResult,
 	fileCounter,
-}: ImageConverterProps) {
+}: Readonly<ImageConverterProps>) {
 	const canvasRef = useRef<HTMLCanvasElement>(null);
 	const imageCanvasRef = useRef<HTMLCanvasElement>(null);
 	const [isGridVisible, setIsGridVisible] = useState(true);

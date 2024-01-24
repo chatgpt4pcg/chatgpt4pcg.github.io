@@ -8,7 +8,7 @@ import styles from './Converter.module.css';
 
 export default function Converter() {
 	const [rawData, setRawData] = useState('');
-	const [xmlOutput, setResult] = useState('');
+	const [xmlOutput, setXMLOutput] = useState('');
 	const [fileCounter, setFileCounter] = useState(0);
 	const [blocks, setBlocks] = useState<Block[]>([]);
 
@@ -23,7 +23,7 @@ export default function Converter() {
 
 	useEffect(() => {
 		if (rawData.length === 0) {
-			setResult('');
+			setXMLOutput('');
 			setBlocks([]);
 		}
 	}, [rawData]);
@@ -33,7 +33,7 @@ export default function Converter() {
 		try {
 			const xmlString = convertTextToXML(rawData.toLowerCase());
 			const [blocksResult] = convertTextToBlocks(rawData.toLowerCase());
-			setResult(xmlString);
+			setXMLOutput(xmlString);
 			setFileCounter(fileCounter + 1);
 			setBlocks(blocksResult);
 		} catch (e) {
@@ -57,9 +57,9 @@ export default function Converter() {
 					onChange={(event) => {
 						setRawData(event.target.value);
 					}}
-					placeholder={`ab_drop('b31', 1)
-ab_drop('b11', 0)
-ab_drop('b13', 1)`}
+					placeholder={`drop_block('b13', 1)
+drop_block('b31', 1)
+drop_block('b11', 1)`}
 					rows={8}
 				/>
 			</div>

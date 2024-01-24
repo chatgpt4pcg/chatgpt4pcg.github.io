@@ -16,7 +16,7 @@ export default function Image({
 	width = 1,
 	height = 1,
 	noBorderRadius = false,
-}: ImageProps) {
+}: Readonly<ImageProps>) {
 	if (width === 1 && height === 1) {
 		return <div className={styles.imageContainer}>
 			<ExportedImage

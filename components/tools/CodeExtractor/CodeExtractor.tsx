@@ -51,10 +51,10 @@ export default function CodeExtractor() {
 					placeholder={`To generate a structure like a character "I", you can use the following code:
 \`\`\`
 # drop the first square block
-ab_drop('b11', 1)
+drop_block('b11', 1)
 
 # drop the second square block
-ab_drop('b11', 1)
+drop_block('b11', 1)
 \`\`\``}
 				/>
 			</div>
