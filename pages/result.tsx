@@ -34,27 +34,27 @@ export default function ResultsPage() {
 						Competition related data can be downloaded from the following links:
 						<ul>
 							<li>
-								<a href='/files/trial_scores.csv' download>
+								<a href='/2023/files/trial_scores.csv' download>
 									Trial scores - trial_scores.csv 
 								</a> (Updated on Feb 7, 2024 9:52AM JST)
 							</li>
 							<li>
-								<a href='/files/character_scores.csv' download>
+								<a href='/2023/files/character_scores.csv' download>
 									Character scores - character_scores.csv
 								</a> (Updated on Feb 7, 2024 9:52AM JST)
 							</li>
 							<li>
-								<a href='/files/result.json' download>
+								<a href='/2023/files/result.json' download>
 									Competition results - result.json
 								</a>
 							</li>
 							<li>
-								<a href='/files/constants.json' download>
+								<a href='/2023/files/constants.json' download>
 									Weights and constant values - constants.json
 								</a>
 							</li>
 							<li>
-								<a href='/files/prompts.zip' download>
+								<a href='/2023/files/prompts.zip' download>
 									Prompts - prompts.zip
 								</a>
 							</li>

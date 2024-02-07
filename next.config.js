@@ -15,7 +15,7 @@ const nextConfig = {
     nextImageExportOptimizer_generateAndUseBlurImages: true,
   },
   output: 'export',
-  basePath: '',
+  basePath: '/2023',
 }
 
 module.exports = nextConfig

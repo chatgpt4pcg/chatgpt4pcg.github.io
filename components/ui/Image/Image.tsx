@@ -20,7 +20,7 @@ export default function Image({
 	if (width === 1 && height === 1) {
 		return <div className={styles.imageContainer}>
 			<ExportedImage
-				src={src}
+				src={"/2023" + src}
 				alt={alt}
 				className={styles.image}
 				layout="responsive"

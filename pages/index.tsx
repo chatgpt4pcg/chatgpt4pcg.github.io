@@ -131,7 +131,7 @@ export default function HomePage() {
 							our paper
 						</a>{' '}
 						about this competition and{' '}
-						<a href='/files/supplementary_material.pdf'>
+						<a href='/2023/files/supplementary_material.pdf'>
 							its supplementary document
 						</a>
 						.

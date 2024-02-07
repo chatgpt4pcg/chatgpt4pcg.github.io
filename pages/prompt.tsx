@@ -40,7 +40,7 @@ export default function PromptPage() {
 							this paper
 						</a>{' '}
 						and{' '}
-						<a href='/files/supplementary_material.pdf'>
+						<a href='/2023/files/supplementary_material.pdf'>
 							its supplementary document
 						</a>{' '}
 						for their performance.
