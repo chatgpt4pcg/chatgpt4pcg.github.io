@@ -8,6 +8,7 @@ import Paragraph from '@/components/ui/Paragraph/Paragraph';
 import Section from '@/components/ui/Section/Section';
 import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 import SubmissionDeadline from '@/components/content/SubmissionDeadline';
+import styles from './index.module.css';
 
 export default function HomePage() {
 	return (
@@ -160,6 +161,20 @@ export default function HomePage() {
 					<HorizontalList header='Complexity' items={['Low-Medium']} />
 					<HorizontalList header='Barrier of entry' items={['Low']} />
 				</Section>
+				<div className={styles.cogLogoContainer}>
+					<h4 className={styles.cogLogoHeader}>As a part of </h4>
+					<div className={styles.cogLogo}>
+						<a rel='noopener' target='_blank' href='https://2024.ieee-cog.org/'>
+							<picture>
+								<source
+									srcSet='images/cog-logo-dark.png'
+									media='(prefers-color-scheme: dark)'
+								/>
+								<img src='images/cog-logo.png' alt='IEEE CoG 2024 Logo' />
+							</picture>
+						</a>
+					</div>
+				</div>
 			</PageLayout>
 		</>
 	);

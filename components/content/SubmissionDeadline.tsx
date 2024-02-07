@@ -7,7 +7,7 @@ export default function SubmissionDeadline() {
 	return (
 		<Section>
 			<SectionHeader id='submission-deadline'>
-				Submission deadline
+				Submission Deadline
 			</SectionHeader>
 			<Paragraph>Midterm: 24 May 2024 (23:59 JST)</Paragraph>
 			<Paragraph>Final: 26 July 2024 (23:59 JST)</Paragraph>
