@@ -35,13 +35,13 @@ export default function ResultsPage() {
 						<ul>
 							<li>
 								<a href='/files/trial_scores.csv' download>
-									Trial scores - trial_scores.csv
-								</a>
+									Trial scores - trial_scores.csv 
+								</a> (Updated on Feb 7, 2024 9:52AM JST)
 							</li>
 							<li>
 								<a href='/files/character_scores.csv' download>
 									Character scores - character_scores.csv
-								</a>
+								</a> (Updated on Feb 7, 2024 9:52AM JST)
 							</li>
 							<li>
 								<a href='/files/result.json' download>

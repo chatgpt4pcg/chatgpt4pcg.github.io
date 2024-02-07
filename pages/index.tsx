@@ -1,4 +1,5 @@
 import AlertBox from '@/components/ui/AlertBox/AlertBox';
+import Divider from '@/components/ui/Divider/Divider';
 import HorizontalList from '@/components/ui/HorizontalList/HorizontalList';
 import Image from '@/components/ui/Image/Image';
 import Link from 'next/link';
@@ -24,11 +25,20 @@ export default function HomePage() {
 				</PageHeader>
 				<AlertBox header='Announcement'>
 					<Paragraph>
-						Congratulations to the <Link href='/result'>winner</Link> of the
-						1st ChatGPT4PCG Competition! 🎉And thank you to all the participants
-						for your hard work and dedication! 🙏
+						Congratulations to the <Link href='/result'>winner</Link> of the 1st
+						ChatGPT4PCG Competition! 🎉And thank you to all the participants for
+						your hard work and dedication! 🙏
 					</Paragraph>
 					<Paragraph>See you in the next edition of the competition!</Paragraph>
+					<Divider />
+					<Paragraph>
+						While preparing the content of the report for the first competition,
+						we found inaccuracies regarding the intermediate results associated
+						with the trial index. However, this does not affect any of the final
+						results and rankings. We apologize for any inconvenience this may
+						cause. We have corrected the trial score file provided on the result
+						page of our website. (Updated on Feb 7, 2024 JST)
+					</Paragraph>
 				</AlertBox>
 				<Image src='/images/logo.png' alt='Competition logo' />
 				<Section>

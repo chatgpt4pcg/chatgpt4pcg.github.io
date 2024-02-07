@@ -21,6 +21,18 @@ export default function ChangelogPage() {
 				</PageHeader>
 				<Section>
 					<SectionHeader id='changelog'>Changelog</SectionHeader>
+					<SectionSubHeader>February 7, 2024</SectionSubHeader>
+					<ul>
+						<li>
+							While preparing the content of the report for the first
+							competition, we found inaccuracies regarding the intermediate
+							results associated with the trial index. However, this does not
+							affect any of the final results and rankings. We apologize for any
+							inconvenience this may cause. We have corrected the trial score
+							file provided on <Link href='/result#competition-data'>the result page</Link> of
+							our website.
+						</li>
+					</ul>
 					<SectionSubHeader>August 22, 2023</SectionSubHeader>
 					<ul>
 						<li>
