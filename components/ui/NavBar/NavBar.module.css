@@ -11,6 +11,7 @@
 	font-family: sans-serif;
 	font-weight: bold;
 	white-space: nowrap;
+	margin: 0;
 }
 
 .navItem a {
