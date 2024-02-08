@@ -1,7 +1,6 @@
 import AlertBox from '@/components/ui/AlertBox/AlertBox';
 import HorizontalList from '@/components/ui/HorizontalList/HorizontalList';
 import Image from '@/components/ui/Image/Image';
-import Link from 'next/link';
 import PageLayout from '@/components/ui/PageLayout/PageLayout';
 import PageMeta from '@/components/content/PageMeta';
 import PageTitle from '@/components/content/PageTitle';
@@ -9,14 +8,9 @@ import Paragraph from '@/components/ui/Paragraph/Paragraph';
 import Section from '@/components/ui/Section/Section';
 import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 import SubmissionDeadline from '@/components/content/SubmissionDeadline';
-import dynamic from 'next/dynamic';
 import styles from './index.module.css';
 
 export default function HomePage() {
-	const VideoPlayer = dynamic(() => import('react-player/lazy'), {
-		ssr: false,
-	});
-
 	return (
 		<>
 			<PageMeta />
@@ -24,8 +18,10 @@ export default function HomePage() {
 				<PageTitle />
 				<AlertBox header='To our reviewers' level='error'>
 					<Paragraph>
-						Please visit the anonymized version of our home page:{' '}
-						<Link href='/review'>Click here</Link>
+						<strong>
+							External links may not be anonymized. Please refrain from clicking
+							on those links.
+						</strong>
 					</Paragraph>
 				</AlertBox>
 				<Image src='/images/logo.jpg' alt='Competition logo' />
@@ -76,46 +72,10 @@ export default function HomePage() {
 						collective learning and discovery in the world of prompt engineering
 						through this game competition!
 					</Paragraph>
-					<div className={styles.youtubeContainer}>
-						<VideoPlayer url='https://www.youtube.com/watch?v=Ujs4tTBQrZw' />
-					</div>
 				</Section>
 				<Section>
 					<SectionHeader id='organizers'>Organizers</SectionHeader>
-					<ol>
-						<li>
-							Pittawat Taveekitworachai, Graduate School of Information Science
-							and Engineering, Ritsumeikan University
-						</li>
-						<li>
-							Febri Abdullah, Graduate School of Information Science and
-							Engineering, Ritsumeikan University
-						</li>
-						<li>
-							Mury F. Dewantoro, Graduate School of Information Science and
-							Engineering, Ritsumeikan University
-						</li>
-						<li>
-							Yi Xia, Graduate School of Information Science and Engineering,
-							Ritsumeikan University
-						</li>
-						<li>
-							Pratch Suntichaikul, Graduate School of Information Science and
-							Engineering, Ritsumeikan University
-						</li>
-						<li>
-							Ruck Thawonmas, College of Information Science and Engineering,
-							Ritsumeikan University
-						</li>
-						<li>
-							Julian Togelius, NYU Tandon School of Engineering, New York
-							University
-						</li>
-						<li>
-							Jochen Renz, School of Computing, The Australian National
-							University
-						</li>
-					</ol>
+					Anonymous
 				</Section>
 				<Section>
 					<SectionHeader id='contact'>Contact</SectionHeader>
@@ -125,27 +85,6 @@ export default function HomePage() {
 					</Paragraph>
 				</Section>
 				<SubmissionDeadline />
-				<Section>
-					<SectionHeader id='paper'>Paper</SectionHeader>
-					<Paragraph>
-						Our paper about the 2024 competition is available together with its
-						supplementary document here{' '}
-						<span className={styles.highlight}>(coming soon)</span>. You can
-						also see a{' '}
-						<a
-							rel='noopener'
-							target='_blank'
-							href='https://arxiv.org/abs/2303.15662'
-						>
-							paper
-						</a>{' '}
-						about the previous edition of the competition and{' '}
-						<a href='/2023/files/supplementary_material.pdf'>
-							its supplementary document
-						</a>
-						. Please see about the previous edition of the competition and .
-					</Paragraph>
-				</Section>
 				<Section>
 					<SectionHeader id='other-info'>Other information</SectionHeader>
 					<HorizontalList
