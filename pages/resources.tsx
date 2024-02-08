@@ -4,8 +4,6 @@ import PageLayout from '@/components/ui/PageLayout/PageLayout';
 import PageMeta from '@/components/content/PageMeta';
 import PageTitle from '@/components/content/PageTitle';
 import Paragraph from '@/components/ui/Paragraph/Paragraph';
-import ReactHighlightSyntax from 'react-highlight-syntax';
-import { SAMPLE_PROMPT } from '@/constants/prompt';
 import Section from '@/components/ui/Section/Section';
 import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 import SectionSubHeader from '@/components/ui/SectionSubHeader/SectionSubHeader';
@@ -18,15 +16,18 @@ export default function ResourcesPage() {
 			<PageLayout>
 				<PageTitle />
 				<Section>
-					<SectionHeader id='sample-prompt'>Sample Prompt</SectionHeader>
-					<ReactHighlightSyntax
-						language={'PlainText'}
-						theme={'Base16Darcula'}
-						copy={true}
-						copyBtnTheme={'Dark'}
-					>
-						{SAMPLE_PROMPT}
-					</ReactHighlightSyntax>
+					<SectionHeader id='examples'>
+						Prompt Engineering Examples
+					</SectionHeader>
+					<Paragraph>
+						We provide a few example programs implemented using various prompt
+						engineering techniques. These examples are offered to assist you in
+						getting started with the competition. You can utilize these examples
+						as a foundation to develop your own advanced prompt engineering
+						techniques. The examples are accessible in a GitHub repository,
+						which you can find{' '}
+						<a href='https://github.com/chatgpt4pcg/pe-examples'>here</a>.
+					</Paragraph>
 				</Section>
 				<Section>
 					<SectionHeader id='tools'>Tools</SectionHeader>
