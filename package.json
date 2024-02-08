@@ -16,8 +16,8 @@
 		"react-dom": "^18.2.0",
 		"react-highlight-syntax": "^1.1.1",
 		"react-katex": "^3.0.1",
+		"react-player": "^2.14.1",
 		"react-remove-scroll": "^2.5.7",
-		"react-youtube": "^10.1.0",
 		"sharp": "^0.33.2"
 	},
 	"devDependencies": {

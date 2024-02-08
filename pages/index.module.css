@@ -17,6 +17,16 @@
 	width: 60%;
 }
 
+.youtubeContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.highlight {
+	color: var(--highlight-color);
+}
+
 @media screen and (max-width: 768px) {
 	.cogLogoContainer {
 		margin-top: 32px;
