@@ -96,17 +96,20 @@ export default function RulesPage() {
 							<InlineMath math='j' /> from the same prompt{' '}
 							<InlineMath math='k' />.
 						</li>
-						<BlockMath math='div_{jk} = \frac{\sum_a^{|A_{jk}|} cosd(\textbf{v}_a^1, \textbf{v}_a^2)}{|A_{jk}|}\text{,}' />
+						<BlockMath math='div_{jk} = \frac{\sum_a^{|A_{jk}|} cosd(\textbf{v}_a^1, \textbf{v}_a^2)}{0.5T(T+1)}\text{,}' />
 						<Paragraph>where</Paragraph>
 						<BlockMath math='A_{jk} = \{(\textbf{v}_a^1, \textbf{v}_a^2) | (\textbf{v}_a^1, \textbf{v}_a^2)  \in \Xi_{jk} \bowtie \Xi_{jk} \}' />
+						<Paragraph>
+							and <InlineMath math='T' /> represents the number of trials per
+							target character.
+						</Paragraph>
 					</ol>
 					<Paragraph>
-						Given that <InlineMath math='P' />, <InlineMath math='T' />, and{' '}
-						<InlineMath math='C' /> represent the number of prompts in the
-						competition, the number of trials per target character, and the
-						number of characters, respectively, to give a higher weight to a
-						more difficult target character, <InlineMath math='weight_{j}' />{' '}
-						for target character <InlineMath math='j' /> is defined as follows:
+						Given that <InlineMath math='P' /> and <InlineMath math='C' />{' '}
+						represent the number of prompts in the competition and the number of
+						characters, respectively, to give a higher weight to a more
+						difficult target character, <InlineMath math='weight_{j}' /> for
+						target character <InlineMath math='j' /> is defined as follows:
 					</Paragraph>
 					<BlockMath math='weight_{j} = w\_sta_{j} \times w\_sim_{j} \times w\_div_{j}\text{,}' />
 					<Paragraph>where</Paragraph>
