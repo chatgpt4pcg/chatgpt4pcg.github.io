@@ -45,7 +45,7 @@ export default function RulesPage() {
 					</SectionSubHeader>
 					<Paragraph>
 						In trial <InlineMath math='i' /> of target character{' '}
-						<InlineMath math='j' /> for prompt <InlineMath math='k' />:
+						<InlineMath math='j' /> for program <InlineMath math='k' />:
 					</Paragraph>
 					<ol>
 						<li>
@@ -85,7 +85,7 @@ export default function RulesPage() {
 						<li>
 							<strong>Diversity</strong>: The diversity score represents how
 							diverse the generated levels are under the same target character{' '}
-							<InlineMath math='j' /> for prompt <InlineMath math='k' />. The
+							<InlineMath math='j' /> for program <InlineMath math='k' />. The
 							score, <InlineMath math='div_{jk}' />, is calculated by computing
 							cosine distance, <InlineMath math='cosd()' />, of unordered pairs
 							in the set <InlineMath math='A' /> containing pairs of output
@@ -93,7 +93,7 @@ export default function RulesPage() {
 							<InlineMath math='\textbf{v}_{ijk} = \sigma(\textbf{z}_{ijk})' />.{' '}
 							<InlineMath math='\Xi_{jk}' /> denotes a set containing all such
 							vectors across trials of the same target character{' '}
-							<InlineMath math='j' /> from the same prompt{' '}
+							<InlineMath math='j' /> from the same program{' '}
 							<InlineMath math='k' />.
 						</li>
 						<BlockMath math='div_{jk} = \frac{\sum_a^{|A_{jk}|} cosd(\textbf{v}_a^1, \textbf{v}_a^2)}{0.5T(T+1)-T}\text{,}' />
@@ -106,7 +106,7 @@ export default function RulesPage() {
 					</ol>
 					<Paragraph>
 						Given that <InlineMath math='P' /> and <InlineMath math='C' />{' '}
-						represent the number of prompts in the competition and the number of
+						represent the number of programs in the competition and the number of
 						characters, respectively, to give a higher weight to a more
 						difficult target character, <InlineMath math='weight_{j}' /> for
 						target character <InlineMath math='j' /> is defined as follows:
@@ -124,7 +124,7 @@ export default function RulesPage() {
 					<BlockMath math='trial_{ijk} = weight_{j}sta_{ijk}sim_{ijk}' />
 					<Paragraph>
 						The average score for target character <InlineMath math='j' /> of
-						prompt <InlineMath math='k' />, <InlineMath math='char_{jk}' />, is
+						program <InlineMath math='k' />, <InlineMath math='char_{jk}' />, is
 						defined as follows:
 					</Paragraph>
 					<BlockMath math='char_{jk} = \frac{div_{jk}\sum_{i=1}^{T} trial_{ijk}}{T}' />
