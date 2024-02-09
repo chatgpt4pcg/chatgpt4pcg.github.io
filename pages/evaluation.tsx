@@ -96,9 +96,9 @@ export default function RulesPage() {
 							<InlineMath math='j' /> from the same prompt{' '}
 							<InlineMath math='k' />.
 						</li>
-						<BlockMath math='div_{jk} = \frac{\sum_a^{|A_{jk}|} cosd(\textbf{v}_a^1, \textbf{v}_a^2)}{0.5T(T+1)}\text{,}' />
+						<BlockMath math='div_{jk} = \frac{\sum_a^{|A_{jk}|} cosd(\textbf{v}_a^1, \textbf{v}_a^2)}{0.5T(T+1)-T}\text{,}' />
 						<Paragraph>where</Paragraph>
-						<BlockMath math='A_{jk} = \{(\textbf{v}_a^1, \textbf{v}_a^2) | (\textbf{v}_a^1, \textbf{v}_a^2)  \in \Xi_{jk} \bowtie \Xi_{jk} \}' />
+						<BlockMath math='A_{jk} = \{(\textbf{v}_a^1, \textbf{v}_a^2) | (\textbf{v}_a^1, \textbf{v}_a^2)  \in \Xi_{jk} \bowtie \Xi_{jk} \land v_a^1 \neq v_a^2 \}' />
 						<Paragraph>
 							and <InlineMath math='T' /> represents the number of trials per
 							target character.
