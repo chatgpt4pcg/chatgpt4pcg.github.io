@@ -1,7 +1,6 @@
-import AlertBox from '@/components/ui/AlertBox/AlertBox';
+import Accordion from '@/components/ui/Accordion/Accordion';
 import HorizontalList from '@/components/ui/HorizontalList/HorizontalList';
 import Image from '@/components/ui/Image/Image';
-import Link from 'next/link';
 import PageLayout from '@/components/ui/PageLayout/PageLayout';
 import PageMeta from '@/components/content/PageMeta';
 import PageTitle from '@/components/content/PageTitle';
@@ -22,12 +21,6 @@ export default function HomePage() {
 			<PageMeta />
 			<PageLayout>
 				<PageTitle />
-				<AlertBox header='To our reviewers' level='error'>
-					<Paragraph>
-						Please visit the anonymized version of our home page:{' '}
-						<Link href='/review'>Click here</Link>
-					</Paragraph>
-				</AlertBox>
 				<Image src='/images/logo.jpg' alt='Competition logo' />
 				<Section>
 					<Paragraph>
@@ -82,40 +75,50 @@ export default function HomePage() {
 				</Section>
 				<Section>
 					<SectionHeader id='organizers'>Organizers</SectionHeader>
-					<ol>
-						<li>
-							Pittawat Taveekitworachai, Graduate School of Information Science
-							and Engineering, Ritsumeikan University
-						</li>
-						<li>
-							Febri Abdullah, Graduate School of Information Science and
-							Engineering, Ritsumeikan University
-						</li>
-						<li>
-							Mury F. Dewantoro, Graduate School of Information Science and
-							Engineering, Ritsumeikan University
-						</li>
-						<li>
-							Yi Xia, Graduate School of Information Science and Engineering,
-							Ritsumeikan University
-						</li>
-						<li>
-							Pratch Suntichaikul, Graduate School of Information Science and
-							Engineering, Ritsumeikan University
-						</li>
-						<li>
-							Ruck Thawonmas, College of Information Science and Engineering,
-							Ritsumeikan University
-						</li>
-						<li>
-							Julian Togelius, NYU Tandon School of Engineering, New York
-							University
-						</li>
-						<li>
-							Jochen Renz, School of Computing, The Australian National
-							University
-						</li>
-					</ol>
+					<Accordion
+						items={[
+							{
+								header: 'Click here to reveal the organizers',
+								headerActive: 'Click here to hide the organizers',
+								body: (
+									<ol>
+										<li>
+											Pittawat Taveekitworachai, Graduate School of Information
+											Science and Engineering, Ritsumeikan University
+										</li>
+										<li>
+											Febri Abdullah, Graduate School of Information Science and
+											Engineering, Ritsumeikan University
+										</li>
+										<li>
+											Mury F. Dewantoro, Graduate School of Information Science
+											and Engineering, Ritsumeikan University
+										</li>
+										<li>
+											Yi Xia, Graduate School of Information Science and
+											Engineering, Ritsumeikan University
+										</li>
+										<li>
+											Pratch Suntichaikul, Graduate School of Information
+											Science and Engineering, Ritsumeikan University
+										</li>
+										<li>
+											Ruck Thawonmas, College of Information Science and
+											Engineering, Ritsumeikan University
+										</li>
+										<li>
+											Julian Togelius, NYU Tandon School of Engineering, New
+											York University
+										</li>
+										<li>
+											Jochen Renz, School of Computing, The Australian National
+											University
+										</li>
+									</ol>
+								),
+							},
+						]}
+					/>
 				</Section>
 				<Section>
 					<SectionHeader id='contact'>Contact</SectionHeader>

@@ -28,6 +28,7 @@
 	--text-color: #41444b;
 	--highlight-color: #f9b572;
 	--code-bg-color: #FBF9F1;
+	--hover-bg-color: #f9f9f9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,6 +40,8 @@
 		--text-color: #fefefe;
 		--highlight-color: #fdffab;
 		--code-bg-color: #161A30;
+		--border-color: #d9d9d9;
+		--hover-bg-color: #3a3f3f;
 	}
 }
 
