@@ -146,7 +146,7 @@ export default function HomePage() {
 						<a href='/2023/files/supplementary_material.pdf'>
 							its supplementary document
 						</a>
-						. Please see about the previous edition of the competition and .
+						.
 					</Paragraph>
 				</Section>
 				<Section>
