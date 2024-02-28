@@ -87,7 +87,7 @@ export default function RulesPage() {
 							diverse the generated levels are under the same target character{' '}
 							<InlineMath math='j' /> for program <InlineMath math='k' />. The
 							score, <InlineMath math='div_{jk}' />, is calculated by computing
-							cosine distance, <InlineMath math='cosd()' />, of unordered pairs
+							cosine distance, <InlineMath math='D_c' />, of unordered pairs
 							in the set <InlineMath math='A' /> containing pairs of output
 							vectors from the softmax probability,{' '}
 							<InlineMath math='\textbf{v}_{ijk} = \sigma(\textbf{z}_{ijk})' />.{' '}
@@ -96,7 +96,7 @@ export default function RulesPage() {
 							<InlineMath math='j' /> from the same program{' '}
 							<InlineMath math='k' />.
 						</li>
-						<BlockMath math='div_{jk} = \frac{\sum_a^{|A_{jk}|} cosd(\textbf{v}_a^1, \textbf{v}_a^2)}{0.5T(T+1)-T}\text{,}' />
+						<BlockMath math='div_{jk} = \frac{\sum_a^{|A_{jk}|} D_c(\textbf{v}_a^1, \textbf{v}_a^2)}{0.5T(T+1)-T}\text{,}' />
 						<Paragraph>where</Paragraph>
 						<BlockMath math='A_{jk} = \{(\textbf{v}_a^1, \textbf{v}_a^2) | (\textbf{v}_a^1, \textbf{v}_a^2)  \in \Xi_{jk} \bowtie \Xi_{jk} \land v_a^1 \neq v_a^2 \}' />
 						<Paragraph>
@@ -121,7 +121,7 @@ export default function RulesPage() {
 						Next, the weighted <InlineMath math='trial_{ijk}' /> score is
 						defined as follows:
 					</Paragraph>
-					<BlockMath math='trial_{ijk} = weight_{j}sta_{ijk}sim_{ijk}' />
+					<BlockMath math='trial_{ijk} = weight_{j} \times sta_{ijk} \times sim_{ijk}' />
 					<Paragraph>
 						The average score for target character <InlineMath math='j' /> of
 						program <InlineMath math='k' />, <InlineMath math='char_{jk}' />, is
