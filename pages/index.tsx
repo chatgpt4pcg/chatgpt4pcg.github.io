@@ -132,9 +132,15 @@ export default function HomePage() {
 					<SectionHeader id='paper'>Paper</SectionHeader>
 					<Paragraph>
 						Our paper about the 2024 competition is available together with its
-						supplementary document here{' '}
-						<span className={styles.highlight}>(coming soon)</span>. You can
-						also see a{' '}
+						supplementary document{' '}
+						<a
+							rel='noopener'
+							target='_blank'
+							href='https://arxiv.org/abs/2403.02610'
+						>
+							here
+						</a>
+						. You can also see a{' '}
 						<a
 							rel='noopener'
 							target='_blank'
