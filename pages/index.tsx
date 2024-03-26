@@ -1,6 +1,8 @@
 import Accordion from '@/components/ui/Accordion/Accordion';
+import AlertBox from '@/components/ui/AlertBox/AlertBox';
 import HorizontalList from '@/components/ui/HorizontalList/HorizontalList';
 import Image from '@/components/ui/Image/Image';
+import Link from 'next/link';
 import PageLayout from '@/components/ui/PageLayout/PageLayout';
 import PageMeta from '@/components/content/PageMeta';
 import PageTitle from '@/components/content/PageTitle';
@@ -21,6 +23,15 @@ export default function HomePage() {
 			<PageMeta />
 			<PageLayout>
 				<PageTitle />
+				<AlertBox header='Announcement'>
+					<Paragraph>
+						We are excited that our competition is sponsored by the IEEE CIS
+						Education Competition Subcommittee for a total prize of 💰{' '}
+						<strong>1000 USD</strong> which will be awarded to the top
+						participants. For more information on the prizes, please visit the{' '}
+						<Link href='/prizes'>prizes page</Link>.
+					</Paragraph>
+				</AlertBox>
 				<Image src='/images/logo.jpg' alt='Competition logo' />
 				<Section>
 					<Paragraph>
