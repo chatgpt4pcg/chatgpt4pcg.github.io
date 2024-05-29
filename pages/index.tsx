@@ -25,11 +25,10 @@ export default function HomePage() {
 				<PageTitle />
 				<AlertBox header='Announcement'>
 					<Paragraph>
-						We are excited that our competition is sponsored by the IEEE CIS
-						Education Competition Subcommittee for a total prize of 💰{' '}
-						<strong>1000 USD</strong> which will be awarded to the top
-						participants. For more information on the prizes, please visit the{' '}
-						<Link href='/prizes'>prizes page</Link>.
+						Thank you 🙏 all participants for your midterm submissions! Please stay
+						tuned for the updates on your submissions 📌. We are looking forward to
+						your final submissions! We also welcome anyone who missed the
+						midterm submission to submit during the final submission period.
 					</Paragraph>
 				</AlertBox>
 				<Image src='/images/logo.jpg' alt='Competition logo' />
