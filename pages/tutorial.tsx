@@ -81,9 +81,8 @@ export default function PrizePage() {
 								</li>
 							</ul>
 							<em>
-								Please note that you can use any model you like that suit to
-								your needs. We are encouraging you to try and experiment with
-								different models.
+								Please note that you can use any model you like that suits your
+								needs. We encourage you to experiment with different models.
 							</em>
 							<Image
 								src='/images/lm-studio-2.png'
