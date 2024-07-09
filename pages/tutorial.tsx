@@ -29,7 +29,17 @@ export default function PrizePage() {
 					<SectionHeader>Prerequisite</SectionHeader>
 					<Paragraph>
 						If you want to follow along with the tutorial, you will need a
-						computer with a GPU and the following software installed:
+						computer with sufficient performance. LLMs are downloaded as files
+						and will be stored on your computer and later loaded into RAM, so
+						you will need to have sufficient storage and memory for that
+						purpose. In addition, while the program works with CPU-only
+						computers, its performance is not optimal, i.e., slow processing
+						speed. Therefore, we recommend a computer with a sufficiently
+						powerful discrete GPU, NPU, or M-series chip.
+					</Paragraph>
+					<Paragraph>
+						Please download and install the following software before the
+						tutorial if you want to follow along:
 					</Paragraph>
 					<ol>
 						<li>
