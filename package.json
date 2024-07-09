@@ -6,28 +6,28 @@
 		"deploy": "npm run export && touch out/.nojekyll && git add -f out/ && git commit -m 'chore: update for GitHub Page' && git subtree push --prefix out origin gh-pages"
 	},
 	"dependencies": {
-		"@heroicons/react": "^2.1.1",
-		"@tanstack/react-table": "^8.11.7",
+		"@heroicons/react": "^2.1.4",
+		"@tanstack/react-table": "^8.19.2",
 		"chatgpt4pcg": "^1.4.1",
 		"next": "latest",
-		"next-image-export-optimizer": "^1.12.2",
+		"next-image-export-optimizer": "^1.14.1",
 		"nextjs-google-analytics": "^2.3.3",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-highlight-syntax": "^1.1.1",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-highlight-syntax": "^1.2.0",
 		"react-katex": "^3.0.1",
-		"react-player": "^2.14.1",
-		"react-remove-scroll": "^2.5.7",
-		"sharp": "^0.33.2"
+		"react-player": "^2.16.0",
+		"react-remove-scroll": "^2.5.10",
+		"sharp": "^0.33.4"
 	},
 	"devDependencies": {
-		"@types/node": "^18.19.8",
-		"@types/react": "^18.2.48",
-		"@types/react-dom": "^18.2.18",
+		"@types/node": "^20.14.10",
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
 		"@types/react-katex": "^3.0.4",
-		"eslint": "^8.56.0",
+		"eslint": "^8.57.0",
 		"prop-types": "^15.8.1",
 		"typescript": "^4.9.5"
 	},
-	"packageManager": "pnpm@8.15.6+sha512.77b89e9be77a2b06ad8f403a19cae5e22976f61023f98ad323d5c30194958ebc02ee0a6ae5d13ee454f6134e4e8caf29a05f0b1a0e1d2b17bca6b6a1f1159f86"
+	"packageManager": "pnpm@8.15.8+sha512.d1a029e1a447ad90bc96cd58b0fad486d2993d531856396f7babf2d83eb1823bb83c5a3d0fc18f675b2d10321d49eb161fece36fe8134aa5823ecd215feed392"
 }
