@@ -142,7 +142,7 @@ export default function PrizePage() {
 					<Paragraph>
 						Starting code can be found at{' '}
 						<a
-							href='https://github.com/chatgpt4pcg/tutorial-2024'
+							href='https://github.com/chatgpt4pcg/tutorial-2024-notebook'
 							target='_blank'
 							rel='noopener noreferrer'
 						>
@@ -152,7 +152,20 @@ export default function PrizePage() {
 					</Paragraph>
 					<Paragraph>
 						Additional instruction on how to run the code can be found in the
-						README file of the repository.
+						<code>README.md</code> file of the repository.
+					</Paragraph>
+					<Paragraph>
+						In case you want to follow along using the project version, which
+						more closely resembles a submission to the competition, you can
+						access the code at{' '}
+						<a
+							href='https://github.com/chatgpt4pcg/tutorial-2024'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							this GitHub repository
+						</a>
+						.
 					</Paragraph>
 				</Section>
 			</PageLayout>
