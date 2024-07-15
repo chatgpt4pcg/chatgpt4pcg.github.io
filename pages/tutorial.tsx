@@ -75,19 +75,25 @@ export default function PrizePage() {
 											bartowski/Yi-1.5-34B-Chat-GGUF
 										</a>
 									</code>{' '}
-									(Q4_K_M)
+									(<code>Q4_K_M</code>)
 								</li>
 								<li>
 									If you have VRAM &gt;= 8GB:{' '}
-									<a href='https://huggingface.co/bartowski/Meta-Llama-3-8B-Instruct-GGUF/blob/main/Meta-Llama-3-8B-Instruct-Q8_0.gguf'>
-										Llama 3 8B Instruct (Q8_0)
-									</a>
+									<code>
+										<a href='https://huggingface.co/bartowski/Meta-Llama-3-8B-Instruct-GGUF/blob/main/Meta-Llama-3-8B-Instruct-Q8_0.gguf'>
+											bartowski/Meta-Llama-3-8B-Instruct-GGUF
+										</a>
+									</code>{' '}
+									(<code>Q8_0</code>)
 								</li>
 								<li>
 									The rest:{' '}
-									<a href='https://huggingface.co/bartowski/Phi-3.1-mini-4k-instruct-GGUF/blob/main/Phi-3.1-mini-4k-instruct-Q8_0_L.gguf'>
-										Phi 3 mini 3.8B (Q8_0_L)
-									</a>
+									<code>
+										<a href='https://huggingface.co/bartowski/Phi-3.1-mini-4k-instruct-GGUF/blob/main/Phi-3.1-mini-4k-instruct-Q8_0_L.gguf'>
+											bartowski/Phi-3.1-mini-4k-instruct-GGUF
+										</a>
+									</code>{' '}
+									(<code>Q8_0_L</code>)
 								</li>
 							</ul>
 							<em>
