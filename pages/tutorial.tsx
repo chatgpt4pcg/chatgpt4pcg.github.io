@@ -10,7 +10,7 @@ import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
 export default function PrizePage() {
 	return (
 		<>
-			<PageMeta pageTitle='Prizes' />
+			<PageMeta pageTitle='Tutorial' />
 			<PageLayout>
 				<PageSubHeader>
 					A Tutorial@
