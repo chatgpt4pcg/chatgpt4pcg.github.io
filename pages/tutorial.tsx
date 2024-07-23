@@ -80,8 +80,8 @@ export default function PrizePage() {
 								<li>
 									If you have VRAM &gt;= 8GB:{' '}
 									<code>
-										<a href='https://huggingface.co/bartowski/Meta-Llama-3-8B-Instruct-GGUF/blob/main/Meta-Llama-3-8B-Instruct-Q8_0.gguf'>
-											bartowski/Meta-Llama-3-8B-Instruct-GGUF
+										<a href='https://huggingface.co/lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF/blob/main/Meta-Llama-3.1-8B-Instruct-Q8_0.gguf'>
+											lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF
 										</a>
 									</code>{' '}
 									(<code>Q8_0</code>)
