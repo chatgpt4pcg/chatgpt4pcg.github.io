@@ -111,6 +111,13 @@ export default function NavBar() {
 					>
 						<Link href='/changelog'>Changelog</Link>
 					</li>
+					<li
+						className={`${styles.navItem} ${
+							router.pathname == '/tutorial' ? styles.active : ''
+						}`}
+					>
+						<Link href='/tutorial'>CoG 2024 Tutorial</Link>
+					</li>
 					<li className={`${styles.navItem} ${styles.special}`}>
 						<a
 							target='_blank'

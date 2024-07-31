@@ -6,8 +6,9 @@ import PageSubHeader from '@/components/ui/PageSubHeader/PageSubHeader';
 import Paragraph from '@/components/ui/Paragraph/Paragraph';
 import Section from '@/components/ui/Section/Section';
 import SectionHeader from '@/components/ui/SectionHeader/SectionHeader';
+import SectionSubHeader from '@/components/ui/SectionSubHeader/SectionSubHeader';
 
-export default function PrizePage() {
+export default function TutorialPage() {
 	return (
 		<>
 			<PageMeta pageTitle='Tutorial' />
@@ -25,6 +26,15 @@ export default function PrizePage() {
 				<PageHeader>
 					Prompt Engineering for Science Birds Level Generation and Beyond
 				</PageHeader>
+				<Section>
+					<SectionHeader>Slide</SectionHeader>
+					<Paragraph>
+						The slide deck for the tutorial can be found{' '}
+						<a href='/files/tutorial_2024.pdf' download>
+							here
+						</a>
+					</Paragraph>
+				</Section>
 				<Section>
 					<SectionHeader>Prerequisite</SectionHeader>
 					<Paragraph>
@@ -142,6 +152,30 @@ export default function PrizePage() {
 							/>
 						</li>
 					</ol>
+					<SectionSubHeader>
+						(Optional) Additional Configurations
+					</SectionSubHeader>
+					<ol>
+						<li>
+							You may want to configure the following settings for faster
+							inference speed. However, please note that these settings are
+							subject to compatibility with the computer's hardware.
+							<Image
+								src='/images/config-0.png'
+								alt='LM Studio Advanced Configuration'
+								noBorderRadius
+								width={736}
+								height={446}
+							/>
+							<Image
+								src='/images/config-1.png'
+								alt='LM Studio Advanced Configuration (details)'
+								noBorderRadius
+								width={446}
+								height={736}
+							/>
+						</li>
+					</ol>
 				</Section>
 				<Section>
 					<SectionHeader>Starting Code</SectionHeader>
@@ -159,19 +193,6 @@ export default function PrizePage() {
 					<Paragraph>
 						Additional instruction on how to run the code can be found in the
 						<code>README.md</code> file of the repository.
-					</Paragraph>
-					<Paragraph>
-						In case you want to follow along using the project version, which
-						more closely resembles a submission to the competition, you can
-						access the code at{' '}
-						<a
-							href='https://github.com/chatgpt4pcg/tutorial-2024'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							this GitHub repository
-						</a>
-						.
 					</Paragraph>
 				</Section>
 			</PageLayout>
