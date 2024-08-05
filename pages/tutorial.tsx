@@ -34,6 +34,11 @@ export default function TutorialPage() {
 							here
 						</a>
 					</Paragraph>
+					<Paragraph>
+						<em>
+							<strong>Latest update</strong>: August 5, 2024 9:45AM (GMT+2)
+						</em>
+					</Paragraph>
 				</Section>
 				<Section>
 					<SectionHeader>Prerequisite</SectionHeader>
