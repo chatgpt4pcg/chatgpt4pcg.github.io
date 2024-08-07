@@ -1,6 +1,7 @@
 import AlertBox from '@/components/ui/AlertBox/AlertBox';
 import HorizontalList from '@/components/ui/HorizontalList/HorizontalList';
 import Image from '@/components/ui/Image/Image';
+import Link from 'next/link';
 import PageLayout from '@/components/ui/PageLayout/PageLayout';
 import PageMeta from '@/components/content/PageMeta';
 import PageTitle from '@/components/content/PageTitle';
@@ -22,11 +23,10 @@ export default function HomePage() {
 			<PageLayout>
 				<PageTitle />
 				<AlertBox header='Announcement'>
-					<Paragraph>
-						Thank you 🙏 all participants for your midterm submissions! Please
-						stay tuned for the updates on your submissions 📌. We are looking
-						forward to your final submissions! We also welcome anyone who missed
-						the midterm submission to submit during the final submission period.
+				<Paragraph>
+						Thank you 🙏 all participants for your final submission! The result
+						is now available in the <Link href='/result'>result</Link> page.
+						Congratulations to the winners! 🎉
 					</Paragraph>
 				</AlertBox>
 				<Image src='/images/logo.jpg' alt='Competition logo' />

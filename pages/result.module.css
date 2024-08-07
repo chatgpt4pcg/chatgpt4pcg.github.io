@@ -1,0 +1,11 @@
+.winnerMessage {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 1rem;
+	font-family: sans-serif;
+}
+
+.winner {
+	color: var(--primary-color);
+}
