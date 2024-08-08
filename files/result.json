@@ -1,0 +1,68 @@
+[
+	{
+		"teamName": "TheAlmostEngineer",
+		"normalizedPromptScore": 50.171935730770078,
+		"promptScore": 0.0224367934633558,
+		"rank": 1
+	},
+	{
+		"teamName": "ijbot",
+		"normalizedPromptScore": 14.08618307498947,
+		"promptScore": 0.00629931406347406,
+		"rank": 2
+	},
+	{
+		"teamName": "SpiralTeam",
+		"normalizedPromptScore": 9.635868368724109,
+		"promptScore": 0.00430914185949085,
+		"rank": 3
+	},
+	{
+		"teamName": "Strong Baseline (Zero-Shot Multi-turn)",
+		"normalizedPromptScore": 8.053954878586249,
+		"promptScore": 0.00360171317972891,
+		"rank": -1
+	},
+	{
+		"teamName": "CoT",
+		"normalizedPromptScore": 6.119790903174839,
+		"promptScore": 0.00273675875832806,
+		"rank": 4
+	},
+	{
+		"teamName": "A-little-HOPE",
+		"normalizedPromptScore": 6.054906175120494,
+		"promptScore": 0.00270774243234667,
+		"rank": 5
+	},
+	{
+		"teamName": "IBMGPT",
+		"normalizedPromptScore": 5.057153657866004,
+		"promptScore": 0.00226154941963712,
+		"rank": 6
+	},
+	{
+		"teamName": "ChuangYe",
+		"normalizedPromptScore": 0.788961249020116,
+		"promptScore": 0.00035282195787394,
+		"rank": 7
+	},
+	{
+		"teamName": "Weak Baseline (Zero-Shot)",
+		"normalizedPromptScore": 0.031245961748641,
+		"promptScore": 0.00001397313418562,
+		"rank": -1
+	},
+	{
+		"teamName": "Shot_Few",
+		"normalizedPromptScore": 0,
+		"promptScore": 0,
+		"rank": 8
+	},
+  {
+		"teamName": "zergy",
+		"normalizedPromptScore": -1,
+		"promptScore": -1,
+		"rank": -2
+	}
+]
