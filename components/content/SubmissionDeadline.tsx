@@ -9,8 +9,12 @@ export default function SubmissionDeadline() {
 			<SectionHeader id='submission-deadline'>
 				Submission Deadline
 			</SectionHeader>
-			<Paragraph><s>Midterm: 24 May 2024 (23:59 JST)</s></Paragraph>
-			<Paragraph>Final: 26 July 2024 (23:59 JST)</Paragraph>
+			<Paragraph>
+				<s>Midterm: 24 May 2024 (23:59 JST)</s>
+			</Paragraph>
+			<Paragraph>
+				<s>Final: 26 July 2024 (23:59 JST)</s>
+			</Paragraph>
 			<Paragraph>
 				Midterm submission is optional, although we recommend it. Any team that
 				submits during the mid-term submission will be notified of the
