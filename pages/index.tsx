@@ -27,6 +27,7 @@ export default function HomePage() {
 						Thank you 🙏 all participants for your final submission! The result
 						is now available in the <Link href='/result'>result</Link> page.
 						Congratulations to the winners! 🎉
+						Next year's competition will come soon!
 					</Paragraph>
 				</AlertBox>
 				<Image src='/images/logo.jpg' alt='Competition logo' />
